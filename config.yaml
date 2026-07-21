@@ -1,0 +1,52 @@
+# IDEAS ENGINE — single source of truth for every threshold.
+# Nothing magic lives in code; tune the funnel here.
+
+regime:
+  vix_max: 22            # risk-on requires VIX below this AND below its 50DMA
+  hyoas_percentile_max: 75   # HY OAS must be below this trailing-252d percentile
+  nfci_max: 0.0          # NFCI below this = loose financial conditions
+  spy_range_pct: 0.08    # 63d high-low range under this = "ranging"
+
+sectors:
+  top_n: 3               # how many leading sectors feed the stock screen
+  thematic_extra: [SMH, IGV, XBI]
+  breadth_min: 0.40      # under this % of members above 50DMA -> "narrow leadership" flag
+
+themes:
+  ai_infra:
+    enabled: true
+    label: AI Infrastructure
+    # always = theme members join the screen every run (basket quadrant is
+    # disclosed on each idea); leading_improving = strict Layer-2 rule
+    include_when: always
+    # curated S&P500/NDX members: power generation, datacenter REITs,
+    # electrical/cooling build-out, AI networking & compute hardware
+    members: [VST, CEG, NRG, GEV, DLR, EQIX, IRM, VRT, ETN, PWR, HUBB,
+              ANET, DELL, SMCI, CSCO]
+    # "backed by real earnings and orders" gate (free-data proxies):
+    fundamentals:
+      require_positive_eps: true      # trailing 12m EPS must be > 0
+      min_revenue_growth: 0.08        # latest quarterly YoY revenue growth
+      orders_proxy: forward_eps_above_trailing   # rising estimates ~ order book
+
+screen:
+  min_price: 10
+  min_avg_dollar_vol: 20000000     # 21d average dollar volume
+  max_pct_from_52w_high: 0.15      # leadership filter
+  max_pct_from_52w_high_ranging: 0.25   # loosened when regime is RISK_ON_RANGING
+
+structure:
+  lookback_days: 126
+  value_area_pct: 0.70
+  vp_bins: 50
+  pullback_poc_tolerance: 0.02     # within +/-2% of POC or an HVN
+  breakout_min_sessions: 3         # closes above VAH needed for acceptance
+  breakout_max_age: 10             # breakout older than this = extended, no entry
+
+trade:
+  min_rr: 2.5
+  atr_period: 14
+
+report:
+  max_ideas: 10
+  sector_rank_weights: [1.00, 0.90, 0.80]   # weight by sector rank 1/2/3

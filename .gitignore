@@ -1,0 +1,12 @@
+# local caches — regenerated on every run, too big for the repo
+data/cache/
+
+# python
+__pycache__/
+*.pyc
+
+# secrets — never commit API keys
+.env
+
+# macOS
+.DS_Store

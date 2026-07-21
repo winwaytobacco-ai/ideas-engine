@@ -1,0 +1,367 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ideas Engine — 2026-07-16</title></head><body><style>
+:root{
+  --page:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink-2:#52514e;
+  --muted:#898781; --grid:#e1e0d9; --axis:#c3c2b7; --ring:rgba(11,11,11,.10);
+  --s1:#2a78d6; --s2:#1baf7a; --s5:#4a3aa7;
+  --good:#0ca30c; --warn:#fab219; --serious:#ec835a; --crit:#d03b3b;
+  --wash:rgba(42,120,214,.08);
+}
+@media (prefers-color-scheme: dark){:root{
+  --page:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink-2:#c3c2b7;
+  --muted:#898781; --grid:#2c2c2a; --axis:#383835; --ring:rgba(255,255,255,.10);
+  --s1:#3987e5; --s2:#199e70; --s5:#9085e9; --wash:rgba(57,135,229,.12);
+}}
+:root[data-theme="light"]{
+  --page:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink-2:#52514e;
+  --muted:#898781; --grid:#e1e0d9; --axis:#c3c2b7; --ring:rgba(11,11,11,.10);
+  --s1:#2a78d6; --s2:#1baf7a; --s5:#4a3aa7; --wash:rgba(42,120,214,.08);
+}
+:root[data-theme="dark"]{
+  --page:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink-2:#c3c2b7;
+  --muted:#898781; --grid:#2c2c2a; --axis:#383835; --ring:rgba(255,255,255,.10);
+  --s1:#3987e5; --s2:#199e70; --s5:#9085e9; --wash:rgba(57,135,229,.12);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);
+  font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:24px 20px 64px}
+h1{font-size:22px;margin:0}
+h2{font-size:15px;margin:28px 0 10px;color:var(--ink)}
+.sub{color:var(--muted);font-size:12.5px}
+.card{background:var(--surface);border:1px solid var(--ring);border-radius:10px;padding:16px}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.pill{display:inline-block;padding:3px 10px;border-radius:999px;font-weight:600;font-size:12.5px}
+.pill.on{background:rgba(12,163,12,.14);color:var(--good)}
+.pill.range{background:var(--wash);color:var(--s1)}
+.pill.trans{background:rgba(250,178,25,.16);color:#8a6100}
+:root[data-theme="dark"] .pill.trans,:root:not([data-theme="light"]) .pill.trans{color:var(--warn)}
+.pill.off{background:rgba(208,59,59,.14);color:var(--crit)}
+.sigs{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px;margin-top:12px}
+.sig{border:1px solid var(--ring);border-radius:8px;padding:8px 10px;font-size:12.5px}
+.sig b{display:block;font-size:12px;color:var(--ink-2);font-weight:600}
+.sig .v{font-size:14px;font-weight:600}
+.sig .rule{color:var(--muted);font-size:11.5px}
+.ok{color:var(--good)} .fail{color:var(--crit)} .na{color:var(--muted)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin:14px 0}
+.tile{background:var(--surface);border:1px solid var(--ring);border-radius:10px;padding:10px 14px}
+.tile .n{font-size:24px;font-weight:650}
+.tile .l{color:var(--muted);font-size:11.5px;text-transform:uppercase;letter-spacing:.04em}
+.split{display:grid;grid-template-columns:minmax(300px,5fr) minmax(320px,7fr);gap:14px}
+@media(max-width:900px){.split{grid-template-columns:1fr}}
+table{border-collapse:collapse;width:100%;font-size:12.5px}
+th{color:var(--muted);font-weight:600;text-align:left;padding:6px 8px;border-bottom:1px solid var(--axis)}
+td{padding:6px 8px;border-bottom:1px solid var(--grid);font-variant-numeric:tabular-nums}
+tr.sel td{background:var(--wash)}
+.tblwrap{overflow-x:auto}
+.controls{position:sticky;top:0;z-index:5;background:var(--page);padding:10px 0;border-bottom:1px solid var(--grid);margin-top:24px}
+.controls .inner{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.ctl{display:flex;gap:6px;align-items:center;font-size:12.5px;color:var(--ink-2)}
+.ctl label{font-weight:600}
+.chip{cursor:pointer;user-select:none;padding:3px 10px;border-radius:999px;border:1px solid var(--axis);font-size:12px;color:var(--ink-2)}
+.chip.act{background:var(--wash);border-color:var(--s1);color:var(--s1);font-weight:600}
+select,input[type=range]{accent-color:var(--s1)}
+select{background:var(--surface);color:var(--ink);border:1px solid var(--axis);border-radius:6px;padding:3px 6px;font-size:12.5px}
+.count{margin-left:auto;color:var(--muted);font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:14px;margin-top:14px}
+.idea h3{margin:0;font-size:16px}
+.idea .head{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.badge{font-size:11px;padding:2px 8px;border-radius:999px;border:1px solid var(--axis);color:var(--ink-2)}
+.badge.bo{background:rgba(74,58,167,.10);color:var(--s5);border-color:transparent}
+.badge.pb{background:rgba(27,175,122,.12);color:var(--s2);border-color:transparent}
+.badge.ai{background:rgba(235,104,52,.12);color:#c24e1f;border-color:transparent;font-weight:600}
+:root:not([data-theme="light"]) .badge.ai{color:#eb8a5e}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]) .badge.ai{color:#c24e1f}}
+.ooda{display:grid;gap:8px;margin-top:8px}
+.ooda .ph b{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.ooda .ph ul{margin:2px 0 0;padding-left:16px;font-size:12.5px;color:var(--ink-2)}
+.ooda .ph li{margin-bottom:3px}
+.score{margin-left:auto;font-weight:700;font-size:15px}
+.thesis{color:var(--ink-2);font-size:12.5px;margin:6px 0 8px}
+.lvls{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;margin:8px 0;text-align:center}
+.lvl .k{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
+.lvl .x{font-weight:650;font-size:13.5px;font-variant-numeric:tabular-nums}
+.lvl.stop .x{color:var(--crit)} .lvl.tgt .x{color:var(--good)} .lvl.entry .x{color:var(--s1)}
+details{margin-top:8px;border-top:1px solid var(--grid);padding-top:8px}
+summary{cursor:pointer;font-size:12.5px;font-weight:600;color:var(--ink-2)}
+.steps{margin:8px 0 0;padding-left:18px;font-size:12.5px;color:var(--ink-2)}
+.steps li{margin-bottom:5px}
+.risks{list-style:none;margin:8px 0 0;padding:0;font-size:12.5px}
+.risks li{display:flex;gap:8px;margin-bottom:6px;color:var(--ink-2)}
+.dot{flex:none;width:9px;height:9px;border-radius:50%;margin-top:4px}
+.dot.high{background:var(--crit)} .dot.medium{background:var(--warn)} .dot.info{background:var(--muted)}
+.rlab{font-weight:700;font-size:10.5px;text-transform:uppercase;margin-top:1.5px}
+.rlab.high{color:var(--crit)} .rlab.medium{color:#8a6100} .rlab.info{color:var(--muted)}
+:root:not([data-theme="light"]) .rlab.medium{color:var(--warn)}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]) .rlab.medium{color:#8a6100}}
+.spark{width:100%;height:130px;display:block}
+svg text{font:10.5px system-ui,-apple-system,"Segoe UI",sans-serif;fill:var(--muted)}
+.tip{position:fixed;pointer-events:none;background:var(--surface);border:1px solid var(--ring);
+  border-radius:6px;padding:5px 8px;font-size:11.5px;color:var(--ink);box-shadow:0 2px 10px rgba(0,0,0,.18);
+  display:none;z-index:20;white-space:nowrap}
+.empty{padding:30px;text-align:center;color:var(--muted)}
+.foot{margin-top:36px;color:var(--muted);font-size:11.5px;border-top:1px solid var(--grid);padding-top:12px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11.5px;color:var(--ink-2);margin-top:6px}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+.sw{width:14px;height:3px;border-radius:2px;display:inline-block}
+</style>
+<div class="wrap">
+  <div class="row" style="justify-content:space-between">
+    <div><h1>Ideas Engine</h1>
+      <div class="sub">US equities · 1–3 month position ideas · run <span id="run-date"></span></div></div>
+    <span id="regime-pill" class="pill"></span>
+  </div>
+
+  <h2>① Macro regime</h2>
+  <div class="card"><div id="regime-expl" style="font-weight:600"></div><div class="sigs" id="sigs"></div></div>
+
+  <h2>Funnel</h2>
+  <div class="tiles" id="funnel"></div>
+
+  <h2>② Sector rotation (vs SPY)</h2>
+  <div class="split">
+    <div class="card"><svg id="rrg" viewBox="0 0 440 330" style="width:100%;height:auto"></svg></div>
+    <div class="card tblwrap"><table id="sectbl"></table></div>
+  </div>
+
+  <h2>③ Ranked ideas</h2>
+  <div class="controls"><div class="inner">
+    <div class="ctl"><label>Sectors</label><span id="secchips" class="row" style="gap:6px"></span></div>
+    <div class="ctl"><label>Setup</label>
+      <select id="setup"><option value="ALL">All setups</option>
+        <option value="ACCEPTANCE_BREAKOUT">Acceptance breakout</option>
+        <option value="PULLBACK_TO_VALUE">Pullback to value</option></select></div>
+    <div class="ctl"><label>Min score</label>
+      <input type="range" id="minscore" min="0" max="100" value="0" step="5"><span id="minscore-v">0</span></div>
+    <div class="ctl"><label>Min R:R</label>
+      <input type="range" id="minrr" min="0" max="6" value="0" step="0.5"><span id="minrr-v">0.0</span></div>
+    <div class="ctl"><label>AI infra</label>
+      <select id="theme" title="AI-infrastructure theme names (all passed the earnings + orders gate)">
+        <option value="all">Include</option>
+        <option value="exclude">Exclude</option>
+        <option value="only">Only theme</option></select></div>
+    <div class="ctl"><label>Sort</label>
+      <select id="sort"><option value="total_score">Total score</option>
+        <option value="rr">Reward / risk</option><option value="rs_percentile">Relative strength</option>
+        <option value="score">Structure score</option></select></div>
+    <span class="count" id="count"></span>
+  </div></div>
+  <div class="grid" id="ideas"></div>
+
+  <h2>④ Appendix</h2>
+  <details><summary>Watch — structure present but no valid trade yet</summary>
+    <div class="card tblwrap" style="margin-top:8px"><table id="watch"></table></div></details>
+  <details><summary>Near-misses — failed exactly one screen filter</summary>
+    <div class="card tblwrap" style="margin-top:8px"><table id="near"></table></div></details>
+
+  <div class="foot">Generated 2026-07-16T03:17:46 · thresholds in config.yaml ·
+    volume-flow is a daily proxy (true CVD needs intraday data) ·
+    research tool — not investment advice.</div>
+</div>
+<script>const DATA={"run_date":"2026-07-16","generated_at":"2026-07-16T03:17:46","regime":{"label":"RISK_ON_TRENDING","explanation":"SPY in confirmed uptrend and 2/3 macro checks risk-on \u2014 full idea generation.","signals":[{"name":"Credit stress (HY OAS)","value":"2.72%","rule":"< 21d MA (2.72) and < p75 of 252d (2.97)","passed":false},{"name":"Yield curve (10y-2y)","value":"+0.40% (positive, flattening)","rule":"informational only in v1","passed":null},{"name":"Volatility (VIX)","value":"16.5","rule":"< 22 and < 50d MA (17.3)","passed":true},{"name":"Financial conditions (NFCI)","value":"-0.54","rule":"< 0.0 (loose)","passed":true},{"name":"SPY trend","value":"754 vs 200DMA 693","rule":"Close > 200DMA, 50DMA > 200DMA, 200DMA slope up over 21d","passed":true},{"name":"SPY range check","value":"63d range 8.8%","rule":"ranging if < 8% and no MA alignment","passed":null}]},"sectors":{"rows":[{"etf":"XBI","name":"Biotech","rel_21d":14.87,"rel_63d":6.27,"composite":10.57,"rs_ratio":110.0,"rs_momentum":12.07,"quadrant":"Leading","selected":true,"rank":1,"breadth":0.8333333333333334,"trail":[{"r":97.97,"m":-3.37},{"r":97.04,"m":-2.72},{"r":106.35,"m":10.04},{"r":115.82,"m":26.57},{"r":110.03,"m":12.07}]},{"etf":"SMH","name":"Semiconductors","rel_21d":-7.12,"rel_63d":21.16,"composite":7.02,"rs_ratio":113.6,"rs_momentum":-13.59,"quadrant":"Weakening","selected":false,"rank":null,"breadth":0.35365853658536583,"trail":[{"r":130.07,"m":7.88},{"r":127.4,"m":-3.02},{"r":138.03,"m":8.71},{"r":118.5,"m":-11.99},{"r":113.56,"m":-13.59}]},{"etf":"IGV","name":"Software","rel_21d":1.62,"rel_63d":9.3,"composite":5.46,"rs_ratio":99.5,"rs_momentum":6.18,"quadrant":"Improving","selected":true,"rank":2,"breadth":0.35365853658536583,"trail":[{"r":95.48,"m":11.56},{"r":95.99,"m":6.03},{"r":90.72,"m":-3.43},{"r":98.97,"m":-4.93},{"r":99.51,"m":6.18}]},{"etf":"XLK","name":"Information Technology","rel_21d":-3.76,"rel_63d":13.75,"composite":5.0,"rs_ratio":107.3,"rs_momentum":-6.3,"quadrant":"Weakening","selected":false,"rank":null,"breadth":0.35365853658536583,"trail":[{"r":115.55,"m":9.91},{"r":113.06,"m":0.48},{"r":117.53,"m":4.72},{"r":109.22,"m":-9.83},{"r":107.26,"m":-6.3}]},{"etf":"XLF","name":"Financials","rel_21d":4.45,"rel_63d":0.72,"composite":2.58,"rs_ratio":101.7,"rs_momentum":6.01,"quadrant":"Leading","selected":true,"rank":3,"breadth":0.8947368421052632,"trail":[{"r":89.85,"m":-5.22},{"r":94.81,"m":4.43},{"r":96.8,"m":5.52},{"r":100.82,"m":12.19},{"r":101.75,"m":6.01}]},{"etf":"XLV","name":"Health Care","rel_21d":1.67,"rel_63d":-1.81,"composite":-0.07,"rs_ratio":97.9,"rs_momentum":2.8,"quadrant":"Improving","selected":false,"rank":null,"breadth":0.8333333333333334,"trail":[{"r":90.99,"m":0.54},{"r":96.2,"m":10.06},{"r":93.16,"m":3.73},{"r":101.95,"m":15.76},{"r":97.91,"m":2.8}]},{"etf":"XLI","name":"Industrials","rel_21d":0.44,"rel_63d":-4.83,"composite":-2.2,"rs_ratio":97.8,"rs_momentum":-0.5,"quadrant":"Lagging","selected":false,"rank":null,"breadth":null,"trail":[{"r":95.61,"m":-4.69},{"r":98.7,"m":1.01},{"r":100.87,"m":5.42},{"r":101.49,"m":6.65},{"r":97.8,"m":-0.5}]},{"etf":"XLRE","name":"Real Estate","rel_21d":-2.83,"rel_63d":-5.37,"composite":-4.1,"rs_ratio":97.3,"rs_momentum":-3.13,"quadrant":"Lagging","selected":false,"rank":null,"breadth":null,"trail":[{"r":96.63,"m":-4.61},{"r":100.28,"m":1.6},{"r":97.67,"m":-0.66},{"r":98.86,"m":5.05},{"r":97.26,"m":-3.13}]},{"etf":"XLP","name":"Consumer Staples","rel_21d":-3.81,"rel_63d":-5.51,"composite":-4.66,"rs_ratio":93.4,"rs_momentum":-3.64,"quadrant":"Lagging","selected":false,"rank":null,"breadth":null,"trail":[{"r":93.56,"m":-4.36},{"r":95.63,"m":0.22},{"r":92.97,"m":-3.53},{"r":96.06,"m":6.5},{"r":93.38,"m":-3.64}]},{"etf":"XLY","name":"Consumer Discretionary","rel_21d":-1.33,"rel_63d":-8.13,"composite":-4.73,"rs_ratio":94.0,"rs_momentum":0.81,"quadrant":"Improving","selected":false,"rank":null,"breadth":null,"trail":[{"r":95.07,"m":-0.38},{"r":93.02,"m":-2.1},{"r":91.99,"m":-1.4},{"r":94.45,"m":3.56},{"r":93.98,"m":0.81}]},{"etf":"XLU","name":"Utilities","rel_21d":0.49,"rel_63d":-10.72,"composite":-5.11,"rs_ratio":94.1,"rs_momentum":0.74,"quadrant":"Improving","selected":false,"rank":null,"breadth":null,"trail":[{"r":91.47,"m":-8.0},{"r":92.82,"m":-0.11},{"r":94.02,"m":1.63},{"r":96.17,"m":7.28},{"r":94.13,"m":0.74}]},{"etf":"XLE","name":"Energy","rel_21d":-3.38,"rel_63d":-7.5,"composite":-5.44,"rs_ratio":94.7,"rs_momentum":-4.95,"quadrant":"Lagging","selected":false,"rank":null,"breadth":null,"trail":[{"r":98.2,"m":-9.72},{"r":100.39,"m":0.5},{"r":93.35,"m":-11.54},{"r":91.22,"m":-7.83},{"r":94.72,"m":-4.95}]},{"etf":"XLC","name":"Communication Services","rel_21d":-0.44,"rel_63d":-11.65,"composite":-6.05,"rs_ratio":92.4,"rs_momentum":2.02,"quadrant":"Improving","selected":false,"rank":null,"breadth":null,"trail":[{"r":92.18,"m":-4.02},{"r":90.8,"m":-3.27},{"r":86.9,"m":-6.63},{"r":89.97,"m":0.69},{"r":92.43,"m":2.02}]},{"etf":"XLB","name":"Materials","rel_21d":-4.48,"rel_63d":-11.1,"composite":-7.79,"rs_ratio":93.2,"rs_momentum":-4.82,"quadrant":"Lagging","selected":false,"rank":null,"breadth":null,"trail":[{"r":95.23,"m":-6.99},{"r":96.09,"m":-2.4},{"r":96.47,"m":2.62},{"r":96.89,"m":2.18},{"r":93.23,"m":-4.82}]},{"etf":"AI_INFRA","name":"AI Infrastructure","rel_21d":0.16,"rel_63d":-1.42,"composite":-0.63,"rs_ratio":103.4,"rs_momentum":-3.93,"quadrant":"Weakening","selected":true,"rank":4,"breadth":0.4,"trail":[{"r":109.31,"m":-5.16},{"r":107.42,"m":-4.32},{"r":117.17,"m":8.59},{"r":105.71,"m":-6.15},{"r":103.4,"m":-3.93}]}],"selected_gics":["Health Care","Information Technology","Financials"]},"funnel":{"universe":518,"screened":229,"candidates":64,"qualified":22,"ideas":2},"ideas":[{"ticker":"EW","name":"Edwards Lifesciences","sector":"Health Care","sector_rank":1,"setup":"PULLBACK_TO_VALUE","setup_human":"Pullback to value","score":81.0,"total_score":13.9,"rs_percentile":17,"thesis":"Edwards Lifesciences \u2014 pullback to value in Health Care (sector rank #1), relative strength top 83% of candidates, flow confirming.","entry":86.99,"entry_type":"Limit at high-volume node (86.99)","stop":83.95,"stop_ref":"anchored VWAP","target":95.18,"target_ref":"52-week high","rr":2.7,"free_flow":90.03,"stop_pct":3.5,"stop_atr":1.3,"close":87.93,"poc":82.66,"vah":86.34,"val":77.69,"avwap":83.95,"avwap_dist":4.7,"atr":2.43,"flow_state":"confirming","pct_from_52w_high":7.6,"breadth":83,"theme":null,"fundamentals":null,"ooda":null,"risks":[{"level":"info","text":"Stop sits 3.5% below entry (~1.3 ATR), below anchored VWAP."},{"level":"info","text":"Reward/risk of 2.7 is close to the 2.5 floor \u2014 any slippage on entry meaningfully degrades the trade."}],"execution":["Entry \u2014 Limit at high-volume node (86.99). Working level: 86.99.","Stop \u2014 83.95 (3.5% risk, ~1.3 ATR), placed below anchored VWAP. Structural, never percentage-based.","Target \u2014 95.18 (52-week high); reward/risk 2.7.","Free-flow \u2014 at 90.03 (+1R) sell half; the remainder then rides at breakeven-or-better even if stopped.","Invalidation \u2014 idea is void on a daily close below the stop reference or if the weekly regime turns RISK_OFF."],"spark":{"dates":["2026-01-13","2026-01-14","2026-01-15","2026-01-16","2026-01-20","2026-01-21","2026-01-22","2026-01-23","2026-01-26","2026-01-27","2026-01-28","2026-01-29","2026-01-30","2026-02-02","2026-02-03","2026-02-04","2026-02-05","2026-02-06","2026-02-09","2026-02-10","2026-02-11","2026-02-12","2026-02-13","2026-02-17","2026-02-18","2026-02-19","2026-02-20","2026-02-23","2026-02-24","2026-02-25","2026-02-26","2026-02-27","2026-03-02","2026-03-03","2026-03-04","2026-03-05","2026-03-06","2026-03-09","2026-03-10","2026-03-11","2026-03-12","2026-03-13","2026-03-16","2026-03-17","2026-03-18","2026-03-19","2026-03-20","2026-03-23","2026-03-24","2026-03-25","2026-03-26","2026-03-27","2026-03-30","2026-03-31","2026-04-01","2026-04-02","2026-04-06","2026-04-07","2026-04-08","2026-04-09","2026-04-10","2026-04-13","2026-04-14","2026-04-15","2026-04-16","2026-04-17","2026-04-20","2026-04-21","2026-04-22","2026-04-23","2026-04-24","2026-04-27","2026-04-28","2026-04-29","2026-04-30","2026-05-01","2026-05-04","2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-11","2026-05-12","2026-05-13","2026-05-14","2026-05-15","2026-05-18","2026-05-19","2026-05-20","2026-05-21","2026-05-22","2026-05-26","2026-05-27","2026-05-28","2026-05-29","2026-06-01","2026-06-02","2026-06-03","2026-06-04","2026-06-05","2026-06-08","2026-06-09","2026-06-10","2026-06-11","2026-06-12","2026-06-15","2026-06-16","2026-06-17","2026-06-18","2026-06-22","2026-06-23","2026-06-24","2026-06-25","2026-06-26","2026-06-29","2026-06-30","2026-07-01","2026-07-02","2026-07-06","2026-07-07","2026-07-08","2026-07-09","2026-07-10","2026-07-13","2026-07-14","2026-07-15"],"close":[83.84,83.1,84.49,84.35,83.46,85.14,84.44,83.66,84.27,83.6,81.86,81.49,81.36,82.65,82.1,79.77,78.1,78.71,76.8,77.05,79.33,76.44,75.87,78.45,78.98,78.92,79.78,82.44,82.4,83.4,85.9,86.47,87.18,85.28,85.22,83.89,81.64,84.26,85.78,85.09,84.61,81.81,83.56,84.27,82.61,82.46,82.5,82.02,81.69,82.67,82.1,79.34,79.5,80.08,81.26,81.05,81.19,80.84,81.71,79.15,77.87,78.12,78.2,78.2,79.05,80.99,81.44,79.71,81.53,79.72,84.15,83.46,82.28,81.22,83.5,83.98,83.33,82.91,83.2,82.76,79.96,77.17,79.73,81.39,81.34,81.38,82.39,82.16,82.97,83.2,85.78,87.54,86.51,85.96,86.47,88.16,87.66,86.0,87.45,85.96,85.85,87.54,85.98,85.76,85.11,86.28,88.58,86.68,87.36,85.88,86.95,89.66,89.72,90.78,91.18,90.46,91.99,94.37,95.18,94.82,93.64,91.33,92.21,91.79,90.09,87.93]}},{"ticker":"ANET","name":"Arista Networks","sector":"Information Technology","sector_rank":2,"setup":"PULLBACK_TO_VALUE","setup_human":"Pullback to value","score":40.0,"total_score":3.9,"rs_percentile":11,"thesis":"Arista Networks \u2014 pullback to value in Information Technology (sector rank #2), relative strength top 89% of candidates, flow diverging.","entry":171.51,"entry_type":"At market (price at high-volume node)","stop":157.1,"stop_ref":"anchored VWAP","target":208.71,"target_ref":"measured move (value-area width projected)","rr":2.58,"free_flow":185.93,"stop_pct":8.4,"stop_atr":1.3,"close":171.51,"poc":142.95,"vah":161.55,"val":124.35,"avwap":157.1,"avwap_dist":9.2,"atr":11.5,"flow_state":"diverging","pct_from_52w_high":8.3,"breadth":35,"theme":"AI Infrastructure","fundamentals":{"trailingEps":2.9,"forwardEps":4.45582,"revenueGrowth":0.351,"earningsGrowth":0.25,"profitMargins":0.38317},"ooda":{"observe":["Profitable today: trailing 12m EPS 2.90, net margin 38%","Real demand: quarterly revenue growing +35% YoY","Order-book proxy: forward EPS 4.46 above trailing 2.90 \u2014 analysts see the pipeline growing","Price structure: pullback to value, flow diverging, +9.2% vs anchored VWAP.","Order-book data is not in free feeds \u2014 forward-vs-trailing EPS is the proxy."],"orient":["AI-infrastructure basket is Weakening vs SPY (RS-ratio 103.4, momentum -3.9%), included by config policy 'always'.","Regime RISK_ON_TRENDING: SPY in confirmed uptrend and 2/3 macro checks risk-on \u2014 full idea generation.","Theme breadth: 35% of basket members above their 50DMA."],"decide":["Earnings-backed: PASS \u2014 kept in the ranked list. Use the AI-infra filter above the ideas grid to exclude (or isolate) theme names if you judge the theme crowded."],"act":["Execute per the plan below \u2014 entry, structural stop, target, free-flow at +1R, and regime invalidation."]},"risks":[{"level":"medium","text":"Trading 9% above anchored VWAP \u2014 mildly extended; prefer limit fills over market entries."},{"level":"high","text":"Volume-flow divergence: price made new highs that the flow line did not confirm \u2014 demand may be thinning."},{"level":"medium","text":"Narrow sector leadership: only 35% of sector members are above their 50DMA \u2014 the sector move rests on few names."},{"level":"info","text":"Stop sits 8.4% below entry (~1.3 ATR), below anchored VWAP."},{"level":"info","text":"Reward/risk of 2.58 is close to the 2.5 floor \u2014 any slippage on entry meaningfully degrades the trade."},{"level":"medium","text":"AI-infrastructure basket is Weakening vs SPY \u2014 the theme tailwind is fading; this idea rests on stock-specific strength."}],"execution":["Entry \u2014 At market (price at high-volume node). Working level: 171.51.","Stop \u2014 157.10 (8.4% risk, ~1.3 ATR), placed below anchored VWAP. Structural, never percentage-based.","Target \u2014 208.71 (measured move (value-area width projected)); reward/risk 2.6.","Free-flow \u2014 at 185.93 (+1R) sell half; the remainder then rides at breakeven-or-better even if stopped.","Invalidation \u2014 idea is void on a daily close below the stop reference or if the weekly regime turns RISK_OFF."],"spark":{"dates":["2026-01-13","2026-01-14","2026-01-15","2026-01-16","2026-01-20","2026-01-21","2026-01-22","2026-01-23","2026-01-26","2026-01-27","2026-01-28","2026-01-29","2026-01-30","2026-02-02","2026-02-03","2026-02-04","2026-02-05","2026-02-06","2026-02-09","2026-02-10","2026-02-11","2026-02-12","2026-02-13","2026-02-17","2026-02-18","2026-02-19","2026-02-20","2026-02-23","2026-02-24","2026-02-25","2026-02-26","2026-02-27","2026-03-02","2026-03-03","2026-03-04","2026-03-05","2026-03-06","2026-03-09","2026-03-10","2026-03-11","2026-03-12","2026-03-13","2026-03-16","2026-03-17","2026-03-18","2026-03-19","2026-03-20","2026-03-23","2026-03-24","2026-03-25","2026-03-26","2026-03-27","2026-03-30","2026-03-31","2026-04-01","2026-04-02","2026-04-06","2026-04-07","2026-04-08","2026-04-09","2026-04-10","2026-04-13","2026-04-14","2026-04-15","2026-04-16","2026-04-17","2026-04-20","2026-04-21","2026-04-22","2026-04-23","2026-04-24","2026-04-27","2026-04-28","2026-04-29","2026-04-30","2026-05-01","2026-05-04","2026-05-05","2026-05-06","2026-05-07","2026-05-08","2026-05-11","2026-05-12","2026-05-13","2026-05-14","2026-05-15","2026-05-18","2026-05-19","2026-05-20","2026-05-21","2026-05-22","2026-05-26","2026-05-27","2026-05-28","2026-05-29","2026-06-01","2026-06-02","2026-06-03","2026-06-04","2026-06-05","2026-06-08","2026-06-09","2026-06-10","2026-06-11","2026-06-12","2026-06-15","2026-06-16","2026-06-17","2026-06-18","2026-06-22","2026-06-23","2026-06-24","2026-06-25","2026-06-26","2026-06-29","2026-06-30","2026-07-01","2026-07-02","2026-07-06","2026-07-07","2026-07-08","2026-07-09","2026-07-10","2026-07-13","2026-07-14","2026-07-15"],"close":[129.93,125.09,130.59,129.83,127.52,127.29,138.41,136.34,143.72,146.69,150.15,148.15,141.74,138.37,139.39,130.28,128.67,137.49,141.74,143.45,140.66,135.12,141.59,142.58,139.54,137.23,132.79,127.43,128.77,132.89,130.25,133.5,129.3,124.6,134.83,139.4,132.89,137.17,139.62,138.23,134.03,133.57,135.35,133.07,136.07,136.26,131.22,135.88,130.8,135.01,122.55,120.77,116.13,122.78,124.85,126.68,126.25,133.64,145.07,146.05,147.35,152.02,154.37,154.33,161.01,164.23,166.85,172.86,177.73,172.55,176.91,172.47,165.29,168.68,172.71,172.7,172.62,170.22,147.06,141.75,141.77,136.43,142.54,140.69,147.81,141.97,141.71,141.58,140.49,148.59,154.03,158.01,154.31,155.27,159.47,170.68,175.33,174.37,166.01,154.27,156.4,152.16,151.76,156.4,163.24,169.09,168.01,164.93,169.67,174.56,162.2,161.74,165.45,157.6,164.1,169.88,166.62,159.99,173.28,166.46,181.05,184.69,186.96,181.15,182.57,171.51]}}],"watch":[{"ticker":"NTAP","name":"NetApp","sector":"Information Technology","score":80.0,"note":"acceptance breakout but R:R 0.78 below 2.5 floor"},{"ticker":"BEN","name":"Franklin Resources","sector":"Financials","score":80.0,"note":"pullback to value but R:R 2.23 below 2.5 floor"},{"ticker":"AAPL","name":"Apple Inc.","sector":"Information Technology","score":80.0,"note":"acceptance breakout but R:R 1.14 below 2.5 floor"},{"ticker":"GL","name":"Globe Life","sector":"Financials","score":80.0,"note":"pullback to value but R:R 1.03 below 2.5 floor"},{"ticker":"PRU","name":"Prudential Financial","sector":"Financials","score":80.0,"note":"acceptance breakout but R:R 0.78 below 2.5 floor"},{"ticker":"MSCI","name":"MSCI Inc.","sector":"Financials","score":80.0,"note":"acceptance breakout but R:R 1.32 below 2.5 floor"},{"ticker":"RF","name":"Regions Financial Corporation","sector":"Financials","score":80.0,"note":"acceptance breakout but R:R 1.17 below 2.5 floor"},{"ticker":"WAT","name":"Waters Corporation","sector":"Health Care","score":80.0,"note":"pullback to value but R:R 0.92 below 2.5 floor"},{"ticker":"HBAN","name":"Huntington Bancshares","sector":"Financials","score":80.0,"note":"pullback to value but R:R 0.64 below 2.5 floor"},{"ticker":"KEY","name":"KeyCorp","sector":"Financials","score":80.0,"note":"acceptance breakout but R:R 0.56 below 2.5 floor"},{"ticker":"XYZ","name":"Block, Inc.","sector":"Financials","score":78.0,"note":"acceptance breakout but R:R 1.52 below 2.5 floor"},{"ticker":"BIIB","name":"Biogen","sector":"Health Care","score":62.5,"note":"pullback to value but R:R 2.02 below 2.5 floor"},{"ticker":"AMD","name":"Advanced Micro Devices","sector":"Information Technology","score":60.0,"note":"pullback to value but R:R 1.5 below 2.5 floor"},{"ticker":"CDNS","name":"Cadence Design Systems","sector":"Information Technology","score":60.0,"note":"pullback to value but R:R 1.0 below 2.5 floor"},{"ticker":"ASML","name":"ASML Holding","sector":"Information Technology","score":60.0,"note":"pullback to value but R:R 0.75 below 2.5 floor"},{"ticker":"SOLV","name":"Solventum","sector":"Health Care","score":60.0,"note":"pullback to value but R:R 1.4 below 2.5 floor"},{"ticker":"ADI","name":"Analog Devices","sector":"Information Technology","score":58.9,"note":"pullback to value but R:R 1.8 below 2.5 floor"},{"ticker":"TXN","name":"Texas Instruments","sector":"Information Technology","score":58.8,"note":"pullback to value but R:R 0.89 below 2.5 floor"},{"ticker":"DDOG","name":"Datadog","sector":"Information Technology","score":40.0,"note":"breakout extended (41 sessions above VAH)"},{"ticker":"DELL","name":"Dell Technologies","sector":"Information Technology","score":40.0,"note":"breakout extended (32 sessions above VAH)"},{"ticker":"PANW","name":"Palo Alto Networks","sector":"Information Technology","score":40.0,"note":"breakout extended (42 sessions above VAH)"},{"ticker":"FTNT","name":"Fortinet","sector":"Information Technology","score":40.0,"note":"breakout extended (40 sessions above VAH)"},{"ticker":"CRWD","name":"CrowdStrike","sector":"Information Technology","score":40.0,"note":"breakout extended (42 sessions above VAH)"},{"ticker":"DVA","name":"DaVita","sector":"Health Care","score":40.0,"note":"breakout extended (15 sessions above VAH)"},{"ticker":"FFIV","name":"F5, Inc.","sector":"Information Technology","score":40.0,"note":"breakout extended (43 sessions above VAH)"},{"ticker":"CSCO","name":"Cisco","sector":"Information Technology","score":40.0,"note":"no qualifying structure yet"},{"ticker":"WST","name":"West Pharmaceutical Services","sector":"Health Care","score":40.0,"note":"breakout extended (29 sessions above VAH)"},{"ticker":"CRL","name":"Charles River Laboratories","sector":"Health Care","score":40.0,"note":"breakout extended (16 sessions above VAH)"},{"ticker":"ELV","name":"Elevance Health","sector":"Health Care","score":40.0,"note":"pullback to value but R:R 1.21 below 2.5 floor"},{"ticker":"AIZ","name":"Assurant","sector":"Financials","score":40.0,"note":"breakout extended (28 sessions above VAH)"},{"ticker":"NTRS","name":"Northern Trust","sector":"Financials","score":40.0,"note":"no qualifying structure yet"},{"ticker":"VTRS","name":"Viatris","sector":"Health Care","score":40.0,"note":"no qualifying structure yet"},{"ticker":"RVTY","name":"Revvity","sector":"Health Care","score":40.0,"note":"pullback to value but R:R 0.64 below 2.5 floor"},{"ticker":"FITB","name":"Fifth Third Bancorp","sector":"Financials","score":40.0,"note":"breakout extended (16 sessions above VAH)"},{"ticker":"ABBV","name":"AbbVie","sector":"Health Care","score":40.0,"note":"no qualifying structure yet"},{"ticker":"V","name":"Visa Inc.","sector":"Financials","score":40.0,"note":"breakout extended (13 sessions above VAH)"},{"ticker":"PNC","name":"PNC Financial Services","sector":"Financials","score":40.0,"note":"breakout extended (16 sessions above VAH)"},{"ticker":"CPAY","name":"Corpay","sector":"Financials","score":40.0,"note":"no qualifying structure yet"},{"ticker":"HSIC","name":"Henry Schein","sector":"Health Care","score":40.0,"note":"breakout extended (15 sessions above VAH)"},{"ticker":"MTB","name":"M&T Bank","sector":"Financials","score":40.0,"note":"breakout extended (16 sessions above VAH)"},{"ticker":"ALL","name":"Allstate","sector":"Financials","score":40.0,"note":"breakout extended (16 sessions above VAH)"},{"ticker":"TRV","name":"Travelers Companies (The)","sector":"Financials","score":40.0,"note":"breakout extended (16 sessions above VAH)"},{"ticker":"HUM","name":"Humana","sector":"Health Care","score":0.0,"note":"breakout extended (46 sessions above VAH)"},{"ticker":"CNC","name":"Centene Corporation","sector":"Health Care","score":0.0,"note":"breakout extended (46 sessions above VAH)"},{"ticker":"CVS","name":"CVS Health","sector":"Health Care","score":0.0,"note":"breakout extended (28 sessions above VAH)"},{"ticker":"UNH","name":"UnitedHealth Group","sector":"Health Care","score":0.0,"note":"breakout extended (46 sessions above VAH)"},{"ticker":"STT","name":"State Street Corporation","sector":"Financials","score":0.0,"note":"no qualifying structure yet"},{"ticker":"GS","name":"Goldman Sachs","sector":"Financials","score":0.0,"note":"breakout extended (38 sessions above VAH)"},{"ticker":"IBKR","name":"Interactive Brokers","sector":"Financials","score":0.0,"note":"breakout extended (26 sessions above VAH)"},{"ticker":"LLY","name":"Lilly (Eli)","sector":"Health Care","score":0.0,"note":"breakout extended (13 sessions above VAH)"},{"ticker":"MS","name":"Morgan Stanley","sector":"Financials","score":0.0,"note":"breakout extended (38 sessions above VAH)"},{"ticker":"TROW","name":"T. Rowe Price","sector":"Financials","score":0.0,"note":"breakout extended (28 sessions above VAH)"},{"ticker":"BNY","name":"BNY Mellon","sector":"Financials","score":0.0,"note":"breakout extended (37 sessions above VAH)"},{"ticker":"IVZ","name":"Invesco","sector":"Financials","score":0.0,"note":"no qualifying structure yet"},{"ticker":"MET","name":"MetLife","sector":"Financials","score":0.0,"note":"closes above VAH but flow not confirming"},{"ticker":"PFG","name":"Principal Financial Group","sector":"Financials","score":0.0,"note":"no qualifying structure yet"},{"ticker":"INCY","name":"Incyte","sector":"Health Care","score":0.0,"note":"breakout extended (15 sessions above VAH)"},{"ticker":"BAC","name":"Bank of America","sector":"Financials","score":0.0,"note":"breakout extended (25 sessions above VAH)"},{"ticker":"USB","name":"U.S. Bancorp","sector":"Financials","score":0.0,"note":"breakout extended (16 sessions above VAH)"},{"ticker":"JPM","name":"JPMorgan Chase","sector":"Financials","score":0.0,"note":"breakout extended (20 sessions above VAH)"},{"ticker":"CI","name":"Cigna","sector":"Health Care","score":0.0,"note":"closes above VAH but flow not confirming"},{"ticker":"CFG","name":"Citizens Financial Group","sector":"Financials","score":0.0,"note":"breakout extended (17 sessions above VAH)"}],"near_misses":[{"ticker":"ALAB","name":"Astera Labs","sector":"Information Technology","failed_filter":"near 52w high"},{"ticker":"HPE","name":"Hewlett Packard Enterprise","sector":"Information Technology","failed_filter":"near 52w high"},{"ticker":"MU","name":"Micron Technology","sector":"Information Technology","failed_filter":"near 52w high"},{"ticker":"SNDK","name":"Sandisk","sector":"Information Technology","failed_filter":"near 52w high"},{"ticker":"ARM","name":"Arm Holdings","sector":"Information Technology","failed_filter":"near 52w high"},{"ticker":"FLEX","name":"Flex Ltd.","sector":"Information Technology","failed_filter":"near 52w high"},{"ticker":"INTC","name":"Intel","sector":"Information Technology","failed_filter":"near 52w high"},{"ticker":"MRVL","name":"Marvell Technology","sector":"Information Technology","failed_filter":"near 52w high"},{"ticker":"STX","name":"Seagate Technology","sector":"Information Technology","failed_filter":"near 52w high"},{"ticker":"AMAT","name":"Applied Materials","sector":"Information Technology","failed_filter":"near 52w high"},{"ticker":"GEN","name":"Gen Digital","sector":"Information Technology","failed_filter":"near 52w high"},{"ticker":"WDC","name":"Western Digital","sector":"Information Technology","failed_filter":"near 52w high"},{"ticker":"QCOM","name":"Qualcomm","sector":"Information Technology","failed_filter":"near 52w high"},{"ticker":"AKAM","name":"Akamai Technologies","sector":"Information Technology","failed_filter":"near 52w high"},{"ticker":"NXPI","name":"NXP Semiconductors","sector":"Information Technology","failed_filter":"near 52w high"},{"ticker":"MRNA","name":"Moderna","sector":"Health Care","failed_filter":"near 52w high"},{"ticker":"ON","name":"ON Semiconductor","sector":"Information Technology","failed_filter":"near 52w high"},{"ticker":"HPQ","name":"HP Inc.","sector":"Information Technology","failed_filter":"near 52w high"},{"ticker":"BAX","name":"Baxter International","sector":"Health Care","failed_filter":"near 52w high"},{"ticker":"KLAC","name":"KLA Corporation","sector":"Information Technology","failed_filter":"near 52w high"},{"ticker":"TECH","name":"Bio-Techne","sector":"Health Care","failed_filter":"50DMA > 200DMA"},{"ticker":"NBIS","name":"Nebius Group","sector":"Information Technology","failed_filter":"near 52w high"},{"ticker":"LRCX","name":"Lam Research","sector":"Information Technology","failed_filter":"near 52w high"},{"ticker":"IQV","name":"IQVIA","sector":"Health Care","failed_filter":"50DMA > 200DMA"},{"ticker":"DXCM","name":"Dexcom","sector":"Health Care","failed_filter":"near 52w high"},{"ticker":"MCO","name":"Moody's Corporation","sector":"Financials","failed_filter":"50DMA > 200DMA"},{"ticker":"MCHP","name":"Microchip Technology","sector":"Information Technology","failed_filter":"near 52w high"},{"ticker":"AMP","name":"Ameriprise Financial","sector":"Financials","failed_filter":"50DMA > 200DMA"},{"ticker":"GPN","name":"Global Payments","sector":"Financials","failed_filter":"50DMA > 200DMA"},{"ticker":"A","name":"Agilent Technologies","sector":"Health Care","failed_filter":"50DMA > 200DMA"},{"ticker":"RJF","name":"Raymond James Financial","sector":"Financials","failed_filter":"50DMA > 200DMA"},{"ticker":"AXP","name":"American Express","sector":"Financials","failed_filter":"50DMA > 200DMA"},{"ticker":"AON","name":"Aon plc","sector":"Financials","failed_filter":"50DMA > 200DMA"},{"ticker":"PWR","name":"Quanta Services","sector":"AI Infrastructure","failed_filter":"near 52w high"},{"ticker":"AFL","name":"Aflac","sector":"Financials","failed_filter":"63d return beats SPY"},{"ticker":"IRM","name":"Iron Mountain","sector":"AI Infrastructure","failed_filter":"63d return beats SPY"},{"ticker":"NVDA","name":"Nvidia","sector":"Information Technology","failed_filter":"63d return beats SPY"},{"ticker":"TFC","name":"Truist Financial","sector":"Financials","failed_filter":"63d return beats SPY"},{"ticker":"VRTX","name":"Vertex Pharmaceuticals","sector":"Health Care","failed_filter":"63d return beats SPY"},{"ticker":"EG","name":"Everest Group","sector":"Financials","failed_filter":"63d return beats SPY"},{"ticker":"GEV","name":"GE Vernova","sector":"AI Infrastructure","failed_filter":"63d return beats SPY"},{"ticker":"CINF","name":"Cincinnati Financial","sector":"Financials","failed_filter":"63d return beats SPY"},{"ticker":"APH","name":"Amphenol","sector":"Information Technology","failed_filter":"63d return beats SPY"},{"ticker":"CAH","name":"Cardinal Health","sector":"Health Care","failed_filter":"63d return beats SPY"},{"ticker":"DGX","name":"Quest Diagnostics","sector":"Health Care","failed_filter":"63d return beats SPY"},{"ticker":"JNJ","name":"Johnson & Johnson","sector":"Health Care","failed_filter":"63d return beats SPY"},{"ticker":"C","name":"Citigroup","sector":"Financials","failed_filter":"63d return beats SPY"},{"ticker":"MRK","name":"Merck & Co.","sector":"Health Care","failed_filter":"63d return beats SPY"},{"ticker":"CB","name":"Chubb Limited","sector":"Financials","failed_filter":"63d return beats SPY"},{"ticker":"AMGN","name":"Amgen","sector":"Health Care","failed_filter":"63d return beats SPY"},{"ticker":"ETN","name":"Eaton Corporation","sector":"AI Infrastructure","failed_filter":"63d return beats SPY"},{"ticker":"L","name":"Loews Corporation","sector":"Financials","failed_filter":"63d return beats SPY"},{"ticker":"ACGL","name":"Arch Capital Group","sector":"Financials","failed_filter":"63d return beats SPY"},{"ticker":"BMY","name":"Bristol Myers Squibb","sector":"Health Care","failed_filter":"63d return beats SPY"},{"ticker":"VRSN","name":"Verisign","sector":"Information Technology","failed_filter":"63d return beats SPY"},{"ticker":"ALGN","name":"Align Technology","sector":"Health Care","failed_filter":"63d return beats SPY"},{"ticker":"KEYS","name":"Keysight Technologies","sector":"Information Technology","failed_filter":"63d return beats SPY"},{"ticker":"EQIX","name":"Equinix","sector":"AI Infrastructure","failed_filter":"63d return beats SPY"},{"ticker":"TDY","name":"Teledyne Technologies","sector":"Information Technology","failed_filter":"63d return beats SPY"},{"ticker":"GILD","name":"Gilead Sciences","sector":"Health Care","failed_filter":"63d return beats SPY"},{"ticker":"DLR","name":"Digital Realty","sector":"AI Infrastructure","failed_filter":"63d return beats SPY"},{"ticker":"HUBB","name":"Hubbell Incorporated","sector":"AI Infrastructure","failed_filter":"63d return beats SPY"}],"config":{"min_rr":2.5,"max_ideas":10,"top_n_sectors":3}};
+
+const $=s=>document.querySelector(s), esc=t=>String(t).replace(/[&<>"]/g,
+  c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const F={sectors:new Set(DATA.ideas.map(i=>i.sector)), setup:"ALL", minScore:0, minRR:0, sort:"total_score", theme:"all"};
+const tip=document.createElement("div"); tip.className="tip"; document.body.appendChild(tip);
+function showTip(e,html){tip.innerHTML=html;tip.style.display="block";
+  tip.style.left=Math.min(e.clientX+14,innerWidth-tip.offsetWidth-8)+"px";
+  tip.style.top=(e.clientY+14)+"px";}
+function hideTip(){tip.style.display="none";}
+
+const REGIME_CLASS={RISK_ON_TRENDING:"on",RISK_ON_RANGING:"range",TRANSITION:"trans",RISK_OFF:"off"};
+const REGIME_HUMAN={RISK_ON_TRENDING:"Risk-on · trending",RISK_ON_RANGING:"Risk-on · ranging",
+  TRANSITION:"Transition · mixed",RISK_OFF:"Risk-off · no new longs"};
+
+function renderRegime(){
+  const r=DATA.regime;
+  $("#regime-pill").className="pill "+(REGIME_CLASS[r.label]||"trans");
+  $("#regime-pill").textContent=REGIME_HUMAN[r.label]||r.label;
+  $("#regime-expl").textContent=r.explanation;
+  $("#sigs").innerHTML=r.signals.map(s=>{
+    const v=s.passed===null?["·","na"]:(s.passed?["PASS","ok"]:["FAIL","fail"]);
+    return `<div class="sig"><b>${esc(s.name)}</b><span class="v">${esc(s.value)}</span>
+      <span class="${v[1]}" style="float:right;font-weight:700">${v[0]}</span>
+      <div class="rule">${esc(s.rule)}</div></div>`;}).join("");
+}
+
+function renderFunnel(){
+  const f=DATA.funnel, steps=[["Universe",f.universe],["Screened",f.screened],
+    ["Candidates",f.candidates],["With setup",f.qualified],["Final ideas",f.ideas]];
+  $("#funnel").innerHTML=steps.map(([l,n])=>
+    `<div class="tile"><div class="n">${n}</div><div class="l">${l}</div></div>`).join("");
+}
+
+function renderRRG(){
+  const rows=DATA.sectors.rows, W=440, H=330, m={t:16,r:14,b:30,l:40};
+  const xs=rows.map(r=>r.rs_ratio), ys=rows.map(r=>r.rs_momentum);
+  rows.forEach(r=>(r.trail||[]).forEach(p=>{xs.push(p.r);ys.push(p.m);}));
+  const xpad=Math.max(2,(Math.max(...xs)-Math.min(...xs))*.12);
+  const ypad=Math.max(2,(Math.max(...ys)-Math.min(...ys))*.12);
+  const x0=Math.min(...xs)-xpad,x1=Math.max(...xs)+xpad,y0=Math.min(...ys)-ypad,y1=Math.max(...ys)+ypad;
+  const X=v=>m.l+(v-x0)/(x1-x0)*(W-m.l-m.r), Y=v=>H-m.b-(v-y0)/(y1-y0)*(H-m.t-m.b);
+  let g=`<rect x="${m.l}" y="${m.t}" width="${W-m.l-m.r}" height="${H-m.t-m.b}" fill="none" stroke="var(--grid)"/>`;
+  if(100>x0&&100<x1) g+=`<line x1="${X(100)}" y1="${m.t}" x2="${X(100)}" y2="${H-m.b}" stroke="var(--axis)"/>`;
+  if(0>y0&&0<y1) g+=`<line x1="${m.l}" y1="${Y(0)}" x2="${W-m.r}" y2="${Y(0)}" stroke="var(--axis)"/>`;
+  const quad=[["Leading",x1,y1,"end","hanging"],["Improving",x0,y1,"start","hanging"],
+    ["Weakening",x1,y0,"end","auto"],["Lagging",x0,y0,"start","auto"]];
+  g+=quad.map(([t,qx,qy,a,b])=>`<text x="${X(qx)+(a=="end"?-6:6)}" y="${Y(qy)+(b=="hanging"?6:-6)}"
+     text-anchor="${a}" dominant-baseline="${b}" font-weight="600">${t}</text>`).join("");
+  g+=`<text x="${(m.l+W-m.r)/2}" y="${H-6}" text-anchor="middle">RS-ratio (vs SPY, 100 = neutral)</text>`;
+  g+=`<text x="12" y="${(m.t+H-m.b)/2}" transform="rotate(-90 12 ${(m.t+H-m.b)/2})" text-anchor="middle">RS-momentum %</text>`;
+  // labels greedily dodged vertically so clustered sectors stay readable
+  const placed=[];
+  rows.forEach(r=>{
+    const c=r.selected?"var(--s1)":"var(--muted)";
+    if(r.selected&&r.trail&&r.trail.length>1)
+      g+=`<polyline points="${r.trail.slice(-3).map(p=>X(p.r)+","+Y(p.m)).join(" ")}" fill="none" stroke="${c}" stroke-width="1" opacity=".45"/>`;
+    g+=`<circle class="pt" data-etf="${r.etf}" cx="${X(r.rs_ratio)}" cy="${Y(r.rs_momentum)}"
+        r="${r.selected?6:4}" fill="${r.selected?c:"var(--surface)"}" stroke="${c}" stroke-width="2"/>`;
+    let lx=X(r.rs_ratio)+8, ly=Y(r.rs_momentum)+3.5;
+    for(let guard=0;guard<12&&placed.some(p=>Math.abs(p[0]-lx)<34&&Math.abs(p[1]-ly)<11);guard++) ly+=11;
+    placed.push([lx,ly]);
+    g+=`<text x="${lx}" y="${ly}" ${r.selected?'font-weight="700" fill="var(--ink-2)"':''}>${r.etf==="AI_INFRA"?"AI-infra":r.etf}</text>`;
+  });
+  $("#rrg").innerHTML=g;
+  $("#rrg").querySelectorAll(".pt").forEach(el=>{
+    const r=rows.find(q=>q.etf===el.dataset.etf);
+    el.addEventListener("mousemove",e=>showTip(e,`<b>${r.etf}</b> ${esc(r.name)}<br>
+      RS-ratio ${r.rs_ratio} · RS-mom ${r.rs_momentum}%<br>
+      21d rel ${r.rel_21d}% · 63d rel ${r.rel_63d}%<br>${r.quadrant}${r.selected?" · selected #"+r.rank:""}`));
+    el.addEventListener("mouseleave",hideTip);
+  });
+}
+
+function renderSectorTable(){
+  $("#sectbl").innerHTML=`<tr><th>ETF</th><th>Sector</th><th>21d rel</th><th>63d rel</th>
+    <th>RS-ratio</th><th>Quadrant</th><th>Breadth</th><th>Sel</th></tr>`+
+    DATA.sectors.rows.map(r=>`<tr class="${r.selected?"sel":""}"><td><b>${r.etf}</b></td>
+      <td>${esc(r.name)}</td><td>${r.rel_21d>0?"+":""}${r.rel_21d}%</td>
+      <td>${r.rel_63d>0?"+":""}${r.rel_63d}%</td><td>${r.rs_ratio}</td><td>${r.quadrant}</td>
+      <td>${r.breadth==null?"—":Math.round(r.breadth*100)+"%"}</td>
+      <td>${r.selected?"#"+r.rank:""}</td></tr>`).join("");
+}
+
+function sparkline(i){
+  const W=340,H=130,m={t:8,r:58,b:16,l:8},cl=i.spark.close;
+  const lv=[i.poc,i.vah,i.val,i.avwap,i.entry,i.stop,i.target];
+  const lo=Math.min(...cl,...lv)*0.995, hi=Math.max(...cl,...lv)*1.005;
+  const X=k=>m.l+k/(cl.length-1)*(W-m.l-m.r), Y=v=>m.t+(hi-v)/(hi-lo)*(H-m.t-m.b);
+  const line=cl.map((v,k)=>(k?"L":"M")+X(k).toFixed(1)+" "+Y(v).toFixed(1)).join("");
+  let g=`<rect x="${m.l}" y="${Y(i.vah)}" width="${W-m.l-m.r-m.l}" height="${Math.max(0,Y(i.val)-Y(i.vah))}" fill="var(--wash)"/>`;
+  g+=`<line x1="${m.l}" x2="${W-m.r}" y1="${Y(i.poc)}" y2="${Y(i.poc)}" stroke="var(--s5)" stroke-dasharray="4 3" stroke-width="1.2"/>`;
+  g+=`<line x1="${m.l}" x2="${W-m.r}" y1="${Y(i.avwap)}" y2="${Y(i.avwap)}" stroke="var(--s2)" stroke-dasharray="1.5 2.5" stroke-width="1.4"/>`;
+  g+=`<path d="${line}" fill="none" stroke="var(--s1)" stroke-width="2" stroke-linejoin="round"/>`;
+  // right-gutter level labels, dodged so they never overlap
+  const marks=[["E",i.entry,"var(--s1)"],["S",i.stop,"var(--crit)"],["T",i.target,"var(--good)"]]
+    .map(([t,v,c])=>({t,v,c,y:Math.max(m.t+4,Math.min(H-m.b-2,Y(v)))}))
+    .sort((a,b)=>a.y-b.y);
+  for(let k=1;k<marks.length;k++)
+    if(marks[k].y-marks[k-1].y<12) marks[k].y=marks[k-1].y+12;
+  marks.forEach(mk=>{
+    g+=`<line x1="${W-m.r}" x2="${W-m.r+6}" y1="${Math.max(m.t+4,Math.min(H-m.b-2,Y(mk.v)))}" y2="${mk.y}" stroke="${mk.c}" stroke-width="1.5"/>`;
+    g+=`<text x="${W-m.r+9}" y="${mk.y+3.5}" fill="${mk.c}" font-weight="700">${mk.t} ${mk.v}</text>`;});
+  g+=`<rect class="hover" x="${m.l}" y="${m.t}" width="${W-m.l-m.r}" height="${H-m.t-m.b}" fill="transparent"/>`;
+  g+=`<line class="xh" y1="${m.t}" y2="${H-m.b}" stroke="var(--axis)" style="display:none"/>`;
+  return {svg:g,W,H,m,X,Y};
+}
+
+function ideaCard(i,rank){
+  const sp=sparkline(i);
+  const badge=i.setup==="ACCEPTANCE_BREAKOUT"?"bo":"pb";
+  return `<div class="card idea" data-t="${i.ticker}">
+    <div class="head"><h3>${rank}. ${i.ticker}</h3><span class="sub">${esc(i.name)}</span>
+      <span class="score" title="structure × sector weight × RS percentile">${i.total_score}</span></div>
+    <div class="row" style="gap:6px;margin-top:4px">
+      <span class="badge ${badge}">${i.setup_human}</span>
+      <span class="badge">${esc(i.sector)} #${i.sector_rank}</span>
+      <span class="badge">RS p${i.rs_percentile}</span>
+      <span class="badge">flow: ${i.flow_state}</span>
+      ${i.theme?`<span class="badge ai" title="Passed the earnings + orders gate">⚡ AI infra · earnings-backed</span>`:""}</div>
+    <p class="thesis">${esc(i.thesis)}</p>
+    <svg class="spark" viewBox="0 0 ${sp.W} ${sp.H}" preserveAspectRatio="none">${sp.svg}</svg>
+    <div class="legend"><span><span class="sw" style="background:var(--s1)"></span>close (126d)</span>
+      <span><span class="sw" style="background:var(--s5)"></span>POC</span>
+      <span><span class="sw" style="background:var(--s2)"></span>AVWAP</span>
+      <span><span class="sw" style="background:var(--wash);height:8px"></span>value area</span></div>
+    <div class="lvls">
+      <div class="lvl entry"><div class="k">Entry</div><div class="x">${i.entry}</div></div>
+      <div class="lvl stop"><div class="k">Stop</div><div class="x">${i.stop}</div></div>
+      <div class="lvl tgt"><div class="k">Target</div><div class="x">${i.target}</div></div>
+      <div class="lvl"><div class="k">R : R</div><div class="x">${i.rr}</div></div>
+      <div class="lvl"><div class="k">Free-flow</div><div class="x">${i.free_flow}</div></div></div>
+    <details><summary>How it executes (${i.execution.length} steps)</summary>
+      <ol class="steps">${i.execution.map(s=>`<li>${esc(s)}</li>`).join("")}</ol></details>
+    ${i.ooda?`<details open><summary>OODA — earnings &amp; orders check</summary>
+      <div class="ooda">${["observe","orient","decide","act"].map(ph=>
+        `<div class="ph"><b>${ph}</b><ul>${i.ooda[ph].map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`).join("")}
+      </div></details>`:""}
+    <details open><summary>Risk remarks (${i.risks.length})</summary>
+      <ul class="risks">${i.risks.map(r=>`<li><span class="dot ${r.level}"></span>
+        <span><span class="rlab ${r.level}">${r.level}</span> ${esc(r.text)}</span></li>`).join("")}</ul></details>
+  </div>`;
+}
+
+function attachSparkHover(card,i){
+  const svg=card.querySelector(".spark"),hov=svg.querySelector(".hover"),xh=svg.querySelector(".xh");
+  const sp={W:340,m:{l:8,r:58}};
+  hov.addEventListener("mousemove",e=>{
+    const r=svg.getBoundingClientRect();
+    const fx=(e.clientX-r.left)/r.width*sp.W;
+    const k=Math.max(0,Math.min(i.spark.close.length-1,
+      Math.round((fx-sp.m.l)/(sp.W-sp.m.l-sp.m.r)*(i.spark.close.length-1))));
+    const px=sp.m.l+k/(i.spark.close.length-1)*(sp.W-sp.m.l-sp.m.r);
+    xh.setAttribute("x1",px);xh.setAttribute("x2",px);xh.style.display="";
+    showTip(e,`<b>${i.ticker}</b> ${i.spark.dates[k]}<br>close ${i.spark.close[k]}`);
+  });
+  hov.addEventListener("mouseleave",()=>{xh.style.display="none";hideTip();});
+}
+
+function visibleIdeas(){
+  return DATA.ideas.filter(i=>F.sectors.has(i.sector)&&
+    (F.setup==="ALL"||i.setup===F.setup)&&i.total_score>=F.minScore&&i.rr>=F.minRR&&
+    (F.theme==="all"||(F.theme==="exclude"?!i.theme:!!i.theme)))
+    .sort((a,b)=>b[F.sort]-a[F.sort]);
+}
+
+function renderIdeas(){
+  const v=visibleIdeas();
+  $("#count").textContent=`showing ${v.length} of ${DATA.ideas.length} ideas`;
+  const grid=$("#ideas");
+  grid.innerHTML=v.length?v.map((i,k)=>ideaCard(i,k+1)).join("")
+    :`<div class="card empty">No ideas match the current filters${DATA.ideas.length?"":" — the engine produced none this run"}.</div>`;
+  v.forEach(i=>attachSparkHover(grid.querySelector(`[data-t="${i.ticker}"]`),i));
+}
+
+function renderControls(){
+  const secs=[...new Set(DATA.ideas.map(i=>i.sector))];
+  $("#secchips").innerHTML=secs.map(s=>
+    `<span class="chip act" data-s="${esc(s)}">${esc(s)}</span>`).join("");
+  $("#secchips").querySelectorAll(".chip").forEach(ch=>ch.addEventListener("click",()=>{
+    const s=ch.dataset.s;
+    if(F.sectors.has(s)&&F.sectors.size>1){F.sectors.delete(s);ch.classList.remove("act");}
+    else{F.sectors.add(s);ch.classList.add("act");}
+    renderIdeas();}));
+  $("#setup").addEventListener("change",e=>{F.setup=e.target.value;renderIdeas();});
+  $("#minscore").addEventListener("input",e=>{F.minScore=+e.target.value;
+    $("#minscore-v").textContent=e.target.value;renderIdeas();});
+  $("#minrr").addEventListener("input",e=>{F.minRR=+e.target.value;
+    $("#minrr-v").textContent=(+e.target.value).toFixed(1);renderIdeas();});
+  $("#sort").addEventListener("change",e=>{F.sort=e.target.value;renderIdeas();});
+  $("#theme").addEventListener("change",e=>{F.theme=e.target.value;renderIdeas();});
+}
+
+function renderAppendix(){
+  $("#watch").innerHTML=`<tr><th>Ticker</th><th>Sector</th><th>Structure score</th><th>Why it is only a watch</th></tr>`+
+    (DATA.watch.map(w=>`<tr><td><b>${w.ticker}</b> <span class="sub">${esc(w.name)}</span></td>
+     <td>${esc(w.sector)}</td><td>${w.score}</td><td>${esc(w.note)}</td></tr>`).join("")||
+     `<tr><td colspan="4" class="sub">none</td></tr>`);
+  $("#near").innerHTML=`<tr><th>Ticker</th><th>Sector</th><th>Failed filter</th></tr>`+
+    (DATA.near_misses.map(n=>`<tr><td><b>${n.ticker}</b> <span class="sub">${esc(n.name)}</span></td>
+     <td>${esc(n.sector)}</td><td>${esc(n.failed_filter)}</td></tr>`).join("")||
+     `<tr><td colspan="3" class="sub">none</td></tr>`);
+}
+
+$("#run-date").textContent=DATA.run_date;
+renderRegime();renderFunnel();renderRRG();renderSectorTable();renderControls();renderIdeas();renderAppendix();
+</script>
+</body></html>
