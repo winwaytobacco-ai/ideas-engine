@@ -7,7 +7,7 @@ SPY in confirmed uptrend and 2/3 macro checks risk-on — full idea generation.
 | Signal | Reading | Rule | Verdict |
 |---|---|---|---|
 | Credit stress (HY OAS) | 2.69% | < 21d MA (2.73) and < p75 of 252d (2.95) | PASS |
-| Yield curve (10y-2y) | +0.39% (positive, steepening) | informational only in v1 | — |
+| Yield curve (10y-2y) | +0.37% (positive, steepening) | informational only in v1 | — |
 | Volatility (VIX) | 18.6 | < 22 and < 50d MA (17.3) | FAIL |
 | Financial conditions (NFCI) | -0.54 | < 0.0 (loose) | PASS |
 | SPY trend | 748 vs 200DMA 694 | Close > 200DMA, 50DMA > 200DMA, 200DMA slope up over 21d | PASS |
@@ -17,25 +17,25 @@ SPY in confirmed uptrend and 2/3 macro checks risk-on — full idea generation.
 
 | ETF | Sector | 21d rel | 63d rel | RS-ratio | RS-mom | Quadrant | Selected |
 |---|---|---|---|---|---|---|---|
-| XBI | Biotech (breadth 78%) | +9.55% | +6.23% | 109.2 | +6.75% | Leading | #1 |
-| XLV | Health Care (breadth 78%) | +7.28% | +3.07% | 99.6 | +8.30% | Improving | #2 |
-| XLE | Energy (breadth 62%) | +9.15% | +0.92% | 98.6 | +7.24% | Improving | #3 |
-| SMH | Semiconductors | -11.71% | +20.02% | 112.7 | -17.35% | Weakening |  |
-| XLF | Financials | +4.86% | +1.09% | 101.8 | +6.25% | Leading |  |
-| XLK | Information Technology | -5.70% | +11.21% | 107.4 | -8.04% | Weakening |  |
-| IGV | Software | +3.02% | +0.73% | 98.8 | +7.28% | Improving |  |
-| XLRE | Real Estate | +3.73% | -3.73% | 99.3 | +3.31% | Improving |  |
+| XBI | Biotech (breadth 78%) | +9.69% | +6.38% | 109.3 | +6.90% | Leading | #1 |
+| XLV | Health Care (breadth 78%) | +7.53% | +3.33% | 99.8 | +8.55% | Improving | #2 |
+| XLE | Energy (breadth 67%) | +9.38% | +1.14% | 98.8 | +7.45% | Improving | #3 |
+| SMH | Semiconductors | -11.69% | +20.04% | 112.7 | -17.33% | Weakening |  |
+| XLF | Financials | +4.90% | +1.13% | 101.9 | +6.30% | Leading |  |
+| XLK | Information Technology | -5.66% | +11.25% | 107.4 | -8.01% | Weakening |  |
+| IGV | Software | +2.86% | +0.56% | 98.6 | +7.12% | Improving |  |
+| XLRE | Real Estate | +3.75% | -3.71% | 99.4 | +3.32% | Improving |  |
 | XLP | Consumer Staples | +1.41% | -3.12% | 94.7 | +1.54% | Improving |  |
-| XLI | Industrials | -1.21% | -2.87% | 97.9 | -2.01% | Lagging |  |
-| XLU | Utilities | +0.67% | -7.16% | 94.0 | +0.87% | Improving |  |
-| XLC | Communication Services | +0.94% | -12.63% | 91.3 | +3.36% | Improving |  |
-| XLY | Consumer Discretionary | -2.05% | -9.92% | 93.3 | +0.11% | Improving |  |
-| XLB | Materials | -3.00% | -9.43% | 93.2 | -3.12% | Lagging |  |
-| AI_INFRA | AI Infrastructure (breadth 33%) | -4.47% | +0.60% | 104.1 | -8.28% | Weakening | #4 |
+| XLI | Industrials | -1.21% | -2.86% | 97.9 | -2.00% | Lagging |  |
+| XLU | Utilities | +0.79% | -7.04% | 94.1 | +0.99% | Improving |  |
+| XLY | Consumer Discretionary | -1.97% | -9.83% | 93.4 | +0.19% | Improving |  |
+| XLC | Communication Services | +0.59% | -12.96% | 91.0 | +3.00% | Improving |  |
+| XLB | Materials | -3.15% | -9.57% | 93.0 | -3.27% | Lagging |  |
+| AI_INFRA | AI Infrastructure (breadth 33%) | -4.44% | +0.63% | 104.1 | -8.26% | Weakening | #4 |
 
 ## ③ Ranked ideas (2)
 
-### 1. VRTX — Pullback to value (score 17.0)
+### 1. VRTX — Pullback to value (score 16.9)
 
 Vertex Pharmaceuticals — pullback to value in Health Care (sector rank #1), relative strength top 74% of candidates, flow neutral.
 
@@ -47,14 +47,14 @@ Vertex Pharmaceuticals — pullback to value in Health Care (sector rank #1), re
   - (info) No flow confirmation yet (daily close-vs-open volume proxy is flat).
   - (info) Stop sits 3.3% below entry (~1.0 ATR), below anchored VWAP (widened to 1 ATR).
 
-### 2. GEV — Pullback to value (score 7.7)
+### 2. GEV — Pullback to value (score 6.2)
 
-GE Vernova — pullback to value in AI Infrastructure (sector rank #4), relative strength top 84% of candidates, flow neutral.
+GE Vernova — pullback to value in AI Infrastructure (sector rank #4), relative strength top 87% of candidates, flow neutral.
 
-- **Entry:** 1078.6 (At market (price already inside ±1% of POC))
-- **Stop:** 941.07 (below anchored VWAP, 12.8% risk)
+- **Entry:** 1078.81 (At market (price already inside ±1% of POC))
+- **Stop:** 941.22 (below anchored VWAP, 12.8% risk)
 - **Target:** 1482.67 (measured move (value-area width projected))
-- **R:R:** 2.94  |  **Free-flow (+1R):** 1216.13
+- **R:R:** 2.94  |  **Free-flow (+1R):** 1216.4
 - **Risks:**
   - (high) Extended 15% above anchored VWAP — heavy chase risk; wait for the limit level, do not buy at market.
   - (info) No flow confirmation yet (daily close-vs-open volume proxy is flat).
@@ -82,27 +82,27 @@ GE Vernova — pullback to value in AI Infrastructure (sector rank #4), relative
 
 **Watch — no valid trade yet:**
 
-- MPC (Energy, score 80.0): acceptance breakout but R:R 1.39 below 2.5 floor
-- PSX (Energy, score 80.0): acceptance breakout but R:R 1.35 below 2.5 floor
-- CAH (Health Care, score 63.7): pullback to value but R:R 2.17 below 2.5 floor
+- MPC (Energy, score 80.0): acceptance breakout but R:R 1.44 below 2.5 floor
+- PSX (Energy, score 80.0): acceptance breakout but R:R 1.41 below 2.5 floor
+- CAH (Health Care, score 63.0): pullback to value but R:R 2.18 below 2.5 floor
 - HUM (Health Care, score 60.0): pullback to value but R:R 1.0 below 2.5 floor
 - RVTY (Health Care, score 60.0): pullback to value but R:R 0.59 below 2.5 floor
-- WAT (Health Care, score 60.0): pullback to value but R:R 0.82 below 2.5 floor
-- LLY (Health Care, score 59.8): pullback to value but R:R 1.42 below 2.5 floor
 - DELL (AI Infrastructure, score 40.0): no qualifying structure yet
 - DVA (Health Care, score 40.0): pullback to value but R:R 1.12 below 2.5 floor
 - CVS (Health Care, score 40.0): breakout extended (32 sessions above VAH)
 - VLO (Energy, score 40.0): breakout extended (14 sessions above VAH)
 - CSCO (AI Infrastructure, score 40.0): no qualifying structure yet
-- ELV (Health Care, score 40.0): pullback to value but R:R 1.05 below 2.5 floor
+- ELV (Health Care, score 40.0): pullback to value but R:R 1.27 below 2.5 floor
 - INCY (Health Care, score 40.0): breakout extended (19 sessions above VAH)
 - HSIC (Health Care, score 40.0): breakout extended (19 sessions above VAH)
-- FANG (Energy, score 39.1): no qualifying structure yet
+- FANG (Energy, score 39.0): no qualifying structure yet
 - WST (Health Care, score 20.0): breakout extended (33 sessions above VAH)
 - ABBV (Health Care, score 20.0): no qualifying structure yet
 - BIIB (Health Care, score 20.0): no qualifying structure yet
+- WAT (Health Care, score 20.0): no qualifying structure yet
 - JNJ (Health Care, score 20.0): breakout extended (17 sessions above VAH)
 - MRK (Health Care, score 20.0): closes above VAH but flow not confirming
+- LLY (Health Care, score 19.8): breakout extended (17 sessions above VAH)
 - CNC (Health Care, score 0.0): breakout extended (38 sessions above VAH)
 - UNH (Health Care, score 0.0): breakout extended (32 sessions above VAH)
 - TRGP (Energy, score 0.0): breakout extended (11 sessions above VAH)
@@ -117,17 +117,18 @@ GE Vernova — pullback to value in AI Infrastructure (sector rank #4), relative
 - TECH (Health Care): failed “50DMA > 200DMA”
 - BAX (Health Care): failed “near 52w high”
 - DXCM (Health Care): failed “near 52w high”
+- A (Health Care): failed “50DMA > 200DMA”
 - MRNA (Health Care): failed “near 52w high”
 - DGX (Health Care): failed “63d return beats SPY”
 - AMGN (Health Care): failed “63d return beats SPY”
-- IRM (AI Infrastructure): failed “63d return beats SPY”
 - CVX (Energy): failed “63d return beats SPY”
+- IRM (AI Infrastructure): failed “63d return beats SPY”
 - ANET (AI Infrastructure): failed “63d return beats SPY”
+- CI (Health Care): failed “63d return beats SPY”
 - WMB (Energy): failed “63d return beats SPY”
-- LH (Health Care): failed “63d return beats SPY”
 - BMY (Health Care): failed “63d return beats SPY”
 - OXY (Energy): failed “63d return beats SPY”
-- CI (Health Care): failed “63d return beats SPY”
+- LH (Health Care): failed “63d return beats SPY”
 - EW (Health Care): failed “63d return beats SPY”
 - XOM (Energy): failed “63d return beats SPY”
 - KMI (Energy): failed “63d return beats SPY”
@@ -136,8 +137,8 @@ GE Vernova — pullback to value in AI Infrastructure (sector rank #4), relative
 - DVN (Energy): failed “63d return beats SPY”
 - EQIX (AI Infrastructure): failed “63d return beats SPY”
 - ALGN (Health Care): failed “63d return beats SPY”
-- HUBB (AI Infrastructure): failed “63d return beats SPY”
 - DLR (AI Infrastructure): failed “63d return beats SPY”
+- HUBB (AI Infrastructure): failed “63d return beats SPY”
 
 ---
 *Generated by Ideas Engine. Research tool — not investment advice.*

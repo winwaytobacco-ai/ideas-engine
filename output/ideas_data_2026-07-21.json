@@ -1,6 +1,6 @@
 {
  "run_date": "2026-07-21",
- "generated_at": "2026-07-21T19:44:35",
+ "generated_at": "2026-07-21T22:28:25",
  "regime": {
   "label": "RISK_ON_TRENDING",
   "explanation": "SPY in confirmed uptrend and 2/3 macro checks risk-on \u2014 full idea generation.",
@@ -13,7 +13,7 @@
    },
    {
     "name": "Yield curve (10y-2y)",
-    "value": "+0.39% (positive, steepening)",
+    "value": "+0.37% (positive, steepening)",
     "rule": "informational only in v1",
     "passed": null
    },
@@ -48,11 +48,11 @@
    {
     "etf": "XBI",
     "name": "Biotech",
-    "rel_21d": 9.55,
-    "rel_63d": 6.23,
-    "composite": 7.89,
-    "rs_ratio": 109.2,
-    "rs_momentum": 6.75,
+    "rel_21d": 9.69,
+    "rel_63d": 6.38,
+    "composite": 8.04,
+    "rs_ratio": 109.3,
+    "rs_momentum": 6.9,
     "quadrant": "Leading",
     "selected": true,
     "rank": 1,
@@ -75,19 +75,19 @@
       "m": 23.38
      },
      {
-      "r": 109.15,
-      "m": 6.75
+      "r": 109.3,
+      "m": 6.9
      }
     ]
    },
    {
     "etf": "XLV",
     "name": "Health Care",
-    "rel_21d": 7.28,
-    "rel_63d": 3.07,
-    "composite": 5.17,
-    "rs_ratio": 99.6,
-    "rs_momentum": 8.3,
+    "rel_21d": 7.53,
+    "rel_63d": 3.33,
+    "composite": 5.43,
+    "rs_ratio": 99.8,
+    "rs_momentum": 8.55,
     "quadrant": "Improving",
     "selected": true,
     "rank": 2,
@@ -110,23 +110,23 @@
       "m": 5.81
      },
      {
-      "r": 99.6,
-      "m": 8.3
+      "r": 99.83,
+      "m": 8.55
      }
     ]
    },
    {
     "etf": "XLE",
     "name": "Energy",
-    "rel_21d": 9.15,
-    "rel_63d": 0.92,
-    "composite": 5.04,
-    "rs_ratio": 98.6,
-    "rs_momentum": 7.24,
+    "rel_21d": 9.38,
+    "rel_63d": 1.14,
+    "composite": 5.26,
+    "rs_ratio": 98.8,
+    "rs_momentum": 7.45,
     "quadrant": "Improving",
     "selected": true,
     "rank": 3,
-    "breadth": 0.6190476190476191,
+    "breadth": 0.6666666666666666,
     "trail": [
      {
       "r": 100.84,
@@ -145,19 +145,19 @@
       "m": -8.85
      },
      {
-      "r": 98.61,
-      "m": 7.24
+      "r": 98.81,
+      "m": 7.45
      }
     ]
    },
    {
     "etf": "SMH",
     "name": "Semiconductors",
-    "rel_21d": -11.71,
-    "rel_63d": 20.02,
-    "composite": 4.15,
+    "rel_21d": -11.69,
+    "rel_63d": 20.04,
+    "composite": 4.17,
     "rs_ratio": 112.7,
-    "rs_momentum": -17.35,
+    "rs_momentum": -17.33,
     "quadrant": "Weakening",
     "selected": false,
     "rank": null,
@@ -180,19 +180,19 @@
       "m": -7.7
      },
      {
-      "r": 112.73,
-      "m": -17.35
+      "r": 112.75,
+      "m": -17.33
      }
     ]
    },
    {
     "etf": "XLF",
     "name": "Financials",
-    "rel_21d": 4.86,
-    "rel_63d": 1.09,
-    "composite": 2.97,
-    "rs_ratio": 101.8,
-    "rs_momentum": 6.25,
+    "rel_21d": 4.9,
+    "rel_63d": 1.13,
+    "composite": 3.02,
+    "rs_ratio": 101.9,
+    "rs_momentum": 6.3,
     "quadrant": "Leading",
     "selected": false,
     "rank": null,
@@ -215,19 +215,19 @@
       "m": 6.88
      },
      {
-      "r": 101.83,
-      "m": 6.25
+      "r": 101.87,
+      "m": 6.3
      }
     ]
    },
    {
     "etf": "XLK",
     "name": "Information Technology",
-    "rel_21d": -5.7,
-    "rel_63d": 11.21,
-    "composite": 2.76,
+    "rel_21d": -5.66,
+    "rel_63d": 11.25,
+    "composite": 2.79,
     "rs_ratio": 107.4,
-    "rs_momentum": -8.04,
+    "rs_momentum": -8.01,
     "quadrant": "Weakening",
     "selected": false,
     "rank": null,
@@ -250,19 +250,19 @@
       "m": -3.84
      },
      {
-      "r": 107.4,
-      "m": -8.04
+      "r": 107.44,
+      "m": -8.01
      }
     ]
    },
    {
     "etf": "IGV",
     "name": "Software",
-    "rel_21d": 3.02,
-    "rel_63d": 0.73,
-    "composite": 1.87,
-    "rs_ratio": 98.8,
-    "rs_momentum": 7.28,
+    "rel_21d": 2.86,
+    "rel_63d": 0.56,
+    "composite": 1.71,
+    "rs_ratio": 98.6,
+    "rs_momentum": 7.12,
     "quadrant": "Improving",
     "selected": false,
     "rank": null,
@@ -285,19 +285,19 @@
       "m": 0.79
      },
      {
-      "r": 98.75,
-      "m": 7.28
+      "r": 98.6,
+      "m": 7.12
      }
     ]
    },
    {
     "etf": "XLRE",
     "name": "Real Estate",
-    "rel_21d": 3.73,
-    "rel_63d": -3.73,
-    "composite": 0.0,
-    "rs_ratio": 99.3,
-    "rs_momentum": 3.31,
+    "rel_21d": 3.75,
+    "rel_63d": -3.71,
+    "composite": 0.02,
+    "rs_ratio": 99.4,
+    "rs_momentum": 3.32,
     "quadrant": "Improving",
     "selected": false,
     "rank": null,
@@ -320,8 +320,8 @@
       "m": -1.02
      },
      {
-      "r": 99.34,
-      "m": 3.31
+      "r": 99.36,
+      "m": 3.32
      }
     ]
    },
@@ -364,10 +364,10 @@
     "etf": "XLI",
     "name": "Industrials",
     "rel_21d": -1.21,
-    "rel_63d": -2.87,
+    "rel_63d": -2.86,
     "composite": -2.04,
     "rs_ratio": 97.9,
-    "rs_momentum": -2.01,
+    "rs_momentum": -2.0,
     "quadrant": "Lagging",
     "selected": false,
     "rank": null,
@@ -390,19 +390,19 @@
       "m": 1.56
      },
      {
-      "r": 97.86,
-      "m": -2.01
+      "r": 97.87,
+      "m": -2.0
      }
     ]
    },
    {
     "etf": "XLU",
     "name": "Utilities",
-    "rel_21d": 0.67,
-    "rel_63d": -7.16,
-    "composite": -3.24,
-    "rs_ratio": 94.0,
-    "rs_momentum": 0.87,
+    "rel_21d": 0.79,
+    "rel_63d": -7.04,
+    "composite": -3.12,
+    "rs_ratio": 94.1,
+    "rs_momentum": 0.99,
     "quadrant": "Improving",
     "selected": false,
     "rank": null,
@@ -425,54 +425,19 @@
       "m": 2.72
      },
      {
-      "r": 93.99,
-      "m": 0.87
-     }
-    ]
-   },
-   {
-    "etf": "XLC",
-    "name": "Communication Services",
-    "rel_21d": 0.94,
-    "rel_63d": -12.63,
-    "composite": -5.85,
-    "rs_ratio": 91.3,
-    "rs_momentum": 3.36,
-    "quadrant": "Improving",
-    "selected": false,
-    "rank": null,
-    "breadth": null,
-    "trail": [
-     {
-      "r": 88.89,
-      "m": -7.03
-     },
-     {
-      "r": 89.55,
-      "m": -3.57
-     },
-     {
-      "r": 88.61,
-      "m": -3.99
-     },
-     {
-      "r": 90.3,
-      "m": 0.18
-     },
-     {
-      "r": 91.34,
-      "m": 3.36
+      "r": 94.1,
+      "m": 0.99
      }
     ]
    },
    {
     "etf": "XLY",
     "name": "Consumer Discretionary",
-    "rel_21d": -2.05,
-    "rel_63d": -9.92,
-    "composite": -5.98,
-    "rs_ratio": 93.3,
-    "rs_momentum": 0.11,
+    "rel_21d": -1.97,
+    "rel_63d": -9.83,
+    "composite": -5.9,
+    "rs_ratio": 93.4,
+    "rs_momentum": 0.19,
     "quadrant": "Improving",
     "selected": false,
     "rank": null,
@@ -495,19 +460,54 @@
       "m": 1.52
      },
      {
-      "r": 93.28,
-      "m": 0.11
+      "r": 93.35,
+      "m": 0.19
+     }
+    ]
+   },
+   {
+    "etf": "XLC",
+    "name": "Communication Services",
+    "rel_21d": 0.59,
+    "rel_63d": -12.96,
+    "composite": -6.19,
+    "rs_ratio": 91.0,
+    "rs_momentum": 3.0,
+    "quadrant": "Improving",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 88.89,
+      "m": -7.03
+     },
+     {
+      "r": 89.55,
+      "m": -3.57
+     },
+     {
+      "r": 88.61,
+      "m": -3.99
+     },
+     {
+      "r": 90.3,
+      "m": 0.18
+     },
+     {
+      "r": 91.03,
+      "m": 3.0
      }
     ]
    },
    {
     "etf": "XLB",
     "name": "Materials",
-    "rel_21d": -3.0,
-    "rel_63d": -9.43,
-    "composite": -6.21,
-    "rs_ratio": 93.2,
-    "rs_momentum": -3.12,
+    "rel_21d": -3.15,
+    "rel_63d": -9.57,
+    "composite": -6.36,
+    "rs_ratio": 93.0,
+    "rs_momentum": -3.27,
     "quadrant": "Lagging",
     "selected": false,
     "rank": null,
@@ -530,19 +530,19 @@
       "m": -1.69
      },
      {
-      "r": 93.18,
-      "m": -3.12
+      "r": 93.04,
+      "m": -3.27
      }
     ]
    },
    {
     "etf": "AI_INFRA",
     "name": "AI Infrastructure",
-    "rel_21d": -4.47,
-    "rel_63d": 0.6,
-    "composite": -1.93,
+    "rel_21d": -4.44,
+    "rel_63d": 0.63,
+    "composite": -1.91,
     "rs_ratio": 104.1,
-    "rs_momentum": -8.28,
+    "rs_momentum": -8.26,
     "quadrant": "Weakening",
     "selected": true,
     "rank": 4,
@@ -565,8 +565,8 @@
       "m": -0.62
      },
      {
-      "r": 104.08,
-      "m": -8.28
+      "r": 104.11,
+      "m": -8.26
      }
     ]
    }
@@ -580,7 +580,7 @@
   "universe": 518,
   "screened": 96,
   "candidates": 31,
-  "qualified": 11,
+  "qualified": 9,
   "ideas": 2
  },
  "ideas": [
@@ -591,8 +591,8 @@
    "sector_rank": 1,
    "setup": "PULLBACK_TO_VALUE",
    "setup_human": "Pullback to value",
-   "score": 65.7,
-   "total_score": 17.0,
+   "score": 65.6,
+   "total_score": 16.9,
    "rs_percentile": 26,
    "thesis": "Vertex Pharmaceuticals \u2014 pullback to value in Health Care (sector rank #1), relative strength top 74% of candidates, flow neutral.",
    "entry": 474.18,
@@ -605,11 +605,11 @@
    "free_flow": 489.85,
    "stop_pct": 3.3,
    "stop_atr": 1.0,
-   "close": 481.86,
+   "close": 482.0,
    "poc": 493.61,
    "vah": 497.25,
    "val": 438.98,
-   "avwap": 465.21,
+   "avwap": 465.28,
    "avwap_dist": 3.6,
    "atr": 15.67,
    "flow_state": "neutral",
@@ -890,7 +890,7 @@
      486.03,
      485.65,
      480.5,
-     481.86
+     482.0
     ]
    }
   },
@@ -902,24 +902,24 @@
    "setup": "PULLBACK_TO_VALUE",
    "setup_human": "Pullback to value",
    "score": 60.0,
-   "total_score": 7.7,
-   "rs_percentile": 16,
-   "thesis": "GE Vernova \u2014 pullback to value in AI Infrastructure (sector rank #4), relative strength top 84% of candidates, flow neutral.",
-   "entry": 1078.6,
+   "total_score": 6.2,
+   "rs_percentile": 13,
+   "thesis": "GE Vernova \u2014 pullback to value in AI Infrastructure (sector rank #4), relative strength top 87% of candidates, flow neutral.",
+   "entry": 1078.81,
    "entry_type": "At market (price already inside \u00b11% of POC)",
-   "stop": 941.07,
+   "stop": 941.22,
    "stop_ref": "anchored VWAP",
    "target": 1482.67,
    "target_ref": "measured move (value-area width projected)",
    "rr": 2.94,
-   "free_flow": 1216.13,
+   "free_flow": 1216.4,
    "stop_pct": 12.8,
    "stop_atr": 2.1,
-   "close": 1078.6,
+   "close": 1078.81,
    "poc": 1080.15,
    "vah": 1162.86,
    "val": 843.04,
-   "avwap": 941.07,
+   "avwap": 941.22,
    "avwap_dist": 14.6,
    "atr": 64.5,
    "flow_state": "neutral",
@@ -980,10 +980,10 @@
     }
    ],
    "execution": [
-    "Entry \u2014 At market (price already inside \u00b11% of POC). Working level: 1078.60.",
-    "Stop \u2014 941.07 (12.8% risk, ~2.1 ATR), placed below anchored VWAP. Structural, never percentage-based.",
+    "Entry \u2014 At market (price already inside \u00b11% of POC). Working level: 1078.81.",
+    "Stop \u2014 941.22 (12.8% risk, ~2.1 ATR), placed below anchored VWAP. Structural, never percentage-based.",
     "Target \u2014 1482.67 (measured move (value-area width projected)); reward/risk 2.9.",
-    "Free-flow \u2014 at 1216.13 (+1R) sell half; the remainder then rides at breakeven-or-better even if stopped.",
+    "Free-flow \u2014 at 1216.40 (+1R) sell half; the remainder then rides at breakeven-or-better even if stopped.",
     "Invalidation \u2014 idea is void on a daily close below the stop reference or if the weekly regime turns RISK_OFF."
    ],
    "spark": {
@@ -1241,7 +1241,7 @@
      1036.22,
      1057.84,
      1079.18,
-     1078.6
+     1078.81
     ]
    }
   }
@@ -1252,21 +1252,21 @@
    "name": "Marathon Petroleum",
    "sector": "Energy",
    "score": 80.0,
-   "note": "acceptance breakout but R:R 1.39 below 2.5 floor"
+   "note": "acceptance breakout but R:R 1.44 below 2.5 floor"
   },
   {
    "ticker": "PSX",
    "name": "Phillips 66",
    "sector": "Energy",
    "score": 80.0,
-   "note": "acceptance breakout but R:R 1.35 below 2.5 floor"
+   "note": "acceptance breakout but R:R 1.41 below 2.5 floor"
   },
   {
    "ticker": "CAH",
    "name": "Cardinal Health",
    "sector": "Health Care",
-   "score": 63.7,
-   "note": "pullback to value but R:R 2.17 below 2.5 floor"
+   "score": 63.0,
+   "note": "pullback to value but R:R 2.18 below 2.5 floor"
   },
   {
    "ticker": "HUM",
@@ -1281,20 +1281,6 @@
    "sector": "Health Care",
    "score": 60.0,
    "note": "pullback to value but R:R 0.59 below 2.5 floor"
-  },
-  {
-   "ticker": "WAT",
-   "name": "Waters Corporation",
-   "sector": "Health Care",
-   "score": 60.0,
-   "note": "pullback to value but R:R 0.82 below 2.5 floor"
-  },
-  {
-   "ticker": "LLY",
-   "name": "Lilly (Eli)",
-   "sector": "Health Care",
-   "score": 59.8,
-   "note": "pullback to value but R:R 1.42 below 2.5 floor"
   },
   {
    "ticker": "DELL",
@@ -1336,7 +1322,7 @@
    "name": "Elevance Health",
    "sector": "Health Care",
    "score": 40.0,
-   "note": "pullback to value but R:R 1.05 below 2.5 floor"
+   "note": "pullback to value but R:R 1.27 below 2.5 floor"
   },
   {
    "ticker": "INCY",
@@ -1356,7 +1342,7 @@
    "ticker": "FANG",
    "name": "Diamondback Energy",
    "sector": "Energy",
-   "score": 39.1,
+   "score": 39.0,
    "note": "no qualifying structure yet"
   },
   {
@@ -1381,6 +1367,13 @@
    "note": "no qualifying structure yet"
   },
   {
+   "ticker": "WAT",
+   "name": "Waters Corporation",
+   "sector": "Health Care",
+   "score": 20.0,
+   "note": "no qualifying structure yet"
+  },
+  {
    "ticker": "JNJ",
    "name": "Johnson & Johnson",
    "sector": "Health Care",
@@ -1393,6 +1386,13 @@
    "sector": "Health Care",
    "score": 20.0,
    "note": "closes above VAH but flow not confirming"
+  },
+  {
+   "ticker": "LLY",
+   "name": "Lilly (Eli)",
+   "sector": "Health Care",
+   "score": 19.8,
+   "note": "breakout extended (17 sessions above VAH)"
   },
   {
    "ticker": "CNC",
@@ -1471,6 +1471,12 @@
    "failed_filter": "near 52w high"
   },
   {
+   "ticker": "A",
+   "name": "Agilent Technologies",
+   "sector": "Health Care",
+   "failed_filter": "50DMA > 200DMA"
+  },
+  {
    "ticker": "MRNA",
    "name": "Moderna",
    "sector": "Health Care",
@@ -1489,15 +1495,15 @@
    "failed_filter": "63d return beats SPY"
   },
   {
-   "ticker": "IRM",
-   "name": "Iron Mountain",
-   "sector": "AI Infrastructure",
-   "failed_filter": "63d return beats SPY"
-  },
-  {
    "ticker": "CVX",
    "name": "Chevron Corporation",
    "sector": "Energy",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "IRM",
+   "name": "Iron Mountain",
+   "sector": "AI Infrastructure",
    "failed_filter": "63d return beats SPY"
   },
   {
@@ -1507,15 +1513,15 @@
    "failed_filter": "63d return beats SPY"
   },
   {
-   "ticker": "WMB",
-   "name": "Williams Companies",
-   "sector": "Energy",
+   "ticker": "CI",
+   "name": "Cigna",
+   "sector": "Health Care",
    "failed_filter": "63d return beats SPY"
   },
   {
-   "ticker": "LH",
-   "name": "Labcorp",
-   "sector": "Health Care",
+   "ticker": "WMB",
+   "name": "Williams Companies",
+   "sector": "Energy",
    "failed_filter": "63d return beats SPY"
   },
   {
@@ -1531,8 +1537,8 @@
    "failed_filter": "63d return beats SPY"
   },
   {
-   "ticker": "CI",
-   "name": "Cigna",
+   "ticker": "LH",
+   "name": "Labcorp",
    "sector": "Health Care",
    "failed_filter": "63d return beats SPY"
   },
@@ -1585,14 +1591,14 @@
    "failed_filter": "63d return beats SPY"
   },
   {
-   "ticker": "HUBB",
-   "name": "Hubbell Incorporated",
+   "ticker": "DLR",
+   "name": "Digital Realty",
    "sector": "AI Infrastructure",
    "failed_filter": "63d return beats SPY"
   },
   {
-   "ticker": "DLR",
-   "name": "Digital Realty",
+   "ticker": "HUBB",
+   "name": "Hubbell Incorporated",
    "sector": "AI Infrastructure",
    "failed_filter": "63d return beats SPY"
   }
