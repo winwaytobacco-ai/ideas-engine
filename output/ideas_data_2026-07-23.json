@@ -1,0 +1,1582 @@
+{
+ "run_date": "2026-07-23",
+ "generated_at": "2026-07-23T22:32:19",
+ "regime": {
+  "label": "RISK_ON_TRENDING",
+  "explanation": "SPY in confirmed uptrend and 3/3 macro checks risk-on \u2014 full idea generation.",
+  "signals": [
+   {
+    "name": "Credit stress (HY OAS)",
+    "value": "2.68%",
+    "rule": "< 21d MA (2.73) and < p75 of 252d (2.95)",
+    "passed": true
+   },
+   {
+    "name": "Yield curve (10y-2y)",
+    "value": "+0.34% (positive, flattening)",
+    "rule": "informational only in v1",
+    "passed": null
+   },
+   {
+    "name": "Volatility (VIX)",
+    "value": "16.6",
+    "rule": "< 22 and < 50d MA (17.3)",
+    "passed": true
+   },
+   {
+    "name": "Financial conditions (NFCI)",
+    "value": "-0.55",
+    "rule": "< 0.0 (loose)",
+    "passed": true
+   },
+   {
+    "name": "SPY trend",
+    "value": "738 vs 200DMA 695",
+    "rule": "Close > 200DMA, 50DMA > 200DMA, 200DMA slope up over 21d",
+    "passed": true
+   },
+   {
+    "name": "SPY range check",
+    "value": "63d range 7.9%",
+    "rule": "ranging if < 8% and no MA alignment",
+    "passed": null
+   }
+  ]
+ },
+ "sectors": {
+  "rows": [
+   {
+    "etf": "XLV",
+    "name": "Health Care",
+    "rel_21d": 5.46,
+    "rel_63d": 6.72,
+    "composite": 6.09,
+    "rs_ratio": 102.0,
+    "rs_momentum": 6.37,
+    "quadrant": "Leading",
+    "selected": true,
+    "rank": 1,
+    "breadth": 0.7166666666666667,
+    "trail": [
+     {
+      "r": 95.06,
+      "m": 6.91
+     },
+     {
+      "r": 93.64,
+      "m": 5.11
+     },
+     {
+      "r": 98.46,
+      "m": 9.35
+     },
+     {
+      "r": 100.16,
+      "m": 3.59
+     },
+     {
+      "r": 102.05,
+      "m": 6.37
+     }
+    ]
+   },
+   {
+    "etf": "SMH",
+    "name": "Semiconductors",
+    "rel_21d": -7.36,
+    "rel_63d": 17.61,
+    "composite": 5.13,
+    "rs_ratio": 113.0,
+    "rs_momentum": -12.89,
+    "quadrant": "Weakening",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 123.57,
+      "m": -4.15
+     },
+     {
+      "r": 130.89,
+      "m": 5.54
+     },
+     {
+      "r": 131.75,
+      "m": 2.08
+     },
+     {
+      "r": 114.49,
+      "m": -8.15
+     },
+     {
+      "r": 113.01,
+      "m": -12.89
+     }
+    ]
+   },
+   {
+    "etf": "XLE",
+    "name": "Energy",
+    "rel_21d": 8.41,
+    "rel_63d": 1.72,
+    "composite": 5.06,
+    "rs_ratio": 101.5,
+    "rs_momentum": 6.44,
+    "quadrant": "Leading",
+    "selected": true,
+    "rank": 2,
+    "breadth": 0.8571428571428571,
+    "trail": [
+     {
+      "r": 101.05,
+      "m": -1.9
+     },
+     {
+      "r": 94.55,
+      "m": -12.14
+     },
+     {
+      "r": 90.91,
+      "m": -6.01
+     },
+     {
+      "r": 96.26,
+      "m": -6.88
+     },
+     {
+      "r": 101.47,
+      "m": 6.44
+     }
+    ]
+   },
+   {
+    "etf": "XBI",
+    "name": "Biotech",
+    "rel_21d": 2.91,
+    "rel_63d": 6.92,
+    "composite": 4.91,
+    "rs_ratio": 109.0,
+    "rs_momentum": 0.29,
+    "quadrant": "Leading",
+    "selected": true,
+    "rank": 3,
+    "breadth": 0.7166666666666667,
+    "trail": [
+     {
+      "r": 94.93,
+      "m": -7.53
+     },
+     {
+      "r": 102.37,
+      "m": 8.85
+     },
+     {
+      "r": 114.24,
+      "m": 16.31
+     },
+     {
+      "r": 110.46,
+      "m": 14.22
+     },
+     {
+      "r": 109.0,
+      "m": 0.29
+     }
+    ]
+   },
+   {
+    "etf": "XLF",
+    "name": "Financials",
+    "rel_21d": 2.99,
+    "rel_63d": 3.25,
+    "composite": 3.12,
+    "rs_ratio": 102.8,
+    "rs_momentum": 4.24,
+    "quadrant": "Leading",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 94.31,
+      "m": 2.31
+     },
+     {
+      "r": 97.61,
+      "m": 6.04
+     },
+     {
+      "r": 96.79,
+      "m": 7.25
+     },
+     {
+      "r": 101.45,
+      "m": 5.71
+     },
+     {
+      "r": 102.81,
+      "m": 4.24
+     }
+    ]
+   },
+   {
+    "etf": "XLK",
+    "name": "Information Technology",
+    "rel_21d": -3.74,
+    "rel_63d": 8.95,
+    "composite": 2.61,
+    "rs_ratio": 107.3,
+    "rs_momentum": -6.03,
+    "quadrant": "Weakening",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 112.96,
+      "m": 2.97
+     },
+     {
+      "r": 114.72,
+      "m": 3.3
+     },
+     {
+      "r": 115.19,
+      "m": -2.08
+     },
+     {
+      "r": 108.25,
+      "m": -3.46
+     },
+     {
+      "r": 107.27,
+      "m": -6.03
+     }
+    ]
+   },
+   {
+    "etf": "XLI",
+    "name": "Industrials",
+    "rel_21d": 1.5,
+    "rel_63d": 2.57,
+    "composite": 2.04,
+    "rs_ratio": 101.0,
+    "rs_momentum": 0.77,
+    "quadrant": "Leading",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 97.91,
+      "m": -2.45
+     },
+     {
+      "r": 100.21,
+      "m": 4.33
+     },
+     {
+      "r": 102.07,
+      "m": 7.45
+     },
+     {
+      "r": 98.74,
+      "m": 1.93
+     },
+     {
+      "r": 101.02,
+      "m": 0.77
+     }
+    ]
+   },
+   {
+    "etf": "XLU",
+    "name": "Utilities",
+    "rel_21d": 1.86,
+    "rel_63d": -0.46,
+    "composite": 0.7,
+    "rs_ratio": 98.1,
+    "rs_momentum": 2.0,
+    "quadrant": "Improving",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 93.45,
+      "m": -2.02
+     },
+     {
+      "r": 93.48,
+      "m": 2.14
+     },
+     {
+      "r": 95.0,
+      "m": 4.53
+     },
+     {
+      "r": 95.58,
+      "m": 1.29
+     },
+     {
+      "r": 98.1,
+      "m": 2.0
+     }
+    ]
+   },
+   {
+    "etf": "XLRE",
+    "name": "Real Estate",
+    "rel_21d": 0.07,
+    "rel_63d": 0.28,
+    "composite": 0.17,
+    "rs_ratio": 100.2,
+    "rs_momentum": -0.32,
+    "quadrant": "Weakening",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 99.64,
+      "m": -0.32
+     },
+     {
+      "r": 97.4,
+      "m": 0.26
+     },
+     {
+      "r": 97.19,
+      "m": 1.76
+     },
+     {
+      "r": 98.24,
+      "m": -3.58
+     },
+     {
+      "r": 100.15,
+      "m": -0.32
+     }
+    ]
+   },
+   {
+    "etf": "XLP",
+    "name": "Consumer Staples",
+    "rel_21d": -1.24,
+    "rel_63d": -2.02,
+    "composite": -1.63,
+    "rs_ratio": 95.1,
+    "rs_momentum": -1.05,
+    "quadrant": "Lagging",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 94.81,
+      "m": -1.26
+     },
+     {
+      "r": 94.62,
+      "m": -2.63
+     },
+     {
+      "r": 93.64,
+      "m": 2.14
+     },
+     {
+      "r": 95.04,
+      "m": -3.75
+     },
+     {
+      "r": 95.11,
+      "m": -1.05
+     }
+    ]
+   },
+   {
+    "etf": "IGV",
+    "name": "Software",
+    "rel_21d": -0.88,
+    "rel_63d": -5.89,
+    "composite": -3.38,
+    "rs_ratio": 95.1,
+    "rs_momentum": 3.03,
+    "quadrant": "Improving",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 98.54,
+      "m": 12.95
+     },
+     {
+      "r": 92.86,
+      "m": -0.62
+     },
+     {
+      "r": 95.2,
+      "m": -6.03
+     },
+     {
+      "r": 98.53,
+      "m": 2.32
+     },
+     {
+      "r": 95.08,
+      "m": 3.03
+     }
+    ]
+   },
+   {
+    "etf": "XLB",
+    "name": "Materials",
+    "rel_21d": -1.77,
+    "rel_63d": -6.67,
+    "composite": -4.22,
+    "rs_ratio": 94.7,
+    "rs_momentum": -1.76,
+    "quadrant": "Lagging",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 95.85,
+      "m": -4.82
+     },
+     {
+      "r": 97.61,
+      "m": 2.37
+     },
+     {
+      "r": 94.5,
+      "m": -0.08
+     },
+     {
+      "r": 93.66,
+      "m": -1.75
+     },
+     {
+      "r": 94.74,
+      "m": -1.76
+     }
+    ]
+   },
+   {
+    "etf": "XLC",
+    "name": "Communication Services",
+    "rel_21d": -2.39,
+    "rel_63d": -14.43,
+    "composite": -8.41,
+    "rs_ratio": 88.6,
+    "rs_momentum": -0.07,
+    "quadrant": "Lagging",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 90.73,
+      "m": -4.11
+     },
+     {
+      "r": 88.98,
+      "m": -5.36
+     },
+     {
+      "r": 87.5,
+      "m": -4.11
+     },
+     {
+      "r": 91.68,
+      "m": -0.28
+     },
+     {
+      "r": 88.57,
+      "m": -0.07
+     }
+    ]
+   },
+   {
+    "etf": "XLY",
+    "name": "Consumer Discretionary",
+    "rel_21d": -5.02,
+    "rel_63d": -12.43,
+    "composite": -8.73,
+    "rs_ratio": 89.8,
+    "rs_momentum": -2.89,
+    "quadrant": "Lagging",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 91.99,
+      "m": -3.29
+     },
+     {
+      "r": 92.7,
+      "m": 0.52
+     },
+     {
+      "r": 94.16,
+      "m": 0.2
+     },
+     {
+      "r": 93.56,
+      "m": 0.99
+     },
+     {
+      "r": 89.83,
+      "m": -2.89
+     }
+    ]
+   },
+   {
+    "etf": "AI_INFRA",
+    "name": "AI Infrastructure",
+    "rel_21d": -1.95,
+    "rel_63d": 1.52,
+    "composite": -0.21,
+    "rs_ratio": 107.0,
+    "rs_momentum": -5.76,
+    "quadrant": "Weakening",
+    "selected": true,
+    "rank": 4,
+    "breadth": 0.4666666666666667,
+    "trail": [
+     {
+      "r": 109.2,
+      "m": -6.97
+     },
+     {
+      "r": 112.28,
+      "m": 3.69
+     },
+     {
+      "r": 113.19,
+      "m": 1.47
+     },
+     {
+      "r": 106.01,
+      "m": 1.58
+     },
+     {
+      "r": 107.05,
+      "m": -5.76
+     }
+    ]
+   }
+  ],
+  "selected_gics": [
+   "Health Care",
+   "Energy"
+  ]
+ },
+ "funnel": {
+  "universe": 518,
+  "screened": 96,
+  "candidates": 39,
+  "qualified": 22,
+  "ideas": 2
+ },
+ "ideas": [
+  {
+   "ticker": "ELV",
+   "name": "Elevance Health",
+   "sector": "Health Care",
+   "sector_rank": 1,
+   "setup": "PULLBACK_TO_VALUE",
+   "setup_human": "Pullback to value",
+   "score": 40.0,
+   "total_score": 20.5,
+   "rs_percentile": 51,
+   "thesis": "Elevance Health \u2014 pullback to value in Health Care (sector rank #1), relative strength top 49% of candidates, flow diverging.",
+   "entry": 375.49,
+   "entry_type": "Limit at high-volume node (375.49)",
+   "stop": 359.02,
+   "stop_ref": "anchored VWAP",
+   "target": 426.79,
+   "target_ref": "52-week high",
+   "rr": 3.11,
+   "free_flow": 391.96,
+   "stop_pct": 4.4,
+   "stop_atr": 1.0,
+   "close": 379.31,
+   "poc": 388.62,
+   "vah": 436.24,
+   "val": 314.74,
+   "avwap": 359.02,
+   "avwap_dist": 5.7,
+   "atr": 15.75,
+   "flow_state": "diverging",
+   "pct_from_52w_high": 11.1,
+   "breadth": 72,
+   "theme": null,
+   "fundamentals": null,
+   "ooda": null,
+   "risks": [
+    {
+     "level": "medium",
+     "text": "Trading 6% above anchored VWAP \u2014 mildly extended; prefer limit fills over market entries."
+    },
+    {
+     "level": "high",
+     "text": "Volume-flow divergence: price made new highs that the flow line did not confirm \u2014 demand may be thinning."
+    },
+    {
+     "level": "info",
+     "text": "Stop sits 4.4% below entry (~1.0 ATR), below anchored VWAP."
+    }
+   ],
+   "execution": [
+    "Entry \u2014 Limit at high-volume node (375.49). Working level: 375.49.",
+    "Stop \u2014 359.02 (4.4% risk, ~1.0 ATR), placed below anchored VWAP. Structural, never percentage-based.",
+    "Target \u2014 426.79 (52-week high); reward/risk 3.1.",
+    "Free-flow \u2014 at 391.96 (+1R) sell half; the remainder then rides at breakeven-or-better even if stopped.",
+    "Invalidation \u2014 idea is void on a daily close below the stop reference or if the weekly regime turns RISK_OFF."
+   ],
+   "spark": {
+    "dates": [
+     "2026-01-22",
+     "2026-01-23",
+     "2026-01-26",
+     "2026-01-27",
+     "2026-01-28",
+     "2026-01-29",
+     "2026-01-30",
+     "2026-02-02",
+     "2026-02-03",
+     "2026-02-04",
+     "2026-02-05",
+     "2026-02-06",
+     "2026-02-09",
+     "2026-02-10",
+     "2026-02-11",
+     "2026-02-12",
+     "2026-02-13",
+     "2026-02-17",
+     "2026-02-18",
+     "2026-02-19",
+     "2026-02-20",
+     "2026-02-23",
+     "2026-02-24",
+     "2026-02-25",
+     "2026-02-26",
+     "2026-02-27",
+     "2026-03-02",
+     "2026-03-03",
+     "2026-03-04",
+     "2026-03-05",
+     "2026-03-06",
+     "2026-03-09",
+     "2026-03-10",
+     "2026-03-11",
+     "2026-03-12",
+     "2026-03-13",
+     "2026-03-16",
+     "2026-03-17",
+     "2026-03-18",
+     "2026-03-19",
+     "2026-03-20",
+     "2026-03-23",
+     "2026-03-24",
+     "2026-03-25",
+     "2026-03-26",
+     "2026-03-27",
+     "2026-03-30",
+     "2026-03-31",
+     "2026-04-01",
+     "2026-04-02",
+     "2026-04-06",
+     "2026-04-07",
+     "2026-04-08",
+     "2026-04-09",
+     "2026-04-10",
+     "2026-04-13",
+     "2026-04-14",
+     "2026-04-15",
+     "2026-04-16",
+     "2026-04-17",
+     "2026-04-20",
+     "2026-04-21",
+     "2026-04-22",
+     "2026-04-23",
+     "2026-04-24",
+     "2026-04-27",
+     "2026-04-28",
+     "2026-04-29",
+     "2026-04-30",
+     "2026-05-01",
+     "2026-05-04",
+     "2026-05-05",
+     "2026-05-06",
+     "2026-05-07",
+     "2026-05-08",
+     "2026-05-11",
+     "2026-05-12",
+     "2026-05-13",
+     "2026-05-14",
+     "2026-05-15",
+     "2026-05-18",
+     "2026-05-19",
+     "2026-05-20",
+     "2026-05-21",
+     "2026-05-22",
+     "2026-05-26",
+     "2026-05-27",
+     "2026-05-28",
+     "2026-05-29",
+     "2026-06-01",
+     "2026-06-02",
+     "2026-06-03",
+     "2026-06-04",
+     "2026-06-05",
+     "2026-06-08",
+     "2026-06-09",
+     "2026-06-10",
+     "2026-06-11",
+     "2026-06-12",
+     "2026-06-15",
+     "2026-06-16",
+     "2026-06-17",
+     "2026-06-18",
+     "2026-06-22",
+     "2026-06-23",
+     "2026-06-24",
+     "2026-06-25",
+     "2026-06-26",
+     "2026-06-29",
+     "2026-06-30",
+     "2026-07-01",
+     "2026-07-02",
+     "2026-07-06",
+     "2026-07-07",
+     "2026-07-08",
+     "2026-07-09",
+     "2026-07-10",
+     "2026-07-13",
+     "2026-07-14",
+     "2026-07-15",
+     "2026-07-16",
+     "2026-07-17",
+     "2026-07-20",
+     "2026-07-21",
+     "2026-07-22",
+     "2026-07-23"
+    ],
+    "close": [
+     368.46,
+     367.29,
+     373.1,
+     319.64,
+     338.38,
+     343.46,
+     342.23,
+     338.36,
+     335.21,
+     337.14,
+     328.88,
+     335.54,
+     324.17,
+     322.33,
+     326.9,
+     332.63,
+     343.28,
+     341.28,
+     342.72,
+     344.64,
+     339.45,
+     332.46,
+     323.82,
+     327.15,
+     319.77,
+     316.75,
+     291.08,
+     281.15,
+     288.49,
+     283.57,
+     286.7,
+     277.89,
+     281.53,
+     288.62,
+     286.72,
+     290.45,
+     290.89,
+     294.55,
+     293.75,
+     289.97,
+     290.3,
+     288.07,
+     289.15,
+     294.89,
+     293.06,
+     285.23,
+     283.64,
+     291.56,
+     297.29,
+     299.52,
+     301.38,
+     310.57,
+     316.94,
+     315.59,
+     310.27,
+     314.79,
+     312.08,
+     309.92,
+     314.54,
+     321.74,
+     318.07,
+     326.78,
+     326.87,
+     344.89,
+     343.36,
+     354.69,
+     361.27,
+     375.1,
+     374.89,
+     371.17,
+     370.39,
+     367.57,
+     373.19,
+     371.41,
+     376.54,
+     380.2,
+     391.71,
+     398.02,
+     395.1,
+     391.09,
+     392.47,
+     400.64,
+     394.6,
+     388.24,
+     393.09,
+     386.28,
+     389.88,
+     391.16,
+     391.6,
+     401.03,
+     387.45,
+     389.68,
+     407.78,
+     413.85,
+     416.46,
+     422.71,
+     404.56,
+     399.18,
+     404.07,
+     401.89,
+     397.8,
+     391.27,
+     388.5,
+     394.82,
+     395.1,
+     384.0,
+     387.32,
+     395.18,
+     388.03,
+     386.73,
+     416.19,
+     417.89,
+     408.17,
+     418.85,
+     416.08,
+     420.39,
+     416.23,
+     425.17,
+     426.79,
+     390.33,
+     372.85,
+     373.11,
+     382.23,
+     393.44,
+     389.09,
+     379.31
+    ]
+   }
+  },
+  {
+   "ticker": "VRTX",
+   "name": "Vertex Pharmaceuticals",
+   "sector": "Health Care",
+   "sector_rank": 1,
+   "setup": "PULLBACK_TO_VALUE",
+   "setup_human": "Pullback to value",
+   "score": 73.5,
+   "total_score": 18.8,
+   "rs_percentile": 26,
+   "thesis": "Vertex Pharmaceuticals \u2014 pullback to value in Health Care (sector rank #1), relative strength top 74% of candidates, flow neutral.",
+   "entry": 473.09,
+   "entry_type": "At market (price at high-volume node)",
+   "stop": 458.44,
+   "stop_ref": "anchored VWAP (widened to 1 ATR)",
+   "target": 529.59,
+   "target_ref": "52-week high",
+   "rr": 3.86,
+   "free_flow": 487.74,
+   "stop_pct": 3.1,
+   "stop_atr": 1.0,
+   "close": 473.09,
+   "poc": 493.61,
+   "vah": 497.25,
+   "val": 441.41,
+   "avwap": 465.54,
+   "avwap_dist": 1.6,
+   "atr": 14.65,
+   "flow_state": "neutral",
+   "pct_from_52w_high": 10.7,
+   "breadth": 72,
+   "theme": null,
+   "fundamentals": null,
+   "ooda": null,
+   "risks": [
+    {
+     "level": "info",
+     "text": "No flow confirmation yet (daily close-vs-open volume proxy is flat)."
+    },
+    {
+     "level": "info",
+     "text": "Stop sits 3.1% below entry (~1.0 ATR), below anchored VWAP (widened to 1 ATR)."
+    }
+   ],
+   "execution": [
+    "Entry \u2014 At market (price at high-volume node). Working level: 473.09.",
+    "Stop \u2014 458.44 (3.1% risk, ~1.0 ATR), placed below anchored VWAP (widened to 1 ATR). Structural, never percentage-based.",
+    "Target \u2014 529.59 (52-week high); reward/risk 3.9.",
+    "Free-flow \u2014 at 487.74 (+1R) sell half; the remainder then rides at breakeven-or-better even if stopped.",
+    "Invalidation \u2014 idea is void on a daily close below the stop reference or if the weekly regime turns RISK_OFF."
+   ],
+   "spark": {
+    "dates": [
+     "2026-01-22",
+     "2026-01-23",
+     "2026-01-26",
+     "2026-01-27",
+     "2026-01-28",
+     "2026-01-29",
+     "2026-01-30",
+     "2026-02-02",
+     "2026-02-03",
+     "2026-02-04",
+     "2026-02-05",
+     "2026-02-06",
+     "2026-02-09",
+     "2026-02-10",
+     "2026-02-11",
+     "2026-02-12",
+     "2026-02-13",
+     "2026-02-17",
+     "2026-02-18",
+     "2026-02-19",
+     "2026-02-20",
+     "2026-02-23",
+     "2026-02-24",
+     "2026-02-25",
+     "2026-02-26",
+     "2026-02-27",
+     "2026-03-02",
+     "2026-03-03",
+     "2026-03-04",
+     "2026-03-05",
+     "2026-03-06",
+     "2026-03-09",
+     "2026-03-10",
+     "2026-03-11",
+     "2026-03-12",
+     "2026-03-13",
+     "2026-03-16",
+     "2026-03-17",
+     "2026-03-18",
+     "2026-03-19",
+     "2026-03-20",
+     "2026-03-23",
+     "2026-03-24",
+     "2026-03-25",
+     "2026-03-26",
+     "2026-03-27",
+     "2026-03-30",
+     "2026-03-31",
+     "2026-04-01",
+     "2026-04-02",
+     "2026-04-06",
+     "2026-04-07",
+     "2026-04-08",
+     "2026-04-09",
+     "2026-04-10",
+     "2026-04-13",
+     "2026-04-14",
+     "2026-04-15",
+     "2026-04-16",
+     "2026-04-17",
+     "2026-04-20",
+     "2026-04-21",
+     "2026-04-22",
+     "2026-04-23",
+     "2026-04-24",
+     "2026-04-27",
+     "2026-04-28",
+     "2026-04-29",
+     "2026-04-30",
+     "2026-05-01",
+     "2026-05-04",
+     "2026-05-05",
+     "2026-05-06",
+     "2026-05-07",
+     "2026-05-08",
+     "2026-05-11",
+     "2026-05-12",
+     "2026-05-13",
+     "2026-05-14",
+     "2026-05-15",
+     "2026-05-18",
+     "2026-05-19",
+     "2026-05-20",
+     "2026-05-21",
+     "2026-05-22",
+     "2026-05-26",
+     "2026-05-27",
+     "2026-05-28",
+     "2026-05-29",
+     "2026-06-01",
+     "2026-06-02",
+     "2026-06-03",
+     "2026-06-04",
+     "2026-06-05",
+     "2026-06-08",
+     "2026-06-09",
+     "2026-06-10",
+     "2026-06-11",
+     "2026-06-12",
+     "2026-06-15",
+     "2026-06-16",
+     "2026-06-17",
+     "2026-06-18",
+     "2026-06-22",
+     "2026-06-23",
+     "2026-06-24",
+     "2026-06-25",
+     "2026-06-26",
+     "2026-06-29",
+     "2026-06-30",
+     "2026-07-01",
+     "2026-07-02",
+     "2026-07-06",
+     "2026-07-07",
+     "2026-07-08",
+     "2026-07-09",
+     "2026-07-10",
+     "2026-07-13",
+     "2026-07-14",
+     "2026-07-15",
+     "2026-07-16",
+     "2026-07-17",
+     "2026-07-20",
+     "2026-07-21",
+     "2026-07-22",
+     "2026-07-23"
+    ],
+    "close": [
+     467.35,
+     468.41,
+     476.84,
+     474.17,
+     477.91,
+     475.68,
+     469.9,
+     472.01,
+     465.61,
+     470.52,
+     458.81,
+     477.92,
+     470.87,
+     463.48,
+     461.24,
+     465.02,
+     491.47,
+     477.32,
+     470.31,
+     469.27,
+     476.9,
+     481.01,
+     487.43,
+     483.05,
+     480.13,
+     496.83,
+     486.03,
+     474.27,
+     477.89,
+     460.82,
+     456.69,
+     460.87,
+     499.17,
+     492.38,
+     478.13,
+     469.34,
+     466.1,
+     462.49,
+     451.59,
+     458.05,
+     454.0,
+     451.24,
+     448.62,
+     454.97,
+     453.74,
+     433.07,
+     443.16,
+     446.54,
+     447.26,
+     438.71,
+     434.3,
+     431.86,
+     443.92,
+     446.78,
+     436.27,
+     440.05,
+     444.28,
+     441.7,
+     435.65,
+     441.2,
+     439.18,
+     436.59,
+     437.67,
+     435.1,
+     430.29,
+     426.01,
+     430.14,
+     423.24,
+     427.38,
+     423.92,
+     429.85,
+     424.36,
+     427.65,
+     425.0,
+     429.82,
+     435.17,
+     448.29,
+     453.06,
+     450.41,
+     436.95,
+     436.58,
+     434.31,
+     430.44,
+     433.54,
+     434.52,
+     435.93,
+     437.22,
+     447.97,
+     447.54,
+     438.4,
+     425.09,
+     428.34,
+     441.74,
+     446.83,
+     442.96,
+     445.77,
+     435.71,
+     445.04,
+     444.93,
+     450.46,
+     453.17,
+     458.99,
+     451.63,
+     466.79,
+     468.42,
+     475.2,
+     480.18,
+     491.34,
+     499.65,
+     496.73,
+     498.01,
+     528.04,
+     529.59,
+     522.25,
+     498.43,
+     496.5,
+     485.39,
+     480.25,
+     476.31,
+     477.08,
+     486.03,
+     485.65,
+     480.5,
+     482.0,
+     472.57,
+     473.09
+    ]
+   }
+  }
+ ],
+ "watch": [
+  {
+   "ticker": "CI",
+   "name": "Cigna",
+   "sector": "Health Care",
+   "score": 94.4,
+   "note": "pullback to value but R:R 2.09 below 2.5 floor"
+  },
+  {
+   "ticker": "WAT",
+   "name": "Waters Corporation",
+   "sector": "Health Care",
+   "score": 80.0,
+   "note": "acceptance breakout but R:R 2.26 below 2.5 floor"
+  },
+  {
+   "ticker": "HSIC",
+   "name": "Henry Schein",
+   "sector": "Health Care",
+   "score": 80.0,
+   "note": "pullback to value but R:R 0.72 below 2.5 floor"
+  },
+  {
+   "ticker": "LH",
+   "name": "Labcorp",
+   "sector": "Health Care",
+   "score": 80.0,
+   "note": "acceptance breakout but R:R 1.7 below 2.5 floor"
+  },
+  {
+   "ticker": "FANG",
+   "name": "Diamondback Energy",
+   "sector": "Energy",
+   "score": 80.0,
+   "note": "acceptance breakout but R:R 1.05 below 2.5 floor"
+  },
+  {
+   "ticker": "BIIB",
+   "name": "Biogen",
+   "sector": "Health Care",
+   "score": 66.8,
+   "note": "pullback to value but R:R 2.14 below 2.5 floor"
+  },
+  {
+   "ticker": "CAH",
+   "name": "Cardinal Health",
+   "sector": "Health Care",
+   "score": 65.5,
+   "note": "pullback to value but R:R 2.26 below 2.5 floor"
+  },
+  {
+   "ticker": "WMB",
+   "name": "Williams Companies",
+   "sector": "Energy",
+   "score": 63.3,
+   "note": "pullback to value but R:R 1.18 below 2.5 floor"
+  },
+  {
+   "ticker": "HUM",
+   "name": "Humana",
+   "sector": "Health Care",
+   "score": 60.0,
+   "note": "pullback to value but R:R 1.11 below 2.5 floor"
+  },
+  {
+   "ticker": "WST",
+   "name": "West Pharmaceutical Services",
+   "sector": "Health Care",
+   "score": 60.0,
+   "note": "pullback to value but R:R 1.3 below 2.5 floor"
+  },
+  {
+   "ticker": "CRL",
+   "name": "Charles River Laboratories",
+   "sector": "Health Care",
+   "score": 60.0,
+   "note": "pullback to value but R:R 1.18 below 2.5 floor"
+  },
+  {
+   "ticker": "INCY",
+   "name": "Incyte",
+   "sector": "Health Care",
+   "score": 60.0,
+   "note": "pullback to value but R:R 0.86 below 2.5 floor"
+  },
+  {
+   "ticker": "RVTY",
+   "name": "Revvity",
+   "sector": "Health Care",
+   "score": 60.0,
+   "note": "pullback to value but R:R 0.61 below 2.5 floor"
+  },
+  {
+   "ticker": "AMGN",
+   "name": "Amgen",
+   "sector": "Health Care",
+   "score": 60.0,
+   "note": "pullback to value but R:R 0.55 below 2.5 floor"
+  },
+  {
+   "ticker": "IRM",
+   "name": "Iron Mountain",
+   "sector": "AI Infrastructure",
+   "score": 60.0,
+   "note": "pullback to value but R:R 0.59 below 2.5 floor"
+  },
+  {
+   "ticker": "CNC",
+   "name": "Centene Corporation",
+   "sector": "Health Care",
+   "score": 40.0,
+   "note": "pullback to value but R:R 0.45 below 2.5 floor"
+  },
+  {
+   "ticker": "DVA",
+   "name": "DaVita",
+   "sector": "Health Care",
+   "score": 40.0,
+   "note": "pullback to value but R:R 1.16 below 2.5 floor"
+  },
+  {
+   "ticker": "MPC",
+   "name": "Marathon Petroleum",
+   "sector": "Energy",
+   "score": 40.0,
+   "note": "breakout extended (12 sessions above VAH)"
+  },
+  {
+   "ticker": "CVS",
+   "name": "CVS Health",
+   "sector": "Health Care",
+   "score": 40.0,
+   "note": "breakout extended (34 sessions above VAH)"
+  },
+  {
+   "ticker": "VLO",
+   "name": "Valero Energy",
+   "sector": "Energy",
+   "score": 40.0,
+   "note": "breakout extended (12 sessions above VAH)"
+  },
+  {
+   "ticker": "PSX",
+   "name": "Phillips 66",
+   "sector": "Energy",
+   "score": 40.0,
+   "note": "breakout extended (12 sessions above VAH)"
+  },
+  {
+   "ticker": "CSCO",
+   "name": "Cisco",
+   "sector": "AI Infrastructure",
+   "score": 40.0,
+   "note": "no qualifying structure yet"
+  },
+  {
+   "ticker": "UNH",
+   "name": "UnitedHealth Group",
+   "sector": "Health Care",
+   "score": 40.0,
+   "note": "pullback to value but R:R 2.29 below 2.5 floor"
+  },
+  {
+   "ticker": "VTRS",
+   "name": "Viatris",
+   "sector": "Health Care",
+   "score": 40.0,
+   "note": "pullback to value but R:R 2.23 below 2.5 floor"
+  },
+  {
+   "ticker": "OKE",
+   "name": "Oneok",
+   "sector": "Energy",
+   "score": 40.0,
+   "note": "pullback to value but R:R 1.16 below 2.5 floor"
+  },
+  {
+   "ticker": "ABBV",
+   "name": "AbbVie",
+   "sector": "Health Care",
+   "score": 20.0,
+   "note": "no qualifying structure yet"
+  },
+  {
+   "ticker": "JNJ",
+   "name": "Johnson & Johnson",
+   "sector": "Health Care",
+   "score": 20.0,
+   "note": "breakout extended (19 sessions above VAH)"
+  },
+  {
+   "ticker": "LLY",
+   "name": "Lilly (Eli)",
+   "sector": "Health Care",
+   "score": 19.5,
+   "note": "breakout extended (19 sessions above VAH)"
+  },
+  {
+   "ticker": "SOLV",
+   "name": "Solventum",
+   "sector": "Health Care",
+   "score": 5.7,
+   "note": "no qualifying structure yet"
+  },
+  {
+   "ticker": "CVX",
+   "name": "Chevron Corporation",
+   "sector": "Energy",
+   "score": 0.4,
+   "note": "no qualifying structure yet"
+  },
+  {
+   "ticker": "DELL",
+   "name": "Dell Technologies",
+   "sector": "AI Infrastructure",
+   "score": 0.0,
+   "note": "closes above VAH but flow not confirming"
+  },
+  {
+   "ticker": "TRGP",
+   "name": "Targa Resources",
+   "sector": "Energy",
+   "score": 0.0,
+   "note": "breakout extended (13 sessions above VAH)"
+  },
+  {
+   "ticker": "MRK",
+   "name": "Merck & Co.",
+   "sector": "Health Care",
+   "score": 0.0,
+   "note": "closes above VAH but flow not confirming"
+  },
+  {
+   "ticker": "DGX",
+   "name": "Quest Diagnostics",
+   "sector": "Health Care",
+   "score": 0.0,
+   "note": "no qualifying structure yet"
+  },
+  {
+   "ticker": "EOG",
+   "name": "EOG Resources",
+   "sector": "Energy",
+   "score": 0.0,
+   "note": "no qualifying structure yet"
+  },
+  {
+   "ticker": "BMY",
+   "name": "Bristol Myers Squibb",
+   "sector": "Health Care",
+   "score": 0.0,
+   "note": "closes above VAH but flow not confirming"
+  },
+  {
+   "ticker": "XOM",
+   "name": "ExxonMobil",
+   "sector": "Energy",
+   "score": 0.0,
+   "note": "no qualifying structure yet"
+  }
+ ],
+ "near_misses": [
+  {
+   "ticker": "TECH",
+   "name": "Bio-Techne",
+   "sector": "Health Care",
+   "failed_filter": "50DMA > 200DMA"
+  },
+  {
+   "ticker": "BAX",
+   "name": "Baxter International",
+   "sector": "Health Care",
+   "failed_filter": "near 52w high"
+  },
+  {
+   "ticker": "A",
+   "name": "Agilent Technologies",
+   "sector": "Health Care",
+   "failed_filter": "50DMA > 200DMA"
+  },
+  {
+   "ticker": "TMO",
+   "name": "Thermo Fisher Scientific",
+   "sector": "Health Care",
+   "failed_filter": "50DMA > 200DMA"
+  },
+  {
+   "ticker": "DXCM",
+   "name": "Dexcom",
+   "sector": "Health Care",
+   "failed_filter": "near 52w high"
+  },
+  {
+   "ticker": "PWR",
+   "name": "Quanta Services",
+   "sector": "AI Infrastructure",
+   "failed_filter": "near 52w high"
+  },
+  {
+   "ticker": "KMI",
+   "name": "Kinder Morgan",
+   "sector": "Energy",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "EW",
+   "name": "Edwards Lifesciences",
+   "sector": "Health Care",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "OXY",
+   "name": "Occidental Petroleum",
+   "sector": "Energy",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "ETN",
+   "name": "Eaton Corporation",
+   "sector": "AI Infrastructure",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "ANET",
+   "name": "Arista Networks",
+   "sector": "AI Infrastructure",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "COP",
+   "name": "ConocoPhillips",
+   "sector": "Energy",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "DVN",
+   "name": "Devon Energy",
+   "sector": "Energy",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "EQIX",
+   "name": "Equinix",
+   "sector": "AI Infrastructure",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "GEV",
+   "name": "GE Vernova",
+   "sector": "AI Infrastructure",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "DLR",
+   "name": "Digital Realty",
+   "sector": "AI Infrastructure",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "HUBB",
+   "name": "Hubbell Incorporated",
+   "sector": "AI Infrastructure",
+   "failed_filter": "63d return beats SPY"
+  }
+ ],
+ "config": {
+  "min_rr": 2.5,
+  "max_ideas": 10,
+  "top_n_sectors": 3
+ }
+}
