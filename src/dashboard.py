@@ -113,6 +113,10 @@ svg text{font:10.5px system-ui,-apple-system,"Segoe UI",sans-serif;fill:var(--mu
   border-radius:6px;padding:5px 8px;font-size:11.5px;color:var(--ink);box-shadow:0 2px 10px rgba(0,0,0,.18);
   display:none;z-index:20;white-space:nowrap}
 .empty{padding:30px;text-align:center;color:var(--muted)}
+.alert{display:flex;gap:12px;align-items:flex-start;background:rgba(209,67,67,.10);
+  border:1.5px solid var(--crit);border-radius:10px;padding:14px 16px;margin:16px 0 4px;
+  font-size:13.5px;line-height:1.5;color:var(--ink)}
+.alert b{color:var(--crit)}
 .foot{margin-top:36px;color:var(--muted);font-size:11.5px;border-top:1px solid var(--grid);padding-top:12px}
 .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11.5px;color:var(--ink-2);margin-top:6px}
 .legend span{display:inline-flex;align-items:center;gap:5px}
@@ -138,6 +142,15 @@ function renderRegime(){
   $("#regime-pill").className="pill "+(REGIME_CLASS[r.label]||"trans");
   $("#regime-pill").textContent=REGIME_HUMAN[r.label]||r.label;
   $("#regime-expl").textContent=r.explanation;
+  if(r.label==="RISK_OFF"){
+    const a=$("#regime-alert");a.style.display="flex";
+    a.innerHTML=`<span style="font-size:22px;line-height:1">⛔</span><div>
+      <b>Risk-off — zero ideas is intentional, not an outage.</b><br>
+      The engine ran successfully on <b>${esc(DATA.run_date)}</b> and is deliberately
+      holding back new long ideas: ${esc(r.explanation)}<br>
+      The signal table below shows which checks failed. New ideas resume automatically
+      the day the regime turns risk-on again.</div>`;
+  }
   $("#sigs").innerHTML=r.signals.map(s=>{
     const v=s.passed===null?["·","na"]:(s.passed?["PASS","ok"]:["FAIL","fail"]);
     return `<div class="sig"><b>${esc(s.name)}</b><span class="v">${esc(s.value)}</span>
@@ -289,7 +302,9 @@ function renderIdeas(){
   $("#count").textContent=`showing ${v.length} of ${DATA.ideas.length} ideas`;
   const grid=$("#ideas");
   grid.innerHTML=v.length?v.map((i,k)=>ideaCard(i,k+1)).join("")
-    :`<div class="card empty">No ideas match the current filters${DATA.ideas.length?"":" — the engine produced none this run"}.</div>`;
+    :`<div class="card empty">No ideas match the current filters${DATA.ideas.length?"":(DATA.regime.label==="RISK_OFF"
+      ?" — risk-off regime: zero ideas by design, see the banner up top"
+      :" — the engine produced none this run")}.</div>`;
   v.forEach(i=>attachSparkHover(grid.querySelector(`[data-t="${i.ticker}"]`),i));
 }
 
@@ -336,6 +351,8 @@ def render_fragment(data: dict) -> str:
       <div class="sub">US equities · 1–3 month position ideas · run <span id="run-date"></span></div></div>
     <span id="regime-pill" class="pill"></span>
   </div>
+
+  <div id="regime-alert" class="alert" style="display:none"></div>
 
   <h2>① Macro regime</h2>
   <div class="card"><div id="regime-expl" style="font-weight:600"></div><div class="sigs" id="sigs"></div></div>
