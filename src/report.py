@@ -200,7 +200,9 @@ def assemble(regime: RegimeResult, sectors: SectorResult, screen: ScreenResult,
     if regime.label == "TRANSITION":
         max_ideas = max(1, max_ideas // 2)
 
-    cand = screen.candidates.set_index("ticker")
+    # RISK_OFF runs carry an empty, column-less candidates frame
+    cand = (screen.candidates if screen.candidates.empty
+            else screen.candidates.set_index("ticker"))
     ideas, watch = [], []
 
     for s in structures:
