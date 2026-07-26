@@ -10,8 +10,10 @@ python3 main.py
 # Publish fresh output to GitHub Pages; harmless to skip when offline
 # or when the run produced no changes.
 if git add -A && git commit -m "Weekend run $(date +%F)" >/dev/null 2>&1; then
-    # the daily cloud run also commits — sync its history before pushing
-    git pull --rebase origin main >/dev/null 2>&1
+    # the daily cloud run also commits — sync its history before pushing.
+    # -X theirs keeps this run's version when both sides rewrote the same
+    # output file (index.html, IDEAS_LOG.csv); dated files never conflict.
+    git pull --rebase -X theirs origin main >/dev/null 2>&1 || git rebase --abort >/dev/null 2>&1
     if git push >/dev/null 2>&1; then
         echo "Published: https://winwaytobacco-ai.github.io/ideas-engine/"
     else
