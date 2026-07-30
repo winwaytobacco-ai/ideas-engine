@@ -338,7 +338,23 @@ function renderAppendix(){
 }
 
 $("#run-date").textContent=DATA.run_date;
-renderRegime();renderFunnel();renderRRG();renderSectorTable();renderControls();renderIdeas();renderAppendix();
+if(DATA.generated_at&&DATA.generated_at.endsWith("Z")){
+  const g=new Date(DATA.generated_at);
+  $("#hk-time").textContent=" · engine ran "+g.toLocaleString("en-GB",
+    {timeZone:"Asia/Hong_Kong",day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"})
+    +" HK (data = "+DATA.run_date+" US close)";
+}
+function renderLogic(){
+  if(!DATA.logic){$("#logic-sec").style.display="none";return;}
+  let last="",rows="";
+  for(const r of DATA.logic){
+    rows+=`<tr>${r.layer!==last?`<td><b>${r.layer}</b></td>`:"<td></td>"}
+      <td>${esc(r.rule)}</td><td><code>${esc(r.key)}</code></td>
+      <td style="font-weight:650">${esc(String(r.value))}</td></tr>`;
+    last=r.layer;}
+  $("#logic").innerHTML=`<tr><th>Layer</th><th>Rule</th><th>config.yaml key</th><th>Value</th></tr>${rows}`;
+}
+renderRegime();renderFunnel();renderRRG();renderSectorTable();renderControls();renderIdeas();renderAppendix();renderLogic();
 """
 
 
@@ -348,7 +364,7 @@ def render_fragment(data: dict) -> str:
 <div class="wrap">
   <div class="row" style="justify-content:space-between">
     <div><h1>Ideas Engine</h1>
-      <div class="sub">US equities · 1–3 month position ideas · run <span id="run-date"></span></div></div>
+      <div class="sub">US equities · 1–3 month position ideas · run <span id="run-date"></span><span id="hk-time"></span></div></div>
     <span id="regime-pill" class="pill"></span>
   </div>
 
@@ -395,6 +411,16 @@ def render_fragment(data: dict) -> str:
     <div class="card tblwrap" style="margin-top:8px"><table id="watch"></table></div></details>
   <details><summary>Near-misses — failed exactly one screen filter</summary>
     <div class="card tblwrap" style="margin-top:8px"><table id="near"></table></div></details>
+
+  <div id="logic-sec">
+  <h2>⑤ Engine logic — live thresholds</h2>
+  <details><summary>Every rule the funnel applied this run, with its current value and config key</summary>
+    <div class="card tblwrap" style="margin-top:8px"><table id="logic"></table>
+    <div class="sub" style="margin-top:8px">Adjust: edit the named key in <b>config.yaml</b>
+    (permanent, next run picks it up) or use one-run overrides
+    <code>--top-n</code> / <code>--min-rr</code> / <code>--sectors</code>.
+    Tuning should follow paper-arena review evidence, not vibes — record the why.</div></div></details>
+  </div>
 
   <div class="foot">Generated {data["generated_at"]} · thresholds in config.yaml ·
     volume-flow is a daily proxy (true CVD needs intraday data) ·

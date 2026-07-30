@@ -7,7 +7,7 @@ from __future__ import annotations
 
 import csv
 import json
-from datetime import date, datetime
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 import pandas as pd
@@ -314,7 +314,8 @@ def assemble(regime: RegimeResult, sectors: SectorResult, screen: ScreenResult,
     near = screen.near_misses
     return {
         "run_date": date.today().isoformat(),
-        "generated_at": datetime.now().isoformat(timespec="seconds"),
+        # UTC with Z so the dashboard can convert to the viewer's timezone (HK)
+        "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "regime": {
             "label": regime.label, "explanation": regime.explanation,
             "signals": [{"name": s.name, "value": s.value, "rule": s.rule,
@@ -344,7 +345,56 @@ def assemble(regime: RegimeResult, sectors: SectorResult, screen: ScreenResult,
             "min_rr": cfg["trade"]["min_rr"], "max_ideas": cfg["report"]["max_ideas"],
             "top_n_sectors": cfg["sectors"]["top_n"],
         },
+        "logic": build_logic(cfg),
     }
+
+
+def build_logic(cfg: dict) -> list[dict]:
+    """The funnel's live rulebook, for display in the dashboard.
+
+    Every row names its config.yaml key so a threshold change is a one-line
+    request; values are read from cfg so the panel can never drift from the
+    engine's actual behavior.
+    """
+    r, s, sc, st, t, rp = (cfg["regime"], cfg["sectors"], cfg["screen"],
+                           cfg["structure"], cfg["trade"], cfg["report"])
+    th = cfg.get("themes", {}).get("ai_infra", {})
+    return [
+        {"layer": "① Regime", "rule": "Risk-on needs VIX below this AND below its 50DMA",
+         "key": "regime.vix_max", "value": r["vix_max"]},
+        {"layer": "① Regime", "rule": "HY OAS must sit below this trailing-252d percentile",
+         "key": "regime.hyoas_percentile_max", "value": r["hyoas_percentile_max"]},
+        {"layer": "① Regime", "rule": "NFCI below this = loose financial conditions",
+         "key": "regime.nfci_max", "value": r["nfci_max"]},
+        {"layer": "① Regime", "rule": "SPY 63d range under this = 'ranging' variant",
+         "key": "regime.spy_range_pct", "value": r["spy_range_pct"]},
+        {"layer": "② Sectors", "rule": "Leading/Improving sectors feeding the screen",
+         "key": "sectors.top_n", "value": s["top_n"]},
+        {"layer": "② Sectors", "rule": "Below this % of members above 50DMA → 'narrow leadership' flag",
+         "key": "sectors.breadth_min", "value": s["breadth_min"]},
+        {"layer": "② Sectors", "rule": "AI-infra theme inclusion policy",
+         "key": "themes.ai_infra.include_when", "value": th.get("include_when", "off")},
+        {"layer": "③ Screen", "rule": "Minimum share price",
+         "key": "screen.min_price", "value": sc["min_price"]},
+        {"layer": "③ Screen", "rule": "Minimum 21d average dollar volume",
+         "key": "screen.min_avg_dollar_vol", "value": sc["min_avg_dollar_vol"]},
+        {"layer": "③ Screen", "rule": "Max distance below 52w high (leadership filter)",
+         "key": "screen.max_pct_from_52w_high", "value": sc["max_pct_from_52w_high"]},
+        {"layer": "③ Screen", "rule": "…loosened to this when regime is RANGING",
+         "key": "screen.max_pct_from_52w_high_ranging", "value": sc["max_pct_from_52w_high_ranging"]},
+        {"layer": "④ Structure", "rule": "Volume-profile lookback (trading days)",
+         "key": "structure.lookback_days", "value": st["lookback_days"]},
+        {"layer": "④ Structure", "rule": "Pullback must sit within ±this of POC/HVN",
+         "key": "structure.pullback_poc_tolerance", "value": st["pullback_poc_tolerance"]},
+        {"layer": "④ Structure", "rule": "Closes above VAH needed to accept a breakout",
+         "key": "structure.breakout_min_sessions", "value": st["breakout_min_sessions"]},
+        {"layer": "④ Structure", "rule": "Breakout older than this = extended, no entry",
+         "key": "structure.breakout_max_age", "value": st["breakout_max_age"]},
+        {"layer": "⑤ Trade", "rule": "Reward/risk floor — ideas below this are dropped to Watch",
+         "key": "trade.min_rr", "value": t["min_rr"]},
+        {"layer": "⑤ Trade", "rule": "Max ideas in the ranked list",
+         "key": "report.max_ideas", "value": rp["max_ideas"]},
+    ]
 
 
 # ------------------------------------------------------------------ outputs --
