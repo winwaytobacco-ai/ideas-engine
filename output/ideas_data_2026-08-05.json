@@ -1,0 +1,3047 @@
+{
+ "run_date": "2026-08-05",
+ "generated_at": "2026-08-05T22:36:13Z",
+ "regime": {
+  "label": "RISK_ON_TRENDING",
+  "explanation": "SPY in confirmed uptrend and 3/3 macro checks risk-on \u2014 full idea generation.",
+  "signals": [
+   {
+    "name": "Credit stress (HY OAS)",
+    "value": "2.73%",
+    "rule": "< 21d MA (2.75) and < p75 of 252d (2.95)",
+    "passed": true
+   },
+   {
+    "name": "Yield curve (10y-2y)",
+    "value": "+0.45% (positive, steepening)",
+    "rule": "informational only in v1",
+    "passed": null
+   },
+   {
+    "name": "Volatility (VIX)",
+    "value": "16.5",
+    "rule": "< 22 and < 50d MA (17.3)",
+    "passed": true
+   },
+   {
+    "name": "Financial conditions (NFCI)",
+    "value": "-0.53",
+    "rule": "< 0.0 (loose)",
+    "passed": true
+   },
+   {
+    "name": "SPY trend",
+    "value": "770 vs 200DMA 699",
+    "rule": "Close > 200DMA, 50DMA > 200DMA, 200DMA slope up over 21d",
+    "passed": true
+   },
+   {
+    "name": "SPY range check",
+    "value": "63d range 7.8%",
+    "rule": "ranging if < 8% and no MA alignment",
+    "passed": null
+   }
+  ]
+ },
+ "sectors": {
+  "rows": [
+   {
+    "etf": "IGV",
+    "name": "Software",
+    "rel_21d": 4.67,
+    "rel_63d": 8.16,
+    "composite": 6.42,
+    "rs_ratio": 106.7,
+    "rs_momentum": 7.19,
+    "quadrant": "Leading",
+    "selected": true,
+    "rank": 1,
+    "breadth": 0.5365853658536586,
+    "trail": [
+     {
+      "r": 92.05,
+      "m": -1.37
+     },
+     {
+      "r": 98.41,
+      "m": -8.12
+     },
+     {
+      "r": 99.34,
+      "m": 5.43
+     },
+     {
+      "r": 96.08,
+      "m": 5.19
+     },
+     {
+      "r": 106.67,
+      "m": 7.19
+     }
+    ]
+   },
+   {
+    "etf": "XLF",
+    "name": "Financials",
+    "rel_21d": 0.53,
+    "rel_63d": 6.19,
+    "composite": 3.36,
+    "rs_ratio": 102.5,
+    "rs_momentum": 1.14,
+    "quadrant": "Leading",
+    "selected": true,
+    "rank": 2,
+    "breadth": 0.9342105263157895,
+    "trail": [
+     {
+      "r": 95.84,
+      "m": 4.63
+     },
+     {
+      "r": 99.11,
+      "m": 10.32
+     },
+     {
+      "r": 101.35,
+      "m": 6.53
+     },
+     {
+      "r": 103.61,
+      "m": 5.24
+     },
+     {
+      "r": 102.47,
+      "m": 1.14
+     }
+    ]
+   },
+   {
+    "etf": "XLK",
+    "name": "Information Technology",
+    "rel_21d": 0.8,
+    "rel_63d": 5.75,
+    "composite": 3.27,
+    "rs_ratio": 106.3,
+    "rs_momentum": -1.29,
+    "quadrant": "Weakening",
+    "selected": false,
+    "rank": null,
+    "breadth": 0.5365853658536586,
+    "trail": [
+     {
+      "r": 116.8,
+      "m": 5.23
+     },
+     {
+      "r": 112.24,
+      "m": -6.49
+     },
+     {
+      "r": 109.13,
+      "m": -4.46
+     },
+     {
+      "r": 105.51,
+      "m": -6.91
+     },
+     {
+      "r": 106.32,
+      "m": -1.29
+     }
+    ]
+   },
+   {
+    "etf": "XLV",
+    "name": "Health Care",
+    "rel_21d": -3.12,
+    "rel_63d": 6.85,
+    "composite": 1.86,
+    "rs_ratio": 99.7,
+    "rs_momentum": -2.32,
+    "quadrant": "Lagging",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 91.96,
+      "m": 1.33
+     },
+     {
+      "r": 99.18,
+      "m": 11.52
+     },
+     {
+      "r": 97.93,
+      "m": 2.14
+     },
+     {
+      "r": 102.69,
+      "m": 6.11
+     },
+     {
+      "r": 99.68,
+      "m": -2.32
+     }
+    ]
+   },
+   {
+    "etf": "XLI",
+    "name": "Industrials",
+    "rel_21d": -0.78,
+    "rel_63d": 1.72,
+    "composite": 0.47,
+    "rs_ratio": 99.1,
+    "rs_momentum": -1.04,
+    "quadrant": "Lagging",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 99.87,
+      "m": 4.52
+     },
+     {
+      "r": 101.12,
+      "m": 7.2
+     },
+     {
+      "r": 98.41,
+      "m": 0.13
+     },
+     {
+      "r": 101.3,
+      "m": -0.11
+     },
+     {
+      "r": 99.1,
+      "m": -1.04
+     }
+    ]
+   },
+   {
+    "etf": "XBI",
+    "name": "Biotech",
+    "rel_21d": -9.58,
+    "rel_63d": 7.85,
+    "composite": -0.87,
+    "rs_ratio": 104.5,
+    "rs_momentum": -11.05,
+    "quadrant": "Weakening",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 102.25,
+      "m": 8.76
+     },
+     {
+      "r": 113.03,
+      "m": 18.01
+     },
+     {
+      "r": 110.02,
+      "m": 12.32
+     },
+     {
+      "r": 107.59,
+      "m": -2.73
+     },
+     {
+      "r": 104.46,
+      "m": -11.05
+     }
+    ]
+   },
+   {
+    "etf": "SMH",
+    "name": "Semiconductors",
+    "rel_21d": -4.97,
+    "rel_63d": 2.36,
+    "composite": -1.31,
+    "rs_ratio": 104.9,
+    "rs_momentum": -8.93,
+    "quadrant": "Weakening",
+    "selected": false,
+    "rank": null,
+    "breadth": 0.5365853658536586,
+    "trail": [
+     {
+      "r": 136.39,
+      "m": 10.01
+     },
+     {
+      "r": 124.36,
+      "m": -4.44
+     },
+     {
+      "r": 116.63,
+      "m": -10.54
+     },
+     {
+      "r": 108.98,
+      "m": -15.28
+     },
+     {
+      "r": 104.9,
+      "m": -8.93
+     }
+    ]
+   },
+   {
+    "etf": "XLB",
+    "name": "Materials",
+    "rel_21d": -0.76,
+    "rel_63d": -4.1,
+    "composite": -2.43,
+    "rs_ratio": 95.4,
+    "rs_momentum": -0.18,
+    "quadrant": "Lagging",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 96.19,
+      "m": 2.64
+     },
+     {
+      "r": 94.95,
+      "m": 1.16
+     },
+     {
+      "r": 93.46,
+      "m": -3.39
+     },
+     {
+      "r": 96.49,
+      "m": -0.52
+     },
+     {
+      "r": 95.37,
+      "m": -0.18
+     }
+    ]
+   },
+   {
+    "etf": "XLRE",
+    "name": "Real Estate",
+    "rel_21d": -2.26,
+    "rel_63d": -3.4,
+    "composite": -2.83,
+    "rs_ratio": 96.3,
+    "rs_momentum": -2.59,
+    "quadrant": "Lagging",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 96.16,
+      "m": -2.11
+     },
+     {
+      "r": 97.64,
+      "m": 4.18
+     },
+     {
+      "r": 97.4,
+      "m": -2.6
+     },
+     {
+      "r": 102.24,
+      "m": 2.03
+     },
+     {
+      "r": 96.35,
+      "m": -2.59
+     }
+    ]
+   },
+   {
+    "etf": "XLP",
+    "name": "Consumer Staples",
+    "rel_21d": -2.4,
+    "rel_63d": -4.42,
+    "composite": -3.41,
+    "rs_ratio": 93.8,
+    "rs_momentum": -1.82,
+    "quadrant": "Lagging",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 93.25,
+      "m": -4.87
+     },
+     {
+      "r": 94.04,
+      "m": 3.91
+     },
+     {
+      "r": 93.41,
+      "m": -3.53
+     },
+     {
+      "r": 96.09,
+      "m": -0.92
+     },
+     {
+      "r": 93.81,
+      "m": -1.82
+     }
+    ]
+   },
+   {
+    "etf": "XLE",
+    "name": "Energy",
+    "rel_21d": 1.93,
+    "rel_63d": -9.54,
+    "composite": -3.8,
+    "rs_ratio": 93.4,
+    "rs_momentum": 0.2,
+    "quadrant": "Improving",
+    "selected": true,
+    "rank": 3,
+    "breadth": 0.38095238095238093,
+    "trail": [
+     {
+      "r": 91.96,
+      "m": -15.96
+     },
+     {
+      "r": 90.46,
+      "m": -7.78
+     },
+     {
+      "r": 96.18,
+      "m": -3.39
+     },
+     {
+      "r": 101.68,
+      "m": 8.48
+     },
+     {
+      "r": 93.35,
+      "m": 0.2
+     }
+    ]
+   },
+   {
+    "etf": "XLY",
+    "name": "Consumer Discretionary",
+    "rel_21d": -1.89,
+    "rel_63d": -5.95,
+    "composite": -3.92,
+    "rs_ratio": 95.0,
+    "rs_momentum": 0.53,
+    "quadrant": "Improving",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 93.18,
+      "m": 1.42
+     },
+     {
+      "r": 95.02,
+      "m": 3.61
+     },
+     {
+      "r": 93.23,
+      "m": -0.2
+     },
+     {
+      "r": 90.41,
+      "m": -3.53
+     },
+     {
+      "r": 94.95,
+      "m": 0.53
+     }
+    ]
+   },
+   {
+    "etf": "XLC",
+    "name": "Communication Services",
+    "rel_21d": -3.09,
+    "rel_63d": -10.5,
+    "composite": -6.79,
+    "rs_ratio": 90.3,
+    "rs_momentum": -0.72,
+    "quadrant": "Lagging",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 88.38,
+      "m": -5.76
+     },
+     {
+      "r": 89.86,
+      "m": -1.26
+     },
+     {
+      "r": 91.34,
+      "m": -0.05
+     },
+     {
+      "r": 89.36,
+      "m": 1.34
+     },
+     {
+      "r": 90.34,
+      "m": -0.72
+     }
+    ]
+   },
+   {
+    "etf": "XLU",
+    "name": "Utilities",
+    "rel_21d": -7.42,
+    "rel_63d": -11.88,
+    "composite": -9.65,
+    "rs_ratio": 89.1,
+    "rs_momentum": -6.91,
+    "quadrant": "Lagging",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 93.18,
+      "m": 0.16
+     },
+     {
+      "r": 93.96,
+      "m": 6.72
+     },
+     {
+      "r": 95.18,
+      "m": 2.44
+     },
+     {
+      "r": 98.2,
+      "m": 1.01
+     },
+     {
+      "r": 89.09,
+      "m": -6.91
+     }
+    ]
+   },
+   {
+    "etf": "AI_INFRA",
+    "name": "AI Infrastructure",
+    "rel_21d": -0.68,
+    "rel_63d": -3.88,
+    "composite": -2.28,
+    "rs_ratio": 102.0,
+    "rs_momentum": -4.23,
+    "quadrant": "Weakening",
+    "selected": true,
+    "rank": 4,
+    "breadth": 0.6666666666666666,
+    "trail": [
+     {
+      "r": 114.8,
+      "m": 6.48
+     },
+     {
+      "r": 110.26,
+      "m": -2.62
+     },
+     {
+      "r": 107.77,
+      "m": -0.03
+     },
+     {
+      "r": 106.57,
+      "m": -7.37
+     },
+     {
+      "r": 102.03,
+      "m": -4.23
+     }
+    ]
+   }
+  ],
+  "selected_gics": [
+   "Information Technology",
+   "Financials",
+   "Energy"
+  ]
+ },
+ "funnel": {
+  "universe": 518,
+  "screened": 190,
+  "candidates": 65,
+  "qualified": 22,
+  "ideas": 5
+ },
+ "ideas": [
+  {
+   "ticker": "ZBRA",
+   "name": "Zebra Technologies",
+   "sector": "Information Technology",
+   "sector_rank": 1,
+   "setup": "ACCEPTANCE_BREAKOUT",
+   "setup_human": "Acceptance breakout above value",
+   "score": 80.0,
+   "total_score": 71.4,
+   "rs_percentile": 89,
+   "thesis": "Zebra Technologies \u2014 acceptance breakout above value in Information Technology (sector rank #1), relative strength top 11% of candidates, flow confirming.",
+   "entry": 267.89,
+   "entry_type": "Buy-stop on retest of VAH (266.56 + 0.5%)",
+   "stop": 249.81,
+   "stop_ref": "anchored VWAP",
+   "target": 368.99,
+   "target_ref": "52-week high",
+   "rr": 5.59,
+   "free_flow": 285.97,
+   "stop_pct": 6.7,
+   "stop_atr": 1.1,
+   "close": 368.99,
+   "poc": 243.46,
+   "vah": 266.56,
+   "val": 220.37,
+   "avwap": 249.81,
+   "avwap_dist": 47.7,
+   "atr": 15.96,
+   "flow_state": "confirming",
+   "pct_from_52w_high": 0.0,
+   "breadth": 54,
+   "theme": null,
+   "fundamentals": null,
+   "ooda": null,
+   "risks": [
+    {
+     "level": "high",
+     "text": "Extended 48% above anchored VWAP \u2014 heavy chase risk; wait for the limit level, do not buy at market."
+    },
+    {
+     "level": "info",
+     "text": "Stop sits 6.7% below entry (~1.1 ATR), below anchored VWAP."
+    },
+    {
+     "level": "medium",
+     "text": "At 52-week highs: target is a measured-move projection with no overhead volume reference \u2014 take partial profits mechanically."
+    },
+    {
+     "level": "info",
+     "text": "Entry limit sits 27.4% below current price \u2014 the order may never fill; do not chase if it runs away."
+    }
+   ],
+   "execution": [
+    "Entry \u2014 Buy-stop on retest of VAH (266.56 + 0.5%). Working level: 267.89.",
+    "Stop \u2014 249.81 (6.7% risk, ~1.1 ATR), placed below anchored VWAP. Structural, never percentage-based.",
+    "Target \u2014 368.99 (52-week high); reward/risk 5.6.",
+    "Free-flow \u2014 at 285.97 (+1R) sell half; the remainder then rides at breakeven-or-better even if stopped.",
+    "Invalidation \u2014 idea is void on a daily close below the stop reference or if the weekly regime turns RISK_OFF."
+   ],
+   "spark": {
+    "dates": [
+     "2026-02-04",
+     "2026-02-05",
+     "2026-02-06",
+     "2026-02-09",
+     "2026-02-10",
+     "2026-02-11",
+     "2026-02-12",
+     "2026-02-13",
+     "2026-02-17",
+     "2026-02-18",
+     "2026-02-19",
+     "2026-02-20",
+     "2026-02-23",
+     "2026-02-24",
+     "2026-02-25",
+     "2026-02-26",
+     "2026-02-27",
+     "2026-03-02",
+     "2026-03-03",
+     "2026-03-04",
+     "2026-03-05",
+     "2026-03-06",
+     "2026-03-09",
+     "2026-03-10",
+     "2026-03-11",
+     "2026-03-12",
+     "2026-03-13",
+     "2026-03-16",
+     "2026-03-17",
+     "2026-03-18",
+     "2026-03-19",
+     "2026-03-20",
+     "2026-03-23",
+     "2026-03-24",
+     "2026-03-25",
+     "2026-03-26",
+     "2026-03-27",
+     "2026-03-30",
+     "2026-03-31",
+     "2026-04-01",
+     "2026-04-02",
+     "2026-04-06",
+     "2026-04-07",
+     "2026-04-08",
+     "2026-04-09",
+     "2026-04-10",
+     "2026-04-13",
+     "2026-04-14",
+     "2026-04-15",
+     "2026-04-16",
+     "2026-04-17",
+     "2026-04-20",
+     "2026-04-21",
+     "2026-04-22",
+     "2026-04-23",
+     "2026-04-24",
+     "2026-04-27",
+     "2026-04-28",
+     "2026-04-29",
+     "2026-04-30",
+     "2026-05-01",
+     "2026-05-04",
+     "2026-05-05",
+     "2026-05-06",
+     "2026-05-07",
+     "2026-05-08",
+     "2026-05-11",
+     "2026-05-12",
+     "2026-05-13",
+     "2026-05-14",
+     "2026-05-15",
+     "2026-05-18",
+     "2026-05-19",
+     "2026-05-20",
+     "2026-05-21",
+     "2026-05-22",
+     "2026-05-26",
+     "2026-05-27",
+     "2026-05-28",
+     "2026-05-29",
+     "2026-06-01",
+     "2026-06-02",
+     "2026-06-03",
+     "2026-06-04",
+     "2026-06-05",
+     "2026-06-08",
+     "2026-06-09",
+     "2026-06-10",
+     "2026-06-11",
+     "2026-06-12",
+     "2026-06-15",
+     "2026-06-16",
+     "2026-06-17",
+     "2026-06-18",
+     "2026-06-22",
+     "2026-06-23",
+     "2026-06-24",
+     "2026-06-25",
+     "2026-06-26",
+     "2026-06-29",
+     "2026-06-30",
+     "2026-07-01",
+     "2026-07-02",
+     "2026-07-06",
+     "2026-07-07",
+     "2026-07-08",
+     "2026-07-09",
+     "2026-07-10",
+     "2026-07-13",
+     "2026-07-14",
+     "2026-07-15",
+     "2026-07-16",
+     "2026-07-17",
+     "2026-07-20",
+     "2026-07-21",
+     "2026-07-22",
+     "2026-07-23",
+     "2026-07-24",
+     "2026-07-27",
+     "2026-07-28",
+     "2026-07-29",
+     "2026-07-30",
+     "2026-07-31",
+     "2026-08-03",
+     "2026-08-04",
+     "2026-08-05"
+    ],
+    "close": [
+     245.25,
+     241.08,
+     251.4,
+     257.79,
+     256.57,
+     252.5,
+     274.15,
+     264.62,
+     260.76,
+     252.52,
+     251.74,
+     255.41,
+     231.32,
+     235.83,
+     239.01,
+     235.03,
+     223.96,
+     223.92,
+     225.38,
+     231.42,
+     229.67,
+     219.65,
+     213.78,
+     212.47,
+     213.67,
+     204.05,
+     202.72,
+     203.97,
+     209.06,
+     207.51,
+     206.19,
+     203.62,
+     205.87,
+     207.49,
+     208.45,
+     204.42,
+     202.64,
+     199.3,
+     209.08,
+     207.28,
+     202.84,
+     211.12,
+     212.51,
+     221.14,
+     223.07,
+     222.13,
+     226.09,
+     226.7,
+     229.64,
+     233.04,
+     234.43,
+     237.3,
+     236.67,
+     231.1,
+     226.87,
+     227.71,
+     221.0,
+     219.24,
+     215.54,
+     226.26,
+     227.08,
+     223.73,
+     228.39,
+     229.76,
+     228.62,
+     226.03,
+     216.96,
+     241.79,
+     246.76,
+     258.1,
+     259.35,
+     260.06,
+     247.15,
+     243.47,
+     242.26,
+     255.55,
+     252.44,
+     252.51,
+     247.9,
+     243.63,
+     249.96,
+     254.44,
+     249.3,
+     245.48,
+     232.11,
+     233.04,
+     234.2,
+     216.79,
+     222.44,
+     228.42,
+     240.05,
+     237.39,
+     232.98,
+     235.98,
+     245.69,
+     237.72,
+     247.78,
+     243.39,
+     251.53,
+     255.81,
+     263.26,
+     267.85,
+     267.18,
+     270.29,
+     264.65,
+     264.32,
+     272.65,
+     272.52,
+     266.71,
+     260.11,
+     255.17,
+     265.04,
+     267.4,
+     264.69,
+     262.4,
+     262.75,
+     256.95,
+     259.92,
+     264.59,
+     284.4,
+     282.98,
+     288.57,
+     293.82,
+     291.64,
+     368.83,
+     368.99
+    ]
+   }
+  },
+  {
+   "ticker": "ANET",
+   "name": "Arista Networks",
+   "sector": "Information Technology",
+   "sector_rank": 1,
+   "setup": "ACCEPTANCE_BREAKOUT",
+   "setup_human": "Acceptance breakout above value",
+   "score": 80.0,
+   "total_score": 38.2,
+   "rs_percentile": 48,
+   "thesis": "Arista Networks \u2014 acceptance breakout above value in Information Technology (sector rank #1), relative strength top 52% of candidates, flow confirming.",
+   "entry": 167.95,
+   "entry_type": "Buy-stop on retest of VAH (167.12 + 0.5%)",
+   "stop": 156.88,
+   "stop_ref": "anchored VWAP (widened to 1 ATR)",
+   "target": 197.31,
+   "target_ref": "52-week high",
+   "rr": 2.65,
+   "free_flow": 179.02,
+   "stop_pct": 6.6,
+   "stop_atr": 1.0,
+   "close": 197.31,
+   "poc": 142.26,
+   "vah": 167.12,
+   "val": 117.41,
+   "avwap": 160.37,
+   "avwap_dist": 23.0,
+   "atr": 11.07,
+   "flow_state": "confirming",
+   "pct_from_52w_high": 0.0,
+   "breadth": 54,
+   "theme": "AI Infrastructure",
+   "fundamentals": {
+    "trailingEps": 2.91,
+    "forwardEps": 4.46749,
+    "revenueGrowth": 0.351,
+    "earningsGrowth": 0.25,
+    "profitMargins": 0.38317
+   },
+   "ooda": {
+    "observe": [
+     "Profitable today: trailing 12m EPS 2.91, net margin 38%",
+     "Real demand: quarterly revenue growing +35% YoY",
+     "Order-book proxy: forward EPS 4.47 above trailing 2.91 \u2014 analysts see the pipeline growing",
+     "Price structure: acceptance breakout above value, flow confirming, +23.0% vs anchored VWAP.",
+     "Order-book data is not in free feeds \u2014 forward-vs-trailing EPS is the proxy."
+    ],
+    "orient": [
+     "AI-infrastructure basket is Weakening vs SPY (RS-ratio 102.0, momentum -4.2%), included by config policy 'always'.",
+     "Regime RISK_ON_TRENDING: SPY in confirmed uptrend and 3/3 macro checks risk-on \u2014 full idea generation.",
+     "Theme breadth: 54% of basket members above their 50DMA."
+    ],
+    "decide": [
+     "Earnings-backed: PASS \u2014 kept in the ranked list. Use the AI-infra filter above the ideas grid to exclude (or isolate) theme names if you judge the theme crowded."
+    ],
+    "act": [
+     "Execute per the plan below \u2014 entry, structural stop, target, free-flow at +1R, and regime invalidation."
+    ]
+   },
+   "risks": [
+    {
+     "level": "high",
+     "text": "Extended 23% above anchored VWAP \u2014 heavy chase risk; wait for the limit level, do not buy at market."
+    },
+    {
+     "level": "info",
+     "text": "Stop sits 6.6% below entry (~1.0 ATR), below anchored VWAP (widened to 1 ATR)."
+    },
+    {
+     "level": "info",
+     "text": "Reward/risk of 2.65 is close to the 2.5 floor \u2014 any slippage on entry meaningfully degrades the trade."
+    },
+    {
+     "level": "medium",
+     "text": "At 52-week highs: target is a measured-move projection with no overhead volume reference \u2014 take partial profits mechanically."
+    },
+    {
+     "level": "info",
+     "text": "Entry limit sits 14.9% below current price \u2014 the order may never fill; do not chase if it runs away."
+    },
+    {
+     "level": "medium",
+     "text": "AI-infrastructure basket is Weakening vs SPY \u2014 the theme tailwind is fading; this idea rests on stock-specific strength."
+    }
+   ],
+   "execution": [
+    "Entry \u2014 Buy-stop on retest of VAH (167.12 + 0.5%). Working level: 167.95.",
+    "Stop \u2014 156.88 (6.6% risk, ~1.0 ATR), placed below anchored VWAP (widened to 1 ATR). Structural, never percentage-based.",
+    "Target \u2014 197.31 (52-week high); reward/risk 2.6.",
+    "Free-flow \u2014 at 179.02 (+1R) sell half; the remainder then rides at breakeven-or-better even if stopped.",
+    "Invalidation \u2014 idea is void on a daily close below the stop reference or if the weekly regime turns RISK_OFF."
+   ],
+   "spark": {
+    "dates": [
+     "2026-02-04",
+     "2026-02-05",
+     "2026-02-06",
+     "2026-02-09",
+     "2026-02-10",
+     "2026-02-11",
+     "2026-02-12",
+     "2026-02-13",
+     "2026-02-17",
+     "2026-02-18",
+     "2026-02-19",
+     "2026-02-20",
+     "2026-02-23",
+     "2026-02-24",
+     "2026-02-25",
+     "2026-02-26",
+     "2026-02-27",
+     "2026-03-02",
+     "2026-03-03",
+     "2026-03-04",
+     "2026-03-05",
+     "2026-03-06",
+     "2026-03-09",
+     "2026-03-10",
+     "2026-03-11",
+     "2026-03-12",
+     "2026-03-13",
+     "2026-03-16",
+     "2026-03-17",
+     "2026-03-18",
+     "2026-03-19",
+     "2026-03-20",
+     "2026-03-23",
+     "2026-03-24",
+     "2026-03-25",
+     "2026-03-26",
+     "2026-03-27",
+     "2026-03-30",
+     "2026-03-31",
+     "2026-04-01",
+     "2026-04-02",
+     "2026-04-06",
+     "2026-04-07",
+     "2026-04-08",
+     "2026-04-09",
+     "2026-04-10",
+     "2026-04-13",
+     "2026-04-14",
+     "2026-04-15",
+     "2026-04-16",
+     "2026-04-17",
+     "2026-04-20",
+     "2026-04-21",
+     "2026-04-22",
+     "2026-04-23",
+     "2026-04-24",
+     "2026-04-27",
+     "2026-04-28",
+     "2026-04-29",
+     "2026-04-30",
+     "2026-05-01",
+     "2026-05-04",
+     "2026-05-05",
+     "2026-05-06",
+     "2026-05-07",
+     "2026-05-08",
+     "2026-05-11",
+     "2026-05-12",
+     "2026-05-13",
+     "2026-05-14",
+     "2026-05-15",
+     "2026-05-18",
+     "2026-05-19",
+     "2026-05-20",
+     "2026-05-21",
+     "2026-05-22",
+     "2026-05-26",
+     "2026-05-27",
+     "2026-05-28",
+     "2026-05-29",
+     "2026-06-01",
+     "2026-06-02",
+     "2026-06-03",
+     "2026-06-04",
+     "2026-06-05",
+     "2026-06-08",
+     "2026-06-09",
+     "2026-06-10",
+     "2026-06-11",
+     "2026-06-12",
+     "2026-06-15",
+     "2026-06-16",
+     "2026-06-17",
+     "2026-06-18",
+     "2026-06-22",
+     "2026-06-23",
+     "2026-06-24",
+     "2026-06-25",
+     "2026-06-26",
+     "2026-06-29",
+     "2026-06-30",
+     "2026-07-01",
+     "2026-07-02",
+     "2026-07-06",
+     "2026-07-07",
+     "2026-07-08",
+     "2026-07-09",
+     "2026-07-10",
+     "2026-07-13",
+     "2026-07-14",
+     "2026-07-15",
+     "2026-07-16",
+     "2026-07-17",
+     "2026-07-20",
+     "2026-07-21",
+     "2026-07-22",
+     "2026-07-23",
+     "2026-07-24",
+     "2026-07-27",
+     "2026-07-28",
+     "2026-07-29",
+     "2026-07-30",
+     "2026-07-31",
+     "2026-08-03",
+     "2026-08-04",
+     "2026-08-05"
+    ],
+    "close": [
+     130.28,
+     128.67,
+     137.49,
+     141.74,
+     143.45,
+     140.66,
+     135.12,
+     141.59,
+     142.58,
+     139.54,
+     137.23,
+     132.79,
+     127.43,
+     128.77,
+     132.89,
+     130.25,
+     133.5,
+     129.3,
+     124.6,
+     134.83,
+     139.4,
+     132.89,
+     137.17,
+     139.62,
+     138.23,
+     134.03,
+     133.57,
+     135.35,
+     133.07,
+     136.07,
+     136.26,
+     131.22,
+     135.88,
+     130.8,
+     135.01,
+     122.55,
+     120.77,
+     116.13,
+     122.78,
+     124.85,
+     126.68,
+     126.25,
+     133.64,
+     145.07,
+     146.05,
+     147.35,
+     152.02,
+     154.37,
+     154.33,
+     161.01,
+     164.23,
+     166.85,
+     172.86,
+     177.73,
+     172.55,
+     176.91,
+     172.47,
+     165.29,
+     168.68,
+     172.71,
+     172.7,
+     172.62,
+     170.22,
+     147.06,
+     141.75,
+     141.77,
+     136.43,
+     142.54,
+     140.69,
+     147.81,
+     141.97,
+     141.71,
+     141.58,
+     140.49,
+     148.59,
+     154.03,
+     158.01,
+     154.31,
+     155.27,
+     159.47,
+     170.68,
+     175.33,
+     174.37,
+     166.01,
+     154.27,
+     156.4,
+     152.16,
+     151.76,
+     156.4,
+     163.24,
+     169.09,
+     168.01,
+     164.93,
+     169.67,
+     174.56,
+     162.2,
+     161.74,
+     165.45,
+     157.6,
+     164.1,
+     169.88,
+     166.62,
+     159.99,
+     173.28,
+     166.46,
+     181.05,
+     184.69,
+     186.96,
+     181.15,
+     182.57,
+     171.92,
+     168.56,
+     168.61,
+     169.35,
+     174.58,
+     174.87,
+     176.61,
+     173.99,
+     170.76,
+     169.71,
+     157.97,
+     171.02,
+     180.35,
+     184.89,
+     190.51,
+     197.31
+    ]
+   }
+  },
+  {
+   "ticker": "STT",
+   "name": "State Street Corporation",
+   "sector": "Financials",
+   "sector_rank": 2,
+   "setup": "PULLBACK_TO_VALUE",
+   "setup_human": "Pullback to value",
+   "score": 40.0,
+   "total_score": 28.2,
+   "rs_percentile": 78,
+   "thesis": "State Street Corporation \u2014 pullback to value in Financials (sector rank #2), relative strength top 22% of candidates, flow diverging.",
+   "entry": 183.96,
+   "entry_type": "Limit at high-volume node (183.96)",
+   "stop": 156.13,
+   "stop_ref": "anchored VWAP",
+   "target": 254.67,
+   "target_ref": "measured move (value-area width projected)",
+   "rr": 2.54,
+   "free_flow": 211.8,
+   "stop_pct": 15.1,
+   "stop_atr": 6.1,
+   "close": 187.05,
+   "poc": 169.98,
+   "vah": 192.51,
+   "val": 130.35,
+   "avwap": 156.13,
+   "avwap_dist": 19.8,
+   "atr": 4.57,
+   "flow_state": "diverging",
+   "pct_from_52w_high": 0.0,
+   "breadth": 93,
+   "theme": null,
+   "fundamentals": null,
+   "ooda": null,
+   "risks": [
+    {
+     "level": "high",
+     "text": "Extended 20% above anchored VWAP \u2014 heavy chase risk; wait for the limit level, do not buy at market."
+    },
+    {
+     "level": "high",
+     "text": "Volume-flow divergence: price made new highs that the flow line did not confirm \u2014 demand may be thinning."
+    },
+    {
+     "level": "medium",
+     "text": "Wide structural stop (15.1% below entry) \u2014 halve position size so dollar risk stays constant."
+    },
+    {
+     "level": "info",
+     "text": "Reward/risk of 2.54 is close to the 2.5 floor \u2014 any slippage on entry meaningfully degrades the trade."
+    },
+    {
+     "level": "medium",
+     "text": "At 52-week highs: target is a measured-move projection with no overhead volume reference \u2014 take partial profits mechanically."
+    }
+   ],
+   "execution": [
+    "Entry \u2014 Limit at high-volume node (183.96). Working level: 183.96.",
+    "Stop \u2014 156.13 (15.1% risk, ~6.1 ATR), placed below anchored VWAP. Structural, never percentage-based.",
+    "Target \u2014 254.67 (measured move (value-area width projected)); reward/risk 2.5.",
+    "Free-flow \u2014 at 211.80 (+1R) sell half; the remainder then rides at breakeven-or-better even if stopped.",
+    "Invalidation \u2014 idea is void on a daily close below the stop reference or if the weekly regime turns RISK_OFF."
+   ],
+   "spark": {
+    "dates": [
+     "2026-02-04",
+     "2026-02-05",
+     "2026-02-06",
+     "2026-02-09",
+     "2026-02-10",
+     "2026-02-11",
+     "2026-02-12",
+     "2026-02-13",
+     "2026-02-17",
+     "2026-02-18",
+     "2026-02-19",
+     "2026-02-20",
+     "2026-02-23",
+     "2026-02-24",
+     "2026-02-25",
+     "2026-02-26",
+     "2026-02-27",
+     "2026-03-02",
+     "2026-03-03",
+     "2026-03-04",
+     "2026-03-05",
+     "2026-03-06",
+     "2026-03-09",
+     "2026-03-10",
+     "2026-03-11",
+     "2026-03-12",
+     "2026-03-13",
+     "2026-03-16",
+     "2026-03-17",
+     "2026-03-18",
+     "2026-03-19",
+     "2026-03-20",
+     "2026-03-23",
+     "2026-03-24",
+     "2026-03-25",
+     "2026-03-26",
+     "2026-03-27",
+     "2026-03-30",
+     "2026-03-31",
+     "2026-04-01",
+     "2026-04-02",
+     "2026-04-06",
+     "2026-04-07",
+     "2026-04-08",
+     "2026-04-09",
+     "2026-04-10",
+     "2026-04-13",
+     "2026-04-14",
+     "2026-04-15",
+     "2026-04-16",
+     "2026-04-17",
+     "2026-04-20",
+     "2026-04-21",
+     "2026-04-22",
+     "2026-04-23",
+     "2026-04-24",
+     "2026-04-27",
+     "2026-04-28",
+     "2026-04-29",
+     "2026-04-30",
+     "2026-05-01",
+     "2026-05-04",
+     "2026-05-05",
+     "2026-05-06",
+     "2026-05-07",
+     "2026-05-08",
+     "2026-05-11",
+     "2026-05-12",
+     "2026-05-13",
+     "2026-05-14",
+     "2026-05-15",
+     "2026-05-18",
+     "2026-05-19",
+     "2026-05-20",
+     "2026-05-21",
+     "2026-05-22",
+     "2026-05-26",
+     "2026-05-27",
+     "2026-05-28",
+     "2026-05-29",
+     "2026-06-01",
+     "2026-06-02",
+     "2026-06-03",
+     "2026-06-04",
+     "2026-06-05",
+     "2026-06-08",
+     "2026-06-09",
+     "2026-06-10",
+     "2026-06-11",
+     "2026-06-12",
+     "2026-06-15",
+     "2026-06-16",
+     "2026-06-17",
+     "2026-06-18",
+     "2026-06-22",
+     "2026-06-23",
+     "2026-06-24",
+     "2026-06-25",
+     "2026-06-26",
+     "2026-06-29",
+     "2026-06-30",
+     "2026-07-01",
+     "2026-07-02",
+     "2026-07-06",
+     "2026-07-07",
+     "2026-07-08",
+     "2026-07-09",
+     "2026-07-10",
+     "2026-07-13",
+     "2026-07-14",
+     "2026-07-15",
+     "2026-07-16",
+     "2026-07-17",
+     "2026-07-20",
+     "2026-07-21",
+     "2026-07-22",
+     "2026-07-23",
+     "2026-07-24",
+     "2026-07-27",
+     "2026-07-28",
+     "2026-07-29",
+     "2026-07-30",
+     "2026-07-31",
+     "2026-08-03",
+     "2026-08-04",
+     "2026-08-05"
+    ],
+    "close": [
+     130.5,
+     127.22,
+     130.82,
+     132.73,
+     130.7,
+     130.09,
+     124.85,
+     126.49,
+     126.52,
+     128.18,
+     126.39,
+     126.46,
+     123.68,
+     125.76,
+     130.1,
+     130.74,
+     127.13,
+     127.96,
+     124.45,
+     125.08,
+     123.69,
+     119.64,
+     120.52,
+     121.13,
+     124.54,
+     121.79,
+     119.94,
+     118.83,
+     120.16,
+     119.69,
+     119.55,
+     120.56,
+     121.81,
+     124.82,
+     125.45,
+     124.21,
+     121.1,
+     121.99,
+     125.1,
+     127.61,
+     128.16,
+     129.56,
+     130.56,
+     135.46,
+     137.8,
+     138.73,
+     140.92,
+     141.08,
+     142.03,
+     141.2,
+     144.71,
+     149.44,
+     152.81,
+     151.65,
+     150.5,
+     149.99,
+     153.26,
+     151.72,
+     149.95,
+     152.08,
+     151.25,
+     147.35,
+     147.94,
+     150.49,
+     148.04,
+     148.75,
+     149.43,
+     149.7,
+     150.83,
+     153.0,
+     152.09,
+     152.98,
+     150.13,
+     153.31,
+     152.93,
+     153.19,
+     157.73,
+     157.14,
+     156.83,
+     154.87,
+     159.0,
+     158.99,
+     157.1,
+     161.94,
+     160.95,
+     161.01,
+     162.44,
+     161.0,
+     164.03,
+     166.8,
+     166.54,
+     170.44,
+     170.25,
+     167.48,
+     172.85,
+     172.87,
+     168.03,
+     168.67,
+     167.28,
+     169.34,
+     168.76,
+     169.67,
+     170.69,
+     175.96,
+     179.94,
+     177.42,
+     180.16,
+     180.22,
+     178.17,
+     183.65,
+     186.59,
+     185.66,
+     182.5,
+     182.58,
+     183.3,
+     185.24,
+     184.21,
+     185.4,
+     184.66,
+     182.57,
+     176.04,
+     182.82,
+     184.16,
+     183.67,
+     185.23,
+     187.05
+    ]
+   }
+  },
+  {
+   "ticker": "PFG",
+   "name": "Principal Financial Group",
+   "sector": "Financials",
+   "sector_rank": 2,
+   "setup": "PULLBACK_TO_VALUE",
+   "setup_human": "Pullback to value",
+   "score": 80.0,
+   "total_score": 27.7,
+   "rs_percentile": 38,
+   "thesis": "Principal Financial Group \u2014 pullback to value in Financials (sector rank #2), relative strength top 62% of candidates, flow confirming.",
+   "entry": 112.75,
+   "entry_type": "Limit at high-volume node (112.75)",
+   "stop": 102.35,
+   "stop_ref": "anchored VWAP",
+   "target": 140.58,
+   "target_ref": "measured move (value-area width projected)",
+   "rr": 2.68,
+   "free_flow": 123.15,
+   "stop_pct": 9.2,
+   "stop_atr": 4.0,
+   "close": 114.85,
+   "poc": 99.31,
+   "vah": 116.27,
+   "val": 91.96,
+   "avwap": 102.35,
+   "avwap_dist": 12.2,
+   "atr": 2.6,
+   "flow_state": "confirming",
+   "pct_from_52w_high": 0.3,
+   "breadth": 93,
+   "theme": null,
+   "fundamentals": null,
+   "ooda": null,
+   "risks": [
+    {
+     "level": "high",
+     "text": "Extended 12% above anchored VWAP \u2014 heavy chase risk; wait for the limit level, do not buy at market."
+    },
+    {
+     "level": "info",
+     "text": "Stop sits 9.2% below entry (~4.0 ATR), below anchored VWAP."
+    },
+    {
+     "level": "info",
+     "text": "Reward/risk of 2.68 is close to the 2.5 floor \u2014 any slippage on entry meaningfully degrades the trade."
+    },
+    {
+     "level": "medium",
+     "text": "At 52-week highs: target is a measured-move projection with no overhead volume reference \u2014 take partial profits mechanically."
+    }
+   ],
+   "execution": [
+    "Entry \u2014 Limit at high-volume node (112.75). Working level: 112.75.",
+    "Stop \u2014 102.35 (9.2% risk, ~4.0 ATR), placed below anchored VWAP. Structural, never percentage-based.",
+    "Target \u2014 140.58 (measured move (value-area width projected)); reward/risk 2.7.",
+    "Free-flow \u2014 at 123.15 (+1R) sell half; the remainder then rides at breakeven-or-better even if stopped.",
+    "Invalidation \u2014 idea is void on a daily close below the stop reference or if the weekly regime turns RISK_OFF."
+   ],
+   "spark": {
+    "dates": [
+     "2026-02-04",
+     "2026-02-05",
+     "2026-02-06",
+     "2026-02-09",
+     "2026-02-10",
+     "2026-02-11",
+     "2026-02-12",
+     "2026-02-13",
+     "2026-02-17",
+     "2026-02-18",
+     "2026-02-19",
+     "2026-02-20",
+     "2026-02-23",
+     "2026-02-24",
+     "2026-02-25",
+     "2026-02-26",
+     "2026-02-27",
+     "2026-03-02",
+     "2026-03-03",
+     "2026-03-04",
+     "2026-03-05",
+     "2026-03-06",
+     "2026-03-09",
+     "2026-03-10",
+     "2026-03-11",
+     "2026-03-12",
+     "2026-03-13",
+     "2026-03-16",
+     "2026-03-17",
+     "2026-03-18",
+     "2026-03-19",
+     "2026-03-20",
+     "2026-03-23",
+     "2026-03-24",
+     "2026-03-25",
+     "2026-03-26",
+     "2026-03-27",
+     "2026-03-30",
+     "2026-03-31",
+     "2026-04-01",
+     "2026-04-02",
+     "2026-04-06",
+     "2026-04-07",
+     "2026-04-08",
+     "2026-04-09",
+     "2026-04-10",
+     "2026-04-13",
+     "2026-04-14",
+     "2026-04-15",
+     "2026-04-16",
+     "2026-04-17",
+     "2026-04-20",
+     "2026-04-21",
+     "2026-04-22",
+     "2026-04-23",
+     "2026-04-24",
+     "2026-04-27",
+     "2026-04-28",
+     "2026-04-29",
+     "2026-04-30",
+     "2026-05-01",
+     "2026-05-04",
+     "2026-05-05",
+     "2026-05-06",
+     "2026-05-07",
+     "2026-05-08",
+     "2026-05-11",
+     "2026-05-12",
+     "2026-05-13",
+     "2026-05-14",
+     "2026-05-15",
+     "2026-05-18",
+     "2026-05-19",
+     "2026-05-20",
+     "2026-05-21",
+     "2026-05-22",
+     "2026-05-26",
+     "2026-05-27",
+     "2026-05-28",
+     "2026-05-29",
+     "2026-06-01",
+     "2026-06-02",
+     "2026-06-03",
+     "2026-06-04",
+     "2026-06-05",
+     "2026-06-08",
+     "2026-06-09",
+     "2026-06-10",
+     "2026-06-11",
+     "2026-06-12",
+     "2026-06-15",
+     "2026-06-16",
+     "2026-06-17",
+     "2026-06-18",
+     "2026-06-22",
+     "2026-06-23",
+     "2026-06-24",
+     "2026-06-25",
+     "2026-06-26",
+     "2026-06-29",
+     "2026-06-30",
+     "2026-07-01",
+     "2026-07-02",
+     "2026-07-06",
+     "2026-07-07",
+     "2026-07-08",
+     "2026-07-09",
+     "2026-07-10",
+     "2026-07-13",
+     "2026-07-14",
+     "2026-07-15",
+     "2026-07-16",
+     "2026-07-17",
+     "2026-07-20",
+     "2026-07-21",
+     "2026-07-22",
+     "2026-07-23",
+     "2026-07-24",
+     "2026-07-27",
+     "2026-07-28",
+     "2026-07-29",
+     "2026-07-30",
+     "2026-07-31",
+     "2026-08-03",
+     "2026-08-04",
+     "2026-08-05"
+    ],
+    "close": [
+     94.78,
+     93.9,
+     95.71,
+     94.32,
+     92.07,
+     91.25,
+     88.99,
+     88.88,
+     90.44,
+     90.9,
+     90.61,
+     94.16,
+     91.14,
+     93.26,
+     93.09,
+     95.87,
+     93.82,
+     94.22,
+     92.1,
+     91.93,
+     91.93,
+     90.71,
+     89.09,
+     88.23,
+     87.5,
+     85.51,
+     85.15,
+     85.77,
+     87.04,
+     85.99,
+     85.22,
+     84.4,
+     85.87,
+     87.03,
+     88.02,
+     88.24,
+     86.32,
+     87.53,
+     89.4,
+     89.37,
+     89.39,
+     90.39,
+     90.34,
+     93.45,
+     91.59,
+     91.07,
+     92.81,
+     93.4,
+     93.93,
+     93.24,
+     95.41,
+     95.43,
+     94.97,
+     96.66,
+     96.23,
+     98.55,
+     98.95,
+     99.27,
+     98.84,
+     100.11,
+     100.29,
+     98.67,
+     100.07,
+     100.75,
+     99.24,
+     99.7,
+     99.4,
+     100.04,
+     99.63,
+     99.97,
+     99.73,
+     101.59,
+     100.34,
+     102.0,
+     103.1,
+     103.03,
+     103.88,
+     103.74,
+     102.5,
+     102.8,
+     102.9,
+     103.31,
+     101.19,
+     103.51,
+     105.22,
+     105.03,
+     106.66,
+     109.21,
+     109.69,
+     111.12,
+     110.59,
+     111.17,
+     110.22,
+     109.57,
+     111.23,
+     112.36,
+     106.7,
+     105.44,
+     107.75,
+     108.51,
+     107.78,
+     108.93,
+     110.87,
+     112.55,
+     112.88,
+     110.74,
+     111.67,
+     112.23,
+     113.61,
+     112.92,
+     112.96,
+     113.12,
+     113.95,
+     112.06,
+     109.57,
+     108.25,
+     107.32,
+     109.4,
+     111.29,
+     114.09,
+     113.18,
+     113.95,
+     113.7,
+     115.13,
+     115.25,
+     114.85
+    ]
+   }
+  },
+  {
+   "ticker": "WRB",
+   "name": "W. R. Berkley Corporation",
+   "sector": "Financials",
+   "sector_rank": 2,
+   "setup": "PULLBACK_TO_VALUE",
+   "setup_human": "Pullback to value",
+   "score": 88.2,
+   "total_score": 13.4,
+   "rs_percentile": 17,
+   "thesis": "W. R. Berkley Corporation \u2014 pullback to value in Financials (sector rank #2), relative strength top 83% of candidates, flow confirming.",
+   "entry": 71.24,
+   "entry_type": "Limit at high-volume node (71.24)",
+   "stop": 69.46,
+   "stop_ref": "anchored VWAP (widened to 1 ATR)",
+   "target": 76.44,
+   "target_ref": "52-week high",
+   "rr": 2.92,
+   "free_flow": 73.02,
+   "stop_pct": 2.5,
+   "stop_atr": 1.0,
+   "close": 72.08,
+   "poc": 65.49,
+   "vah": 71.09,
+   "val": 65.03,
+   "avwap": 70.01,
+   "avwap_dist": 3.0,
+   "atr": 1.78,
+   "flow_state": "confirming",
+   "pct_from_52w_high": 5.7,
+   "breadth": 93,
+   "theme": null,
+   "fundamentals": null,
+   "ooda": null,
+   "risks": [
+    {
+     "level": "info",
+     "text": "Stop sits 2.5% below entry (~1.0 ATR), below anchored VWAP (widened to 1 ATR)."
+    },
+    {
+     "level": "info",
+     "text": "Reward/risk of 2.92 is close to the 2.5 floor \u2014 any slippage on entry meaningfully degrades the trade."
+    }
+   ],
+   "execution": [
+    "Entry \u2014 Limit at high-volume node (71.24). Working level: 71.24.",
+    "Stop \u2014 69.46 (2.5% risk, ~1.0 ATR), placed below anchored VWAP (widened to 1 ATR). Structural, never percentage-based.",
+    "Target \u2014 76.44 (52-week high); reward/risk 2.9.",
+    "Free-flow \u2014 at 73.02 (+1R) sell half; the remainder then rides at breakeven-or-better even if stopped.",
+    "Invalidation \u2014 idea is void on a daily close below the stop reference or if the weekly regime turns RISK_OFF."
+   ],
+   "spark": {
+    "dates": [
+     "2026-02-04",
+     "2026-02-05",
+     "2026-02-06",
+     "2026-02-09",
+     "2026-02-10",
+     "2026-02-11",
+     "2026-02-12",
+     "2026-02-13",
+     "2026-02-17",
+     "2026-02-18",
+     "2026-02-19",
+     "2026-02-20",
+     "2026-02-23",
+     "2026-02-24",
+     "2026-02-25",
+     "2026-02-26",
+     "2026-02-27",
+     "2026-03-02",
+     "2026-03-03",
+     "2026-03-04",
+     "2026-03-05",
+     "2026-03-06",
+     "2026-03-09",
+     "2026-03-10",
+     "2026-03-11",
+     "2026-03-12",
+     "2026-03-13",
+     "2026-03-16",
+     "2026-03-17",
+     "2026-03-18",
+     "2026-03-19",
+     "2026-03-20",
+     "2026-03-23",
+     "2026-03-24",
+     "2026-03-25",
+     "2026-03-26",
+     "2026-03-27",
+     "2026-03-30",
+     "2026-03-31",
+     "2026-04-01",
+     "2026-04-02",
+     "2026-04-06",
+     "2026-04-07",
+     "2026-04-08",
+     "2026-04-09",
+     "2026-04-10",
+     "2026-04-13",
+     "2026-04-14",
+     "2026-04-15",
+     "2026-04-16",
+     "2026-04-17",
+     "2026-04-20",
+     "2026-04-21",
+     "2026-04-22",
+     "2026-04-23",
+     "2026-04-24",
+     "2026-04-27",
+     "2026-04-28",
+     "2026-04-29",
+     "2026-04-30",
+     "2026-05-01",
+     "2026-05-04",
+     "2026-05-05",
+     "2026-05-06",
+     "2026-05-07",
+     "2026-05-08",
+     "2026-05-11",
+     "2026-05-12",
+     "2026-05-13",
+     "2026-05-14",
+     "2026-05-15",
+     "2026-05-18",
+     "2026-05-19",
+     "2026-05-20",
+     "2026-05-21",
+     "2026-05-22",
+     "2026-05-26",
+     "2026-05-27",
+     "2026-05-28",
+     "2026-05-29",
+     "2026-06-01",
+     "2026-06-02",
+     "2026-06-03",
+     "2026-06-04",
+     "2026-06-05",
+     "2026-06-08",
+     "2026-06-09",
+     "2026-06-10",
+     "2026-06-11",
+     "2026-06-12",
+     "2026-06-15",
+     "2026-06-16",
+     "2026-06-17",
+     "2026-06-18",
+     "2026-06-22",
+     "2026-06-23",
+     "2026-06-24",
+     "2026-06-25",
+     "2026-06-26",
+     "2026-06-29",
+     "2026-06-30",
+     "2026-07-01",
+     "2026-07-02",
+     "2026-07-06",
+     "2026-07-07",
+     "2026-07-08",
+     "2026-07-09",
+     "2026-07-10",
+     "2026-07-13",
+     "2026-07-14",
+     "2026-07-15",
+     "2026-07-16",
+     "2026-07-17",
+     "2026-07-20",
+     "2026-07-21",
+     "2026-07-22",
+     "2026-07-23",
+     "2026-07-24",
+     "2026-07-27",
+     "2026-07-28",
+     "2026-07-29",
+     "2026-07-30",
+     "2026-07-31",
+     "2026-08-03",
+     "2026-08-04",
+     "2026-08-05"
+    ],
+    "close": [
+     69.47,
+     70.56,
+     69.69,
+     68.54,
+     69.21,
+     70.81,
+     70.92,
+     68.99,
+     70.32,
+     70.08,
+     69.62,
+     70.36,
+     70.37,
+     70.99,
+     70.94,
+     70.94,
+     71.06,
+     72.59,
+     71.99,
+     69.76,
+     68.95,
+     69.3,
+     67.63,
+     67.25,
+     67.25,
+     68.09,
+     68.15,
+     67.92,
+     68.23,
+     66.66,
+     65.63,
+     65.15,
+     64.96,
+     64.45,
+     63.91,
+     64.68,
+     64.16,
+     65.66,
+     65.69,
+     64.7,
+     65.4,
+     65.57,
+     66.08,
+     66.62,
+     66.61,
+     65.11,
+     66.36,
+     65.4,
+     65.51,
+     65.68,
+     66.23,
+     65.61,
+     64.82,
+     66.9,
+     67.84,
+     65.94,
+     65.61,
+     66.52,
+     66.35,
+     66.23,
+     65.79,
+     65.73,
+     65.9,
+     65.53,
+     65.94,
+     65.09,
+     65.82,
+     65.97,
+     64.85,
+     65.44,
+     65.86,
+     68.15,
+     67.91,
+     67.63,
+     66.87,
+     66.94,
+     66.73,
+     64.71,
+     63.73,
+     62.97,
+     63.77,
+     64.6,
+     64.71,
+     65.72,
+     67.96,
+     66.15,
+     66.62,
+     67.54,
+     66.94,
+     67.66,
+     67.42,
+     67.76,
+     67.48,
+     66.58,
+     66.54,
+     68.96,
+     70.05,
+     69.29,
+     71.27,
+     71.01,
+     70.53,
+     70.66,
+     72.08,
+     70.92,
+     71.54,
+     71.28,
+     71.82,
+     72.19,
+     73.84,
+     71.98,
+     69.88,
+     69.9,
+     71.61,
+     72.73,
+     72.16,
+     72.36,
+     73.43,
+     75.46,
+     75.7,
+     76.17,
+     75.65,
+     73.38,
+     72.54,
+     72.09,
+     71.39,
+     72.08
+    ]
+   }
+  }
+ ],
+ "watch": [
+  {
+   "ticker": "L",
+   "name": "Loews Corporation",
+   "sector": "Financials",
+   "score": 86.7,
+   "note": "pullback to value but R:R 0.98 below 2.5 floor"
+  },
+  {
+   "ticker": "CINF",
+   "name": "Cincinnati Financial",
+   "sector": "Financials",
+   "score": 82.5,
+   "note": "pullback to value but R:R 1.91 below 2.5 floor"
+  },
+  {
+   "ticker": "BEN",
+   "name": "Franklin Resources",
+   "sector": "Financials",
+   "score": 80.0,
+   "note": "acceptance breakout but R:R 0.55 below 2.5 floor"
+  },
+  {
+   "ticker": "AAPL",
+   "name": "Apple Inc.",
+   "sector": "Information Technology",
+   "score": 80.0,
+   "note": "pullback to value but R:R 1.86 below 2.5 floor"
+  },
+  {
+   "ticker": "TDY",
+   "name": "Teledyne Technologies",
+   "sector": "Information Technology",
+   "score": 80.0,
+   "note": "acceptance breakout but R:R 1.95 below 2.5 floor"
+  },
+  {
+   "ticker": "HIG",
+   "name": "Hartford (The)",
+   "sector": "Financials",
+   "score": 80.0,
+   "note": "acceptance breakout but R:R 1.57 below 2.5 floor"
+  },
+  {
+   "ticker": "EG",
+   "name": "Everest Group",
+   "sector": "Financials",
+   "score": 80.0,
+   "note": "pullback to value but R:R 0.83 below 2.5 floor"
+  },
+  {
+   "ticker": "BRK-B",
+   "name": "Berkshire Hathaway",
+   "sector": "Financials",
+   "score": 79.8,
+   "note": "acceptance breakout but R:R 1.76 below 2.5 floor"
+  },
+  {
+   "ticker": "MET",
+   "name": "MetLife",
+   "sector": "Financials",
+   "score": 78.5,
+   "note": "acceptance breakout but R:R 0.36 below 2.5 floor"
+  },
+  {
+   "ticker": "BNY",
+   "name": "BNY Mellon",
+   "sector": "Financials",
+   "score": 60.0,
+   "note": "pullback to value but R:R 1.48 below 2.5 floor"
+  },
+  {
+   "ticker": "MTB",
+   "name": "M&T Bank",
+   "sector": "Financials",
+   "score": 60.0,
+   "note": "pullback to value but R:R 1.42 below 2.5 floor"
+  },
+  {
+   "ticker": "GS",
+   "name": "Goldman Sachs",
+   "sector": "Financials",
+   "score": 60.0,
+   "note": "pullback to value but R:R 1.09 below 2.5 floor"
+  },
+  {
+   "ticker": "FITB",
+   "name": "Fifth Third Bancorp",
+   "sector": "Financials",
+   "score": 60.0,
+   "note": "pullback to value but R:R 1.56 below 2.5 floor"
+  },
+  {
+   "ticker": "NTRS",
+   "name": "Northern Trust",
+   "sector": "Financials",
+   "score": 60.0,
+   "note": "pullback to value but R:R 0.34 below 2.5 floor"
+  },
+  {
+   "ticker": "USB",
+   "name": "U.S. Bancorp",
+   "sector": "Financials",
+   "score": 59.3,
+   "note": "pullback to value but R:R 1.06 below 2.5 floor"
+  },
+  {
+   "ticker": "HBAN",
+   "name": "Huntington Bancshares",
+   "sector": "Financials",
+   "score": 58.4,
+   "note": "pullback to value but R:R 0.76 below 2.5 floor"
+  },
+  {
+   "ticker": "CB",
+   "name": "Chubb Limited",
+   "sector": "Financials",
+   "score": 46.9,
+   "note": "breakout extended (15 sessions above VAH)"
+  },
+  {
+   "ticker": "HPQ",
+   "name": "HP Inc.",
+   "sector": "Information Technology",
+   "score": 40.0,
+   "note": "breakout extended (14 sessions above VAH)"
+  },
+  {
+   "ticker": "CPAY",
+   "name": "Corpay",
+   "sector": "Financials",
+   "score": 40.0,
+   "note": "no qualifying structure yet"
+  },
+  {
+   "ticker": "CSCO",
+   "name": "Cisco",
+   "sector": "Information Technology",
+   "score": 40.0,
+   "note": "no qualifying structure yet"
+  },
+  {
+   "ticker": "AIZ",
+   "name": "Assurant",
+   "sector": "Financials",
+   "score": 40.0,
+   "note": "breakout extended (39 sessions above VAH)"
+  },
+  {
+   "ticker": "TRV",
+   "name": "Travelers Companies (The)",
+   "sector": "Financials",
+   "score": 40.0,
+   "note": "breakout extended (31 sessions above VAH)"
+  },
+  {
+   "ticker": "GPN",
+   "name": "Global Payments",
+   "sector": "Financials",
+   "score": 40.0,
+   "note": "breakout extended (19 sessions above VAH)"
+  },
+  {
+   "ticker": "ALL",
+   "name": "Allstate",
+   "sector": "Financials",
+   "score": 40.0,
+   "note": "breakout extended (32 sessions above VAH)"
+  },
+  {
+   "ticker": "PRU",
+   "name": "Prudential Financial",
+   "sector": "Financials",
+   "score": 40.0,
+   "note": "breakout extended (15 sessions above VAH)"
+  },
+  {
+   "ticker": "AMP",
+   "name": "Ameriprise Financial",
+   "sector": "Financials",
+   "score": 40.0,
+   "note": "breakout extended (25 sessions above VAH)"
+  },
+  {
+   "ticker": "XYZ",
+   "name": "Block, Inc.",
+   "sector": "Financials",
+   "score": 40.0,
+   "note": "no qualifying structure yet"
+  },
+  {
+   "ticker": "SCHW",
+   "name": "Charles Schwab Corporation",
+   "sector": "Financials",
+   "score": 40.0,
+   "note": "breakout extended (25 sessions above VAH)"
+  },
+  {
+   "ticker": "JPM",
+   "name": "JPMorgan Chase",
+   "sector": "Financials",
+   "score": 40.0,
+   "note": "breakout extended (35 sessions above VAH)"
+  },
+  {
+   "ticker": "PNC",
+   "name": "PNC Financial Services",
+   "sector": "Financials",
+   "score": 40.0,
+   "note": "pullback to value but R:R 2.04 below 2.5 floor"
+  },
+  {
+   "ticker": "AON",
+   "name": "Aon plc",
+   "sector": "Financials",
+   "score": 40.0,
+   "note": "breakout extended (25 sessions above VAH)"
+  },
+  {
+   "ticker": "V",
+   "name": "Visa Inc.",
+   "sector": "Financials",
+   "score": 40.0,
+   "note": "breakout extended (28 sessions above VAH)"
+  },
+  {
+   "ticker": "RJF",
+   "name": "Raymond James Financial",
+   "sector": "Financials",
+   "score": 40.0,
+   "note": "breakout extended (24 sessions above VAH)"
+  },
+  {
+   "ticker": "AFL",
+   "name": "Aflac",
+   "sector": "Financials",
+   "score": 40.0,
+   "note": "breakout extended (24 sessions above VAH)"
+  },
+  {
+   "ticker": "VRSN",
+   "name": "Verisign",
+   "sector": "Information Technology",
+   "score": 40.0,
+   "note": "no qualifying structure yet"
+  },
+  {
+   "ticker": "NVDA",
+   "name": "Nvidia",
+   "sector": "Information Technology",
+   "score": 39.7,
+   "note": "no qualifying structure yet"
+  },
+  {
+   "ticker": "BAC",
+   "name": "Bank of America",
+   "sector": "Financials",
+   "score": 39.3,
+   "note": "breakout extended (25 sessions above VAH)"
+  },
+  {
+   "ticker": "PGR",
+   "name": "Progressive Corporation",
+   "sector": "Financials",
+   "score": 36.9,
+   "note": "closes above VAH but flow not confirming"
+  },
+  {
+   "ticker": "FFIV",
+   "name": "F5, Inc.",
+   "sector": "Information Technology",
+   "score": 20.0,
+   "note": "no qualifying structure yet"
+  },
+  {
+   "ticker": "VLO",
+   "name": "Valero Energy",
+   "sector": "Energy",
+   "score": 20.0,
+   "note": "breakout extended (21 sessions above VAH)"
+  },
+  {
+   "ticker": "GL",
+   "name": "Globe Life",
+   "sector": "Financials",
+   "score": 20.0,
+   "note": "closes above VAH but flow not confirming"
+  },
+  {
+   "ticker": "MS",
+   "name": "Morgan Stanley",
+   "sector": "Financials",
+   "score": 20.0,
+   "note": "no qualifying structure yet"
+  },
+  {
+   "ticker": "CFG",
+   "name": "Citizens Financial Group",
+   "sector": "Financials",
+   "score": 20.0,
+   "note": "breakout extended (20 sessions above VAH)"
+  },
+  {
+   "ticker": "RF",
+   "name": "Regions Financial Corporation",
+   "sector": "Financials",
+   "score": 20.0,
+   "note": "closes above VAH but flow not confirming"
+  },
+  {
+   "ticker": "MPC",
+   "name": "Marathon Petroleum",
+   "sector": "Energy",
+   "score": 20.0,
+   "note": "breakout extended (21 sessions above VAH)"
+  },
+  {
+   "ticker": "PSX",
+   "name": "Phillips 66",
+   "sector": "Energy",
+   "score": 20.0,
+   "note": "breakout extended (21 sessions above VAH)"
+  },
+  {
+   "ticker": "C",
+   "name": "Citigroup",
+   "sector": "Financials",
+   "score": 20.0,
+   "note": "closes above VAH but flow not confirming"
+  },
+  {
+   "ticker": "TFC",
+   "name": "Truist Financial",
+   "sector": "Financials",
+   "score": 20.0,
+   "note": "no qualifying structure yet"
+  },
+  {
+   "ticker": "DELL",
+   "name": "Dell Technologies",
+   "sector": "Information Technology",
+   "score": 0.0,
+   "note": "no qualifying structure yet"
+  },
+  {
+   "ticker": "PANW",
+   "name": "Palo Alto Networks",
+   "sector": "Information Technology",
+   "score": 0.0,
+   "note": "breakout extended (38 sessions above VAH)"
+  },
+  {
+   "ticker": "DDOG",
+   "name": "Datadog",
+   "sector": "Information Technology",
+   "score": 0.0,
+   "note": "breakout extended (28 sessions above VAH)"
+  },
+  {
+   "ticker": "FTNT",
+   "name": "Fortinet",
+   "sector": "Information Technology",
+   "score": 0.0,
+   "note": "breakout extended (33 sessions above VAH)"
+  },
+  {
+   "ticker": "HPE",
+   "name": "Hewlett Packard Enterprise",
+   "sector": "Information Technology",
+   "score": 0.0,
+   "note": "closes above VAH but flow not confirming"
+  },
+  {
+   "ticker": "CRWD",
+   "name": "CrowdStrike",
+   "sector": "Information Technology",
+   "score": 0.0,
+   "note": "breakout extended (38 sessions above VAH)"
+  },
+  {
+   "ticker": "NTAP",
+   "name": "NetApp",
+   "sector": "Information Technology",
+   "score": 0.0,
+   "note": "breakout extended (12 sessions above VAH)"
+  },
+  {
+   "ticker": "GEN",
+   "name": "Gen Digital",
+   "sector": "Information Technology",
+   "score": 0.0,
+   "note": "closes above VAH but flow not confirming"
+  },
+  {
+   "ticker": "APH",
+   "name": "Amphenol",
+   "sector": "Information Technology",
+   "score": 0.0,
+   "note": "closes above VAH but flow not confirming"
+  },
+  {
+   "ticker": "IVZ",
+   "name": "Invesco",
+   "sector": "Financials",
+   "score": 0.0,
+   "note": "closes above VAH but flow not confirming"
+  },
+  {
+   "ticker": "TROW",
+   "name": "T. Rowe Price",
+   "sector": "Financials",
+   "score": 0.0,
+   "note": "breakout extended (29 sessions above VAH)"
+  },
+  {
+   "ticker": "ETN",
+   "name": "Eaton Corporation",
+   "sector": "AI Infrastructure",
+   "score": 0.0,
+   "note": "no qualifying structure yet"
+  }
+ ],
+ "near_misses": [
+  {
+   "ticker": "ALAB",
+   "name": "Astera Labs",
+   "sector": "Information Technology",
+   "failed_filter": "near 52w high"
+  },
+  {
+   "ticker": "MU",
+   "name": "Micron Technology",
+   "sector": "Information Technology",
+   "failed_filter": "near 52w high"
+  },
+  {
+   "ticker": "AMD",
+   "name": "Advanced Micro Devices",
+   "sector": "Information Technology",
+   "failed_filter": "near 52w high"
+  },
+  {
+   "ticker": "ARM",
+   "name": "Arm Holdings",
+   "sector": "Information Technology",
+   "failed_filter": "near 52w high"
+  },
+  {
+   "ticker": "WTW",
+   "name": "Willis Towers Watson",
+   "sector": "Financials",
+   "failed_filter": "50DMA > 200DMA"
+  },
+  {
+   "ticker": "AMAT",
+   "name": "Applied Materials",
+   "sector": "Information Technology",
+   "failed_filter": "near 52w high"
+  },
+  {
+   "ticker": "FDS",
+   "name": "FactSet",
+   "sector": "Financials",
+   "failed_filter": "near 52w high"
+  },
+  {
+   "ticker": "FLEX",
+   "name": "Flex Ltd.",
+   "sector": "Information Technology",
+   "failed_filter": "near 52w high"
+  },
+  {
+   "ticker": "MRVL",
+   "name": "Marvell Technology",
+   "sector": "Information Technology",
+   "failed_filter": "near 52w high"
+  },
+  {
+   "ticker": "NBIS",
+   "name": "Nebius Group",
+   "sector": "Information Technology",
+   "failed_filter": "near 52w high"
+  },
+  {
+   "ticker": "MSFT",
+   "name": "Microsoft",
+   "sector": "Information Technology",
+   "failed_filter": "50DMA > 200DMA"
+  },
+  {
+   "ticker": "COF",
+   "name": "Capital One",
+   "sector": "Financials",
+   "failed_filter": "50DMA > 200DMA"
+  },
+  {
+   "ticker": "ASML",
+   "name": "ASML Holding",
+   "sector": "Information Technology",
+   "failed_filter": "near 52w high"
+  },
+  {
+   "ticker": "MRSH",
+   "name": "Marsh McLennan",
+   "sector": "Financials",
+   "failed_filter": "50DMA > 200DMA"
+  },
+  {
+   "ticker": "MA",
+   "name": "Mastercard",
+   "sector": "Financials",
+   "failed_filter": "50DMA > 200DMA"
+  },
+  {
+   "ticker": "WFC",
+   "name": "Wells Fargo",
+   "sector": "Financials",
+   "failed_filter": "50DMA > 200DMA"
+  },
+  {
+   "ticker": "WDC",
+   "name": "Western Digital",
+   "sector": "Information Technology",
+   "failed_filter": "near 52w high"
+  },
+  {
+   "ticker": "LRCX",
+   "name": "Lam Research",
+   "sector": "Information Technology",
+   "failed_filter": "near 52w high"
+  },
+  {
+   "ticker": "KLAC",
+   "name": "KLA Corporation",
+   "sector": "Information Technology",
+   "failed_filter": "near 52w high"
+  },
+  {
+   "ticker": "AXP",
+   "name": "American Express",
+   "sector": "Financials",
+   "failed_filter": "50DMA > 200DMA"
+  },
+  {
+   "ticker": "TER",
+   "name": "Teradyne",
+   "sector": "Information Technology",
+   "failed_filter": "near 52w high"
+  },
+  {
+   "ticker": "STX",
+   "name": "Seagate Technology",
+   "sector": "Information Technology",
+   "failed_filter": "near 52w high"
+  },
+  {
+   "ticker": "BLK",
+   "name": "BlackRock",
+   "sector": "Financials",
+   "failed_filter": "50DMA > 200DMA"
+  },
+  {
+   "ticker": "FSLR",
+   "name": "First Solar",
+   "sector": "Information Technology",
+   "failed_filter": "near 52w high"
+  },
+  {
+   "ticker": "SYF",
+   "name": "Synchrony Financial",
+   "sector": "Financials",
+   "failed_filter": "50DMA > 200DMA"
+  },
+  {
+   "ticker": "MCO",
+   "name": "Moody's Corporation",
+   "sector": "Financials",
+   "failed_filter": "50DMA > 200DMA"
+  },
+  {
+   "ticker": "KEY",
+   "name": "KeyCorp",
+   "sector": "Financials",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "IBKR",
+   "name": "Interactive Brokers",
+   "sector": "Financials",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "ACGL",
+   "name": "Arch Capital Group",
+   "sector": "Financials",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "AIG",
+   "name": "American International Group",
+   "sector": "Financials",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "HUBB",
+   "name": "Hubbell Incorporated",
+   "sector": "AI Infrastructure",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "TRGP",
+   "name": "Targa Resources",
+   "sector": "Energy",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "JBL",
+   "name": "Jabil",
+   "sector": "Information Technology",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "DLR",
+   "name": "Digital Realty",
+   "sector": "AI Infrastructure",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "MSCI",
+   "name": "MSCI Inc.",
+   "sector": "Financials",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "XOM",
+   "name": "ExxonMobil",
+   "sector": "Energy",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "EQIX",
+   "name": "Equinix",
+   "sector": "AI Infrastructure",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "OKE",
+   "name": "Oneok",
+   "sector": "Energy",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "AVGO",
+   "name": "Broadcom",
+   "sector": "Information Technology",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "CVX",
+   "name": "Chevron Corporation",
+   "sector": "Energy",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "KMI",
+   "name": "Kinder Morgan",
+   "sector": "Energy",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "IRM",
+   "name": "Iron Mountain",
+   "sector": "AI Infrastructure",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "EOG",
+   "name": "EOG Resources",
+   "sector": "Energy",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "WMB",
+   "name": "Williams Companies",
+   "sector": "Energy",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "KEYS",
+   "name": "Keysight Technologies",
+   "sector": "Information Technology",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "COP",
+   "name": "ConocoPhillips",
+   "sector": "Energy",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "GEV",
+   "name": "GE Vernova",
+   "sector": "AI Infrastructure",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "BKR",
+   "name": "Baker Hughes",
+   "sector": "Energy",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "FANG",
+   "name": "Diamondback Energy",
+   "sector": "Energy",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "SLB",
+   "name": "Schlumberger",
+   "sector": "Energy",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "PWR",
+   "name": "Quanta Services",
+   "sector": "AI Infrastructure",
+   "failed_filter": "63d return beats SPY"
+  }
+ ],
+ "config": {
+  "min_rr": 2.5,
+  "max_ideas": 10,
+  "top_n_sectors": 3
+ },
+ "logic": [
+  {
+   "layer": "\u2460 Regime",
+   "rule": "Risk-on needs VIX below this AND below its 50DMA",
+   "key": "regime.vix_max",
+   "value": 22
+  },
+  {
+   "layer": "\u2460 Regime",
+   "rule": "HY OAS must sit below this trailing-252d percentile",
+   "key": "regime.hyoas_percentile_max",
+   "value": 75
+  },
+  {
+   "layer": "\u2460 Regime",
+   "rule": "NFCI below this = loose financial conditions",
+   "key": "regime.nfci_max",
+   "value": 0.0
+  },
+  {
+   "layer": "\u2460 Regime",
+   "rule": "SPY 63d range under this = 'ranging' variant",
+   "key": "regime.spy_range_pct",
+   "value": 0.08
+  },
+  {
+   "layer": "\u2461 Sectors",
+   "rule": "Leading/Improving sectors feeding the screen",
+   "key": "sectors.top_n",
+   "value": 3
+  },
+  {
+   "layer": "\u2461 Sectors",
+   "rule": "Below this % of members above 50DMA \u2192 'narrow leadership' flag",
+   "key": "sectors.breadth_min",
+   "value": 0.4
+  },
+  {
+   "layer": "\u2461 Sectors",
+   "rule": "AI-infra theme inclusion policy",
+   "key": "themes.ai_infra.include_when",
+   "value": "always"
+  },
+  {
+   "layer": "\u2462 Screen",
+   "rule": "Minimum share price",
+   "key": "screen.min_price",
+   "value": 10
+  },
+  {
+   "layer": "\u2462 Screen",
+   "rule": "Minimum 21d average dollar volume",
+   "key": "screen.min_avg_dollar_vol",
+   "value": 20000000
+  },
+  {
+   "layer": "\u2462 Screen",
+   "rule": "Max distance below 52w high (leadership filter)",
+   "key": "screen.max_pct_from_52w_high",
+   "value": 0.15
+  },
+  {
+   "layer": "\u2462 Screen",
+   "rule": "\u2026loosened to this when regime is RANGING",
+   "key": "screen.max_pct_from_52w_high_ranging",
+   "value": 0.25
+  },
+  {
+   "layer": "\u2463 Structure",
+   "rule": "Volume-profile lookback (trading days)",
+   "key": "structure.lookback_days",
+   "value": 126
+  },
+  {
+   "layer": "\u2463 Structure",
+   "rule": "Pullback must sit within \u00b1this of POC/HVN",
+   "key": "structure.pullback_poc_tolerance",
+   "value": 0.02
+  },
+  {
+   "layer": "\u2463 Structure",
+   "rule": "Closes above VAH needed to accept a breakout",
+   "key": "structure.breakout_min_sessions",
+   "value": 3
+  },
+  {
+   "layer": "\u2463 Structure",
+   "rule": "Breakout older than this = extended, no entry",
+   "key": "structure.breakout_max_age",
+   "value": 10
+  },
+  {
+   "layer": "\u2464 Trade",
+   "rule": "Reward/risk floor \u2014 ideas below this are dropped to Watch",
+   "key": "trade.min_rr",
+   "value": 2.5
+  },
+  {
+   "layer": "\u2464 Trade",
+   "rule": "Max ideas in the ranked list",
+   "key": "report.max_ideas",
+   "value": 10
+  }
+ ]
+}
