@@ -1,6 +1,6 @@
 {
  "run_date": "2026-08-29",
- "generated_at": "2026-08-29T03:16:23Z",
+ "generated_at": "2026-08-29T23:31:54Z",
  "regime": {
   "label": "RISK_ON_TRENDING",
   "explanation": "SPY in confirmed uptrend and 3/3 macro checks risk-on \u2014 full idea generation.",
@@ -929,7 +929,7 @@
    "val": 205.1,
    "avwap": 222.82,
    "avwap_dist": 5.3,
-   "atr": 6.28,
+   "atr": 6.3,
    "flow_state": "neutral",
    "pct_from_52w_high": 2.4,
    "breadth": 75,
