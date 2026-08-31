@@ -91,6 +91,15 @@ def _ticker_cache(ticker: str) -> Path:
     return CACHE_DIR / f"{ticker.replace('/', '-')}.parquet"
 
 
+def _drop_incomplete(df: pd.DataFrame) -> pd.DataFrame:
+    """Drop rows with NaN in any OHLC column. Yahoo intermittently serves a
+    trailing bar with NaN prices but real Volume, so dropna(how="all") keeps
+    it — and one such row poisons every .iloc[-1]/rolling read downstream
+    (a NaN SPY close flipped the regime to RISK_OFF on 2026-08-31)."""
+    cols = [c for c in ("Open", "High", "Low", "Close") if c in df.columns]
+    return df.dropna(subset=cols) if cols else df
+
+
 def _extract_single(batch: pd.DataFrame, ticker: str) -> pd.DataFrame | None:
     """Pull one ticker's OHLCV frame out of a (possibly MultiIndex) batch."""
     try:
@@ -102,7 +111,7 @@ def _extract_single(batch: pd.DataFrame, ticker: str) -> pd.DataFrame | None:
             df = batch.copy()
     except (KeyError, TypeError):
         return None
-    df = df.dropna(how="all")
+    df = _drop_incomplete(df.dropna(how="all"))
     if df.empty or "Close" not in df.columns:
         return None
     return _tz_naive(df)
@@ -127,7 +136,9 @@ def get_ohlcv(
         cache = _ticker_cache(t)
         if _cache_fresh(cache, max_age_days):
             try:
-                out[t] = pd.read_parquet(cache)
+                # re-clean on read: a cache written before _drop_incomplete
+                # existed may still hold a poisoned trailing row
+                out[t] = _drop_incomplete(pd.read_parquet(cache))
                 continue
             except Exception:
                 cache.unlink(missing_ok=True)

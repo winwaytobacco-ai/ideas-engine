@@ -1,6 +1,6 @@
 pandas
 numpy
-yfinance
+yfinance==1.5.1
 fredapi
 lxml
 pyyaml
