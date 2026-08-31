@@ -152,9 +152,10 @@ function renderRegime(){
       the day the regime turns risk-on again.</div>`;
   }
   $("#sigs").innerHTML=r.signals.map(s=>{
-    const v=s.passed===null?["·","na"]:(s.passed?["PASS","ok"]:["FAIL","fail"]);
+    const v=s.passed===null?["INFO","na"]:(s.passed?["PASS","ok"]:["FAIL","fail"]);
+    const tip=s.passed===null?' title="Observed but non-voting: this dial is shown for context and does not gate the regime decision"':"";
     return `<div class="sig"><b>${esc(s.name)}</b><span class="v">${esc(s.value)}</span>
-      <span class="${v[1]}" style="float:right;font-weight:700">${v[0]}</span>
+      <span class="${v[1]}" style="float:right;font-weight:700"${tip}>${v[0]}</span>
       <div class="rule">${esc(s.rule)}</div></div>`;}).join("");
 }
 

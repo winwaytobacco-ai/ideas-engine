@@ -143,5 +143,6 @@ if __name__ == "__main__":
     r = classify(cfg)
     print(f"\nREGIME: {r.label}\n{r.explanation}\n")
     for s in r.signals:
-        mark = "·" if s.passed is None else ("PASS" if s.passed else "FAIL")
+        # "info" = observed but non-voting (display only; a bare "·" read as a failure)
+        mark = "info" if s.passed is None else ("PASS" if s.passed else "FAIL")
         print(f"  [{mark:>4}] {s.name}: {s.value}  — rule: {s.rule}")
