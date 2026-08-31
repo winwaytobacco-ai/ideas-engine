@@ -372,7 +372,24 @@ def render_fragment(data: dict) -> str:
   <div id="regime-alert" class="alert" style="display:none"></div>
 
   <h2>① Macro regime</h2>
-  <div class="card"><div id="regime-expl" style="font-weight:600"></div><div class="sigs" id="sigs"></div></div>
+  <div class="card"><div id="regime-expl" style="font-weight:600"></div><div class="sigs" id="sigs"></div>
+  <details style="margin-top:10px"><summary style="cursor:pointer;font-size:12.5px;opacity:.75">ⓘ what do the regime labels mean?</summary>
+    <div style="font-size:12.5px;line-height:1.55;margin-top:8px">
+      <p><b>🟢 RISK_ON_TRENDING — green light, full speed.</b> The market's big trend is UP (SPY above
+      its 200-day average, averages aligned and rising) and at least 2 of the 3 voting macro dials
+      (credit stress, VIX, financial conditions) are calm. Full idea list — breakouts and pullbacks both.</p>
+      <p><b>🟡 RISK_ON_RANGING — green light, but the road is bumpy.</b> Macro is calm, but SPY is stuck
+      moving sideways in a band instead of trending. Ideas still flow, but pullback-to-value setups are
+      preferred — breakouts tend to fail inside a range.</p>
+      <p><b>🟠 TRANSITION — yellow light, signals disagree.</b> Some dials say go, others say caution.
+      The idea list is HALVED and sizes come down.</p>
+      <p><b>🔴 RISK_OFF — red light, no new buying.</b> SPY below its 200-day average, OR credit AND
+      volatility both stressed at once. Zero new ideas by design — the run still completes and this page
+      still publishes, so an idle day is a report, not an outage.</p>
+      <p style="opacity:.75">Dials marked <b>INFO</b> (yield curve, range check) are observed but do not
+      vote — only credit, VIX and NFCI vote, plus the SPY trend test. An INFO row is never a failure.
+      Full decision tree: README.md.</p>
+    </div></details></div>
 
   <h2>Funnel</h2>
   <div class="tiles" id="funnel"></div>
