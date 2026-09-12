@@ -1,0 +1,699 @@
+{
+ "run_date": "2026-09-12",
+ "generated_at": "2026-09-12T23:11:28Z",
+ "regime": {
+  "label": "RISK_OFF",
+  "explanation": "No new long ideas: credit and volatility both stressed.",
+  "signals": [
+   {
+    "name": "Credit stress (HY OAS)",
+    "value": "2.70%",
+    "rule": "< 21d MA (2.68) and < p75 of 252d (2.95)",
+    "passed": false
+   },
+   {
+    "name": "Yield curve (10y-2y)",
+    "value": "+0.33% (positive, flattening)",
+    "rule": "informational only in v1",
+    "passed": null
+   },
+   {
+    "name": "Volatility (VIX)",
+    "value": "17.8",
+    "rule": "< 22 and < 50d MA (16.1)",
+    "passed": false
+   },
+   {
+    "name": "Financial conditions (NFCI)",
+    "value": "-0.56",
+    "rule": "< 0.0 (loose)",
+    "passed": true
+   },
+   {
+    "name": "SPY trend",
+    "value": "764 vs 200DMA 712",
+    "rule": "Close > 200DMA, 50DMA > 200DMA, 200DMA slope up over 21d",
+    "passed": true
+   },
+   {
+    "name": "SPY range check",
+    "value": "63d range 8.2%",
+    "rule": "ranging if < 8% and no MA alignment",
+    "passed": null
+   }
+  ]
+ },
+ "sectors": {
+  "rows": [
+   {
+    "etf": "XLE",
+    "name": "Energy",
+    "rel_21d": 7.8,
+    "rel_63d": 11.0,
+    "composite": 9.4,
+    "rs_ratio": 106.4,
+    "rs_momentum": 7.4,
+    "quadrant": "Leading",
+    "selected": true,
+    "rank": 1,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 97.77,
+      "m": 3.4
+     },
+     {
+      "r": 93.27,
+      "m": 0.46
+     },
+     {
+      "r": 103.51,
+      "m": 4.76
+     },
+     {
+      "r": 104.22,
+      "m": 4.17
+     },
+     {
+      "r": 106.36,
+      "m": 7.4
+     }
+    ]
+   },
+   {
+    "etf": "XBI",
+    "name": "Biotech",
+    "rel_21d": -0.94,
+    "rel_63d": 13.93,
+    "composite": 6.49,
+    "rs_ratio": 104.4,
+    "rs_momentum": -3.25,
+    "quadrant": "Weakening",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 106.65,
+      "m": -7.42
+     },
+     {
+      "r": 106.76,
+      "m": -8.5
+     },
+     {
+      "r": 114.71,
+      "m": 4.95
+     },
+     {
+      "r": 109.14,
+      "m": 5.36
+     },
+     {
+      "r": 104.42,
+      "m": -3.25
+     }
+    ]
+   },
+   {
+    "etf": "IGV",
+    "name": "Software",
+    "rel_21d": -0.45,
+    "rel_63d": 7.82,
+    "composite": 3.68,
+    "rs_ratio": 105.4,
+    "rs_momentum": -2.22,
+    "quadrant": "Weakening",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 100.22,
+      "m": 6.04
+     },
+     {
+      "r": 107.49,
+      "m": 8.5
+     },
+     {
+      "r": 107.48,
+      "m": 9.01
+     },
+     {
+      "r": 114.16,
+      "m": 11.19
+     },
+     {
+      "r": 105.36,
+      "m": -2.22
+     }
+    ]
+   },
+   {
+    "etf": "XLF",
+    "name": "Financials",
+    "rel_21d": -0.1,
+    "rel_63d": 5.32,
+    "composite": 2.61,
+    "rs_ratio": 102.0,
+    "rs_momentum": -0.17,
+    "quadrant": "Weakening",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 105.69,
+      "m": 6.86
+     },
+     {
+      "r": 101.38,
+      "m": 1.36
+     },
+     {
+      "r": 101.87,
+      "m": -0.0
+     },
+     {
+      "r": 102.5,
+      "m": -1.06
+     },
+     {
+      "r": 101.96,
+      "m": -0.17
+     }
+    ]
+   },
+   {
+    "etf": "XLV",
+    "name": "Health Care",
+    "rel_21d": -0.77,
+    "rel_63d": 3.92,
+    "composite": 1.58,
+    "rs_ratio": 101.7,
+    "rs_momentum": -0.35,
+    "quadrant": "Weakening",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 105.41,
+      "m": 3.5
+     },
+     {
+      "r": 100.25,
+      "m": 0.07
+     },
+     {
+      "r": 107.15,
+      "m": 7.33
+     },
+     {
+      "r": 104.4,
+      "m": 2.76
+     },
+     {
+      "r": 101.75,
+      "m": -0.35
+     }
+    ]
+   },
+   {
+    "etf": "XLC",
+    "name": "Communication Services",
+    "rel_21d": 3.17,
+    "rel_63d": -3.17,
+    "composite": 0.0,
+    "rs_ratio": 95.5,
+    "rs_momentum": 5.98,
+    "quadrant": "Improving",
+    "selected": true,
+    "rank": 2,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 92.16,
+      "m": 4.01
+     },
+     {
+      "r": 90.48,
+      "m": 0.2
+     },
+     {
+      "r": 91.91,
+      "m": 0.97
+     },
+     {
+      "r": 93.14,
+      "m": 2.89
+     },
+     {
+      "r": 95.49,
+      "m": 5.98
+     }
+    ]
+   },
+   {
+    "etf": "XLK",
+    "name": "Information Technology",
+    "rel_21d": 0.43,
+    "rel_63d": -1.31,
+    "composite": -0.44,
+    "rs_ratio": 104.6,
+    "rs_momentum": -2.18,
+    "quadrant": "Weakening",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 102.21,
+      "m": -9.14
+     },
+     {
+      "r": 106.71,
+      "m": -3.48
+     },
+     {
+      "r": 103.75,
+      "m": -3.43
+     },
+     {
+      "r": 104.62,
+      "m": 0.91
+     },
+     {
+      "r": 104.59,
+      "m": -2.18
+     }
+    ]
+   },
+   {
+    "etf": "XLB",
+    "name": "Materials",
+    "rel_21d": -2.04,
+    "rel_63d": -4.02,
+    "composite": -3.03,
+    "rs_ratio": 95.0,
+    "rs_momentum": -0.27,
+    "quadrant": "Lagging",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 98.31,
+      "m": 0.01
+     },
+     {
+      "r": 95.48,
+      "m": 2.95
+     },
+     {
+      "r": 96.1,
+      "m": 3.29
+     },
+     {
+      "r": 97.33,
+      "m": 3.52
+     },
+     {
+      "r": 95.01,
+      "m": -0.27
+     }
+    ]
+   },
+   {
+    "etf": "XLP",
+    "name": "Consumer Staples",
+    "rel_21d": -0.94,
+    "rel_63d": -5.4,
+    "composite": -3.17,
+    "rs_ratio": 95.0,
+    "rs_momentum": 1.41,
+    "quadrant": "Improving",
+    "selected": true,
+    "rank": 3,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 99.21,
+      "m": 1.42
+     },
+     {
+      "r": 93.36,
+      "m": 0.21
+     },
+     {
+      "r": 96.31,
+      "m": 1.71
+     },
+     {
+      "r": 95.67,
+      "m": -0.51
+     },
+     {
+      "r": 95.02,
+      "m": 1.41
+     }
+    ]
+   },
+   {
+    "etf": "XLRE",
+    "name": "Real Estate",
+    "rel_21d": -1.34,
+    "rel_63d": -6.36,
+    "composite": -3.85,
+    "rs_ratio": 94.6,
+    "rs_momentum": -0.03,
+    "quadrant": "Lagging",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 102.02,
+      "m": -0.31
+     },
+     {
+      "r": 95.49,
+      "m": -1.47
+     },
+     {
+      "r": 96.43,
+      "m": -2.95
+     },
+     {
+      "r": 95.21,
+      "m": -3.83
+     },
+     {
+      "r": 94.63,
+      "m": -0.03
+     }
+    ]
+   },
+   {
+    "etf": "XLU",
+    "name": "Utilities",
+    "rel_21d": -2.25,
+    "rel_63d": -7.02,
+    "composite": -4.63,
+    "rs_ratio": 90.1,
+    "rs_momentum": 0.73,
+    "quadrant": "Improving",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 96.31,
+      "m": -2.88
+     },
+     {
+      "r": 88.73,
+      "m": -5.65
+     },
+     {
+      "r": 90.77,
+      "m": -3.54
+     },
+     {
+      "r": 88.34,
+      "m": -5.12
+     },
+     {
+      "r": 90.15,
+      "m": 0.73
+     }
+    ]
+   },
+   {
+    "etf": "XLY",
+    "name": "Consumer Discretionary",
+    "rel_21d": -3.12,
+    "rel_63d": -6.54,
+    "composite": -4.83,
+    "rs_ratio": 93.2,
+    "rs_momentum": -1.27,
+    "quadrant": "Lagging",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 92.95,
+      "m": -1.0
+     },
+     {
+      "r": 95.68,
+      "m": 2.13
+     },
+     {
+      "r": 95.85,
+      "m": 2.67
+     },
+     {
+      "r": 95.11,
+      "m": -0.35
+     },
+     {
+      "r": 93.23,
+      "m": -1.27
+     }
+    ]
+   },
+   {
+    "etf": "XLI",
+    "name": "Industrials",
+    "rel_21d": -6.21,
+    "rel_63d": -5.21,
+    "composite": -5.71,
+    "rs_ratio": 93.9,
+    "rs_momentum": -4.78,
+    "quadrant": "Lagging",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 100.88,
+      "m": -1.5
+     },
+     {
+      "r": 98.09,
+      "m": -0.79
+     },
+     {
+      "r": 97.25,
+      "m": -0.63
+     },
+     {
+      "r": 94.44,
+      "m": -4.17
+     },
+     {
+      "r": 93.94,
+      "m": -4.78
+     }
+    ]
+   },
+   {
+    "etf": "SMH",
+    "name": "Semiconductors",
+    "rel_21d": -1.73,
+    "rel_63d": -10.58,
+    "composite": -6.15,
+    "rs_ratio": 101.1,
+    "rs_momentum": -4.85,
+    "quadrant": "Weakening",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 102.24,
+      "m": -19.41
+     },
+     {
+      "r": 106.37,
+      "m": -10.67
+     },
+     {
+      "r": 101.56,
+      "m": -9.93
+     },
+     {
+      "r": 99.96,
+      "m": -3.03
+     },
+     {
+      "r": 101.13,
+      "m": -4.85
+     }
+    ]
+   },
+   {
+    "etf": "AI_INFRA",
+    "name": "AI Infrastructure",
+    "rel_21d": -1.58,
+    "rel_63d": 2.54,
+    "composite": 0.48,
+    "rs_ratio": 101.3,
+    "rs_momentum": -2.55,
+    "quadrant": "Weakening",
+    "selected": true,
+    "rank": 4,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 99.57,
+      "m": -11.11
+     },
+     {
+      "r": 99.63,
+      "m": -8.4
+     },
+     {
+      "r": 97.94,
+      "m": -6.09
+     },
+     {
+      "r": 95.16,
+      "m": -4.99
+     },
+     {
+      "r": 101.34,
+      "m": -2.55
+     }
+    ]
+   }
+  ],
+  "selected_gics": [
+   "Energy",
+   "Communication Services",
+   "Consumer Staples"
+  ]
+ },
+ "funnel": {
+  "universe": 518,
+  "screened": 0,
+  "candidates": 0,
+  "qualified": 0,
+  "ideas": 0
+ },
+ "ideas": [],
+ "watch": [],
+ "near_misses": [],
+ "config": {
+  "min_rr": 2.5,
+  "max_ideas": 10,
+  "top_n_sectors": 3
+ },
+ "logic": [
+  {
+   "layer": "\u2460 Regime",
+   "rule": "Risk-on needs VIX below this AND below its 50DMA",
+   "key": "regime.vix_max",
+   "value": 22
+  },
+  {
+   "layer": "\u2460 Regime",
+   "rule": "HY OAS must sit below this trailing-252d percentile",
+   "key": "regime.hyoas_percentile_max",
+   "value": 75
+  },
+  {
+   "layer": "\u2460 Regime",
+   "rule": "NFCI below this = loose financial conditions",
+   "key": "regime.nfci_max",
+   "value": 0.0
+  },
+  {
+   "layer": "\u2460 Regime",
+   "rule": "SPY 63d range under this = 'ranging' variant",
+   "key": "regime.spy_range_pct",
+   "value": 0.08
+  },
+  {
+   "layer": "\u2461 Sectors",
+   "rule": "Leading/Improving sectors feeding the screen",
+   "key": "sectors.top_n",
+   "value": 3
+  },
+  {
+   "layer": "\u2461 Sectors",
+   "rule": "Below this % of members above 50DMA \u2192 'narrow leadership' flag",
+   "key": "sectors.breadth_min",
+   "value": 0.4
+  },
+  {
+   "layer": "\u2461 Sectors",
+   "rule": "AI-infra theme inclusion policy",
+   "key": "themes.ai_infra.include_when",
+   "value": "always"
+  },
+  {
+   "layer": "\u2462 Screen",
+   "rule": "Minimum share price",
+   "key": "screen.min_price",
+   "value": 10
+  },
+  {
+   "layer": "\u2462 Screen",
+   "rule": "Minimum 21d average dollar volume",
+   "key": "screen.min_avg_dollar_vol",
+   "value": 20000000
+  },
+  {
+   "layer": "\u2462 Screen",
+   "rule": "Max distance below 52w high (leadership filter)",
+   "key": "screen.max_pct_from_52w_high",
+   "value": 0.15
+  },
+  {
+   "layer": "\u2462 Screen",
+   "rule": "\u2026loosened to this when regime is RANGING",
+   "key": "screen.max_pct_from_52w_high_ranging",
+   "value": 0.25
+  },
+  {
+   "layer": "\u2463 Structure",
+   "rule": "Volume-profile lookback (trading days)",
+   "key": "structure.lookback_days",
+   "value": 126
+  },
+  {
+   "layer": "\u2463 Structure",
+   "rule": "Pullback must sit within \u00b1this of POC/HVN",
+   "key": "structure.pullback_poc_tolerance",
+   "value": 0.02
+  },
+  {
+   "layer": "\u2463 Structure",
+   "rule": "Closes above VAH needed to accept a breakout",
+   "key": "structure.breakout_min_sessions",
+   "value": 3
+  },
+  {
+   "layer": "\u2463 Structure",
+   "rule": "Breakout older than this = extended, no entry",
+   "key": "structure.breakout_max_age",
+   "value": 10
+  },
+  {
+   "layer": "\u2464 Trade",
+   "rule": "Reward/risk floor \u2014 ideas below this are dropped to Watch",
+   "key": "trade.min_rr",
+   "value": 2.5
+  },
+  {
+   "layer": "\u2464 Trade",
+   "rule": "Max ideas in the ranked list",
+   "key": "report.max_ideas",
+   "value": 10
+  }
+ ]
+}
