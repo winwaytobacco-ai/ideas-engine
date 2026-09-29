@@ -1,0 +1,1267 @@
+{
+ "run_date": "2026-09-29",
+ "generated_at": "2026-09-29T01:10:59Z",
+ "regime": {
+  "label": "RISK_ON_TRENDING",
+  "explanation": "SPY in confirmed uptrend and 2/3 macro checks risk-on \u2014 full idea generation.",
+  "signals": [
+   {
+    "name": "Credit stress (HY OAS)",
+    "value": "2.93%",
+    "rule": "< 21d MA (2.70) and < p75 of 252d (2.95)",
+    "passed": false
+   },
+   {
+    "name": "Yield curve (10y-2y)",
+    "value": "+0.32% (positive, flattening)",
+    "rule": "informational only in v1",
+    "passed": null
+   },
+   {
+    "name": "Volatility (VIX)",
+    "value": "14.2",
+    "rule": "< 22 and < 50d MA (16.1)",
+    "passed": true
+   },
+   {
+    "name": "Financial conditions (NFCI)",
+    "value": "-0.56",
+    "rule": "< 0.0 (loose)",
+    "passed": true
+   },
+   {
+    "name": "SPY trend",
+    "value": "771 vs 200DMA 715",
+    "rule": "Close > 200DMA, 50DMA > 200DMA, 200DMA slope up over 21d",
+    "passed": true
+   },
+   {
+    "name": "SPY range check",
+    "value": "63d range 6.5%",
+    "rule": "ranging if < 8% and no MA alignment",
+    "passed": null
+   }
+  ]
+ },
+ "sectors": {
+  "rows": [
+   {
+    "etf": "IGV",
+    "name": "Software",
+    "rel_21d": 2.6,
+    "rel_63d": 14.12,
+    "composite": 8.36,
+    "rs_ratio": 107.9,
+    "rs_momentum": 1.0,
+    "quadrant": "Leading",
+    "selected": true,
+    "rank": 1,
+    "breadth": 0.6746987951807228,
+    "trail": [
+     {
+      "r": 108.97,
+      "m": 10.59
+     },
+     {
+      "r": 108.33,
+      "m": 13.93
+     },
+     {
+      "r": 107.45,
+      "m": 0.2
+     },
+     {
+      "r": 110.38,
+      "m": 2.16
+     },
+     {
+      "r": 107.94,
+      "m": 1.0
+     }
+    ]
+   },
+   {
+    "etf": "XLK",
+    "name": "Information Technology",
+    "rel_21d": 6.53,
+    "rel_63d": 2.42,
+    "composite": 4.48,
+    "rs_ratio": 106.8,
+    "rs_momentum": 3.55,
+    "quadrant": "Leading",
+    "selected": true,
+    "rank": 2,
+    "breadth": 0.6746987951807228,
+    "trail": [
+     {
+      "r": 105.76,
+      "m": -2.31
+     },
+     {
+      "r": 103.77,
+      "m": -3.26
+     },
+     {
+      "r": 102.99,
+      "m": -3.57
+     },
+     {
+      "r": 103.09,
+      "m": -3.43
+     },
+     {
+      "r": 106.77,
+      "m": 3.55
+     }
+    ]
+   },
+   {
+    "etf": "XLE",
+    "name": "Energy",
+    "rel_21d": -0.97,
+    "rel_63d": 9.84,
+    "composite": 4.43,
+    "rs_ratio": 101.4,
+    "rs_momentum": -0.51,
+    "quadrant": "Weakening",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 99.14,
+      "m": 3.0
+     },
+     {
+      "r": 103.98,
+      "m": 2.47
+     },
+     {
+      "r": 106.27,
+      "m": 11.71
+     },
+     {
+      "r": 108.63,
+      "m": 8.68
+     },
+     {
+      "r": 101.37,
+      "m": -0.51
+     }
+    ]
+   },
+   {
+    "etf": "SMH",
+    "name": "Semiconductors",
+    "rel_21d": 8.2,
+    "rel_63d": -6.9,
+    "composite": 0.65,
+    "rs_ratio": 104.9,
+    "rs_momentum": 4.5,
+    "quadrant": "Leading",
+    "selected": true,
+    "rank": 3,
+    "breadth": 0.6746987951807228,
+    "trail": [
+     {
+      "r": 104.59,
+      "m": -8.65
+     },
+     {
+      "r": 101.61,
+      "m": -10.08
+     },
+     {
+      "r": 98.8,
+      "m": -6.78
+     },
+     {
+      "r": 97.05,
+      "m": -8.39
+     },
+     {
+      "r": 104.88,
+      "m": 4.5
+     }
+    ]
+   },
+   {
+    "etf": "XLC",
+    "name": "Communication Services",
+    "rel_21d": -0.3,
+    "rel_63d": 0.66,
+    "composite": 0.18,
+    "rs_ratio": 96.1,
+    "rs_momentum": 2.43,
+    "quadrant": "Improving",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 91.03,
+      "m": -0.72
+     },
+     {
+      "r": 92.59,
+      "m": 4.54
+     },
+     {
+      "r": 94.43,
+      "m": 3.79
+     },
+     {
+      "r": 97.8,
+      "m": 6.24
+     },
+     {
+      "r": 96.14,
+      "m": 2.43
+     }
+    ]
+   },
+   {
+    "etf": "XLV",
+    "name": "Health Care",
+    "rel_21d": -2.2,
+    "rel_63d": 0.8,
+    "composite": -0.7,
+    "rs_ratio": 104.3,
+    "rs_momentum": -1.87,
+    "quadrant": "Weakening",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 102.08,
+      "m": 1.92
+     },
+     {
+      "r": 106.97,
+      "m": 4.83
+     },
+     {
+      "r": 106.16,
+      "m": 8.1
+     },
+     {
+      "r": 104.14,
+      "m": 3.07
+     },
+     {
+      "r": 104.29,
+      "m": -1.87
+     }
+    ]
+   },
+   {
+    "etf": "XLF",
+    "name": "Financials",
+    "rel_21d": -6.48,
+    "rel_63d": -3.34,
+    "composite": -4.91,
+    "rs_ratio": 97.1,
+    "rs_momentum": -6.32,
+    "quadrant": "Lagging",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 102.16,
+      "m": 0.69
+     },
+     {
+      "r": 102.34,
+      "m": -0.46
+     },
+     {
+      "r": 102.66,
+      "m": 0.61
+     },
+     {
+      "r": 102.14,
+      "m": 0.07
+     },
+     {
+      "r": 97.07,
+      "m": -6.32
+     }
+    ]
+   },
+   {
+    "etf": "XLP",
+    "name": "Consumer Staples",
+    "rel_21d": -5.19,
+    "rel_63d": -8.56,
+    "composite": -6.88,
+    "rs_ratio": 94.1,
+    "rs_momentum": -2.89,
+    "quadrant": "Lagging",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 93.41,
+      "m": -1.71
+     },
+     {
+      "r": 96.31,
+      "m": 1.26
+     },
+     {
+      "r": 96.73,
+      "m": 3.36
+     },
+     {
+      "r": 96.5,
+      "m": 2.04
+     },
+     {
+      "r": 94.08,
+      "m": -2.89
+     }
+    ]
+   },
+   {
+    "etf": "XBI",
+    "name": "Biotech",
+    "rel_21d": -8.87,
+    "rel_63d": -6.3,
+    "composite": -7.59,
+    "rs_ratio": 101.7,
+    "rs_momentum": -10.51,
+    "quadrant": "Weakening",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 107.41,
+      "m": -2.76
+     },
+     {
+      "r": 112.32,
+      "m": 3.04
+     },
+     {
+      "r": 111.06,
+      "m": 7.27
+     },
+     {
+      "r": 103.74,
+      "m": -2.01
+     },
+     {
+      "r": 101.69,
+      "m": -10.51
+     }
+    ]
+   },
+   {
+    "etf": "XLY",
+    "name": "Consumer Discretionary",
+    "rel_21d": -6.36,
+    "rel_63d": -9.19,
+    "composite": -7.78,
+    "rs_ratio": 91.4,
+    "rs_momentum": -4.21,
+    "quadrant": "Lagging",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 95.67,
+      "m": 2.26
+     },
+     {
+      "r": 95.96,
+      "m": 6.83
+     },
+     {
+      "r": 94.11,
+      "m": -0.29
+     },
+     {
+      "r": 92.54,
+      "m": -1.95
+     },
+     {
+      "r": 91.42,
+      "m": -4.21
+     }
+    ]
+   },
+   {
+    "etf": "XLB",
+    "name": "Materials",
+    "rel_21d": -7.72,
+    "rel_63d": -9.12,
+    "composite": -8.42,
+    "rs_ratio": 93.0,
+    "rs_momentum": -6.0,
+    "quadrant": "Lagging",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 96.62,
+      "m": 3.17
+     },
+     {
+      "r": 98.56,
+      "m": 4.04
+     },
+     {
+      "r": 98.2,
+      "m": 4.51
+     },
+     {
+      "r": 95.62,
+      "m": 0.72
+     },
+     {
+      "r": 93.04,
+      "m": -6.0
+     }
+    ]
+   },
+   {
+    "etf": "XLI",
+    "name": "Industrials",
+    "rel_21d": -6.18,
+    "rel_63d": -11.76,
+    "composite": -8.97,
+    "rs_ratio": 92.9,
+    "rs_momentum": -4.32,
+    "quadrant": "Lagging",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 98.78,
+      "m": 0.04
+     },
+     {
+      "r": 96.9,
+      "m": -4.08
+     },
+     {
+      "r": 93.6,
+      "m": -5.38
+     },
+     {
+      "r": 93.02,
+      "m": -5.65
+     },
+     {
+      "r": 92.9,
+      "m": -4.32
+     }
+    ]
+   },
+   {
+    "etf": "XLRE",
+    "name": "Real Estate",
+    "rel_21d": -7.99,
+    "rel_63d": -13.43,
+    "composite": -10.71,
+    "rs_ratio": 91.1,
+    "rs_momentum": -6.34,
+    "quadrant": "Lagging",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 93.98,
+      "m": -4.34
+     },
+     {
+      "r": 97.13,
+      "m": -3.02
+     },
+     {
+      "r": 94.77,
+      "m": -1.37
+     },
+     {
+      "r": 94.88,
+      "m": -1.09
+     },
+     {
+      "r": 91.08,
+      "m": -6.34
+     }
+    ]
+   },
+   {
+    "etf": "XLU",
+    "name": "Utilities",
+    "rel_21d": -9.46,
+    "rel_63d": -19.93,
+    "composite": -14.69,
+    "rs_ratio": 85.4,
+    "rs_momentum": -5.8,
+    "quadrant": "Lagging",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 89.21,
+      "m": -6.66
+     },
+     {
+      "r": 88.81,
+      "m": -9.47
+     },
+     {
+      "r": 89.77,
+      "m": 0.01
+     },
+     {
+      "r": 89.03,
+      "m": -1.28
+     },
+     {
+      "r": 85.43,
+      "m": -5.8
+     }
+    ]
+   },
+   {
+    "etf": "AI_INFRA",
+    "name": "AI Infrastructure",
+    "rel_21d": 0.9,
+    "rel_63d": -6.04,
+    "composite": -2.57,
+    "rs_ratio": 99.1,
+    "rs_momentum": 0.09,
+    "quadrant": "Improving",
+    "selected": true,
+    "rank": 4,
+    "breadth": 0.3333333333333333,
+    "trail": [
+     {
+      "r": 101.52,
+      "m": -5.15
+     },
+     {
+      "r": 97.69,
+      "m": -9.63
+     },
+     {
+      "r": 97.05,
+      "m": -5.13
+     },
+     {
+      "r": 97.22,
+      "m": -6.89
+     },
+     {
+      "r": 99.13,
+      "m": 0.09
+     }
+    ]
+   }
+  ],
+  "selected_gics": [
+   "Information Technology"
+  ]
+ },
+ "funnel": {
+  "universe": 518,
+  "screened": 94,
+  "candidates": 24,
+  "qualified": 9,
+  "ideas": 1
+ },
+ "ideas": [
+  {
+   "ticker": "VRSN",
+   "name": "Verisign",
+   "sector": "Information Technology",
+   "sector_rank": 1,
+   "setup": "PULLBACK_TO_VALUE",
+   "setup_human": "Pullback to value",
+   "score": 85.0,
+   "total_score": 17.7,
+   "rs_percentile": 21,
+   "thesis": "Verisign \u2014 pullback to value in Information Technology (sector rank #1), relative strength top 79% of candidates, flow confirming.",
+   "entry": 287.25,
+   "entry_type": "At market (price at high-volume node)",
+   "stop": 279.12,
+   "stop_ref": "anchored VWAP",
+   "target": 309.09,
+   "target_ref": "52-week high",
+   "rr": 2.69,
+   "free_flow": 295.38,
+   "stop_pct": 2.8,
+   "stop_atr": 1.0,
+   "close": 287.25,
+   "poc": 273.07,
+   "vah": 296.71,
+   "val": 262.94,
+   "avwap": 279.12,
+   "avwap_dist": 2.9,
+   "atr": 7.86,
+   "flow_state": "confirming",
+   "pct_from_52w_high": 7.1,
+   "breadth": 67,
+   "theme": null,
+   "fundamentals": null,
+   "ooda": null,
+   "risks": [
+    {
+     "level": "info",
+     "text": "Stop sits 2.8% below entry (~1.0 ATR), below anchored VWAP."
+    },
+    {
+     "level": "info",
+     "text": "Reward/risk of 2.69 is close to the 2.5 floor \u2014 any slippage on entry meaningfully degrades the trade."
+    }
+   ],
+   "execution": [
+    "Entry \u2014 At market (price at high-volume node). Working level: 287.25.",
+    "Stop \u2014 279.12 (2.8% risk, ~1.0 ATR), placed below anchored VWAP. Structural, never percentage-based.",
+    "Target \u2014 309.09 (52-week high); reward/risk 2.7.",
+    "Free-flow \u2014 at 295.38 (+1R) sell half; the remainder then rides at breakeven-or-better even if stopped.",
+    "Invalidation \u2014 idea is void on a daily close below the stop reference or if the weekly regime turns RISK_OFF."
+   ],
+   "spark": {
+    "dates": [
+     "2026-03-27",
+     "2026-03-30",
+     "2026-03-31",
+     "2026-04-01",
+     "2026-04-02",
+     "2026-04-06",
+     "2026-04-07",
+     "2026-04-08",
+     "2026-04-09",
+     "2026-04-10",
+     "2026-04-13",
+     "2026-04-14",
+     "2026-04-15",
+     "2026-04-16",
+     "2026-04-17",
+     "2026-04-20",
+     "2026-04-21",
+     "2026-04-22",
+     "2026-04-23",
+     "2026-04-24",
+     "2026-04-27",
+     "2026-04-28",
+     "2026-04-29",
+     "2026-04-30",
+     "2026-05-01",
+     "2026-05-04",
+     "2026-05-05",
+     "2026-05-06",
+     "2026-05-07",
+     "2026-05-08",
+     "2026-05-11",
+     "2026-05-12",
+     "2026-05-13",
+     "2026-05-14",
+     "2026-05-15",
+     "2026-05-18",
+     "2026-05-19",
+     "2026-05-20",
+     "2026-05-21",
+     "2026-05-22",
+     "2026-05-26",
+     "2026-05-27",
+     "2026-05-28",
+     "2026-05-29",
+     "2026-06-01",
+     "2026-06-02",
+     "2026-06-03",
+     "2026-06-04",
+     "2026-06-05",
+     "2026-06-08",
+     "2026-06-09",
+     "2026-06-10",
+     "2026-06-11",
+     "2026-06-12",
+     "2026-06-15",
+     "2026-06-16",
+     "2026-06-17",
+     "2026-06-18",
+     "2026-06-22",
+     "2026-06-23",
+     "2026-06-24",
+     "2026-06-25",
+     "2026-06-26",
+     "2026-06-29",
+     "2026-06-30",
+     "2026-07-01",
+     "2026-07-02",
+     "2026-07-06",
+     "2026-07-07",
+     "2026-07-08",
+     "2026-07-09",
+     "2026-07-10",
+     "2026-07-13",
+     "2026-07-14",
+     "2026-07-15",
+     "2026-07-16",
+     "2026-07-17",
+     "2026-07-20",
+     "2026-07-21",
+     "2026-07-22",
+     "2026-07-23",
+     "2026-07-24",
+     "2026-07-27",
+     "2026-07-28",
+     "2026-07-29",
+     "2026-07-30",
+     "2026-07-31",
+     "2026-08-03",
+     "2026-08-04",
+     "2026-08-05",
+     "2026-08-06",
+     "2026-08-07",
+     "2026-08-10",
+     "2026-08-11",
+     "2026-08-12",
+     "2026-08-13",
+     "2026-08-14",
+     "2026-08-17",
+     "2026-08-18",
+     "2026-08-19",
+     "2026-08-20",
+     "2026-08-21",
+     "2026-08-24",
+     "2026-08-25",
+     "2026-08-26",
+     "2026-08-27",
+     "2026-08-28",
+     "2026-08-31",
+     "2026-09-01",
+     "2026-09-02",
+     "2026-09-03",
+     "2026-09-04",
+     "2026-09-08",
+     "2026-09-09",
+     "2026-09-10",
+     "2026-09-11",
+     "2026-09-14",
+     "2026-09-15",
+     "2026-09-16",
+     "2026-09-17",
+     "2026-09-18",
+     "2026-09-21",
+     "2026-09-22",
+     "2026-09-23",
+     "2026-09-24",
+     "2026-09-25"
+    ],
+    "close": [
+     246.1,
+     248.28,
+     246.98,
+     249.37,
+     258.4,
+     272.98,
+     273.22,
+     269.39,
+     268.38,
+     258.33,
+     269.93,
+     266.84,
+     273.73,
+     272.32,
+     272.52,
+     274.27,
+     268.28,
+     268.33,
+     275.41,
+     267.7,
+     266.41,
+     268.89,
+     271.08,
+     267.16,
+     270.92,
+     272.62,
+     274.23,
+     274.22,
+     276.92,
+     286.6,
+     284.87,
+     284.21,
+     293.5,
+     291.32,
+     295.91,
+     303.61,
+     301.74,
+     302.11,
+     305.03,
+     309.09,
+     305.96,
+     294.78,
+     295.27,
+     284.54,
+     295.72,
+     296.54,
+     296.21,
+     292.93,
+     294.06,
+     282.58,
+     283.06,
+     287.25,
+     278.75,
+     279.07,
+     272.16,
+     273.07,
+     264.14,
+     263.87,
+     246.97,
+     246.5,
+     251.34,
+     250.12,
+     254.87,
+     251.75,
+     250.82,
+     255.15,
+     255.68,
+     258.37,
+     266.0,
+     266.8,
+     269.19,
+     269.32,
+     269.52,
+     268.06,
+     269.73,
+     274.41,
+     276.85,
+     276.8,
+     265.37,
+     261.82,
+     260.81,
+     279.18,
+     274.02,
+     280.33,
+     290.07,
+     285.74,
+     289.17,
+     298.02,
+     298.32,
+     292.55,
+     291.67,
+     293.7,
+     292.48,
+     286.79,
+     282.11,
+     286.31,
+     283.41,
+     271.97,
+     275.93,
+     273.03,
+     276.9,
+     281.8,
+     290.79,
+     293.75,
+     292.99,
+     294.73,
+     291.93,
+     288.28,
+     288.37,
+     289.96,
+     293.35,
+     292.08,
+     282.2,
+     286.94,
+     288.85,
+     292.71,
+     298.6,
+     297.26,
+     298.46,
+     302.05,
+     303.12,
+     308.18,
+     299.42,
+     293.28,
+     291.88,
+     287.25
+    ]
+   }
+  }
+ ],
+ "watch": [
+  {
+   "ticker": "HPE",
+   "name": "Hewlett Packard Enterprise",
+   "sector": "Information Technology",
+   "score": 80.0,
+   "note": "acceptance breakout but R:R 1.3 below 2.5 floor"
+  },
+  {
+   "ticker": "SWKS",
+   "name": "Skyworks Solutions",
+   "sector": "Information Technology",
+   "score": 80.0,
+   "note": "pullback to value but R:R 1.03 below 2.5 floor"
+  },
+  {
+   "ticker": "KEYS",
+   "name": "Keysight Technologies",
+   "sector": "Information Technology",
+   "score": 80.0,
+   "note": "acceptance breakout but R:R 1.1 below 2.5 floor"
+  },
+  {
+   "ticker": "ETN",
+   "name": "Eaton Corporation",
+   "sector": "AI Infrastructure",
+   "score": 80.0,
+   "note": "acceptance breakout but R:R 1.22 below 2.5 floor"
+  },
+  {
+   "ticker": "CRWD",
+   "name": "CrowdStrike",
+   "sector": "Information Technology",
+   "score": 78.8,
+   "note": "acceptance breakout but R:R 1.53 below 2.5 floor"
+  },
+  {
+   "ticker": "NVDA",
+   "name": "Nvidia",
+   "sector": "Information Technology",
+   "score": 60.0,
+   "note": "pullback to value but R:R 0.6 below 2.5 floor"
+  },
+  {
+   "ticker": "LITE",
+   "name": "Lumentum",
+   "sector": "Information Technology",
+   "score": 60.0,
+   "note": "pullback to value but R:R 1.32 below 2.5 floor"
+  },
+  {
+   "ticker": "MSI",
+   "name": "Motorola Solutions",
+   "sector": "Information Technology",
+   "score": 60.0,
+   "note": "pullback to value but R:R 0.8 below 2.5 floor"
+  },
+  {
+   "ticker": "PLTR",
+   "name": "Palantir Technologies",
+   "sector": "Information Technology",
+   "score": 40.0,
+   "note": "breakout extended (35 sessions above VAH)"
+  },
+  {
+   "ticker": "ZBRA",
+   "name": "Zebra Technologies",
+   "sector": "Information Technology",
+   "score": 40.0,
+   "note": "breakout extended (43 sessions above VAH)"
+  },
+  {
+   "ticker": "DELL",
+   "name": "Dell Technologies",
+   "sector": "Information Technology",
+   "score": 40.0,
+   "note": "no qualifying structure yet"
+  },
+  {
+   "ticker": "MSFT",
+   "name": "Microsoft",
+   "sector": "Information Technology",
+   "score": 40.0,
+   "note": "breakout extended (41 sessions above VAH)"
+  },
+  {
+   "ticker": "NTAP",
+   "name": "NetApp",
+   "sector": "Information Technology",
+   "score": 40.0,
+   "note": "no qualifying structure yet"
+  },
+  {
+   "ticker": "AMD",
+   "name": "Advanced Micro Devices",
+   "sector": "Information Technology",
+   "score": 40.0,
+   "note": "no qualifying structure yet"
+  },
+  {
+   "ticker": "FTNT",
+   "name": "Fortinet",
+   "sector": "Information Technology",
+   "score": 40.0,
+   "note": "no qualifying structure yet"
+  },
+  {
+   "ticker": "FFIV",
+   "name": "F5, Inc.",
+   "sector": "Information Technology",
+   "score": 40.0,
+   "note": "no qualifying structure yet"
+  },
+  {
+   "ticker": "DDOG",
+   "name": "Datadog",
+   "sector": "Information Technology",
+   "score": 40.0,
+   "note": "no qualifying structure yet"
+  },
+  {
+   "ticker": "PANW",
+   "name": "Palo Alto Networks",
+   "sector": "Information Technology",
+   "score": 39.4,
+   "note": "no qualifying structure yet"
+  },
+  {
+   "ticker": "CRM",
+   "name": "Salesforce",
+   "sector": "Information Technology",
+   "score": 20.0,
+   "note": "breakout extended (27 sessions above VAH)"
+  },
+  {
+   "ticker": "HPQ",
+   "name": "HP Inc.",
+   "sector": "Information Technology",
+   "score": 20.0,
+   "note": "breakout extended (38 sessions above VAH)"
+  },
+  {
+   "ticker": "P",
+   "name": "Everpure",
+   "sector": "Information Technology",
+   "score": 0.0,
+   "note": "no qualifying structure yet"
+  },
+  {
+   "ticker": "ANET",
+   "name": "Arista Networks",
+   "sector": "Information Technology",
+   "score": 0.0,
+   "note": "no qualifying structure yet"
+  },
+  {
+   "ticker": "AAPL",
+   "name": "Apple Inc.",
+   "sector": "Information Technology",
+   "score": 0.0,
+   "note": "breakout extended (11 sessions above VAH)"
+  }
+ ],
+ "near_misses": [
+  {
+   "ticker": "WDAY",
+   "name": "Workday, Inc.",
+   "sector": "Information Technology",
+   "failed_filter": "near 52w high"
+  },
+  {
+   "ticker": "SMCI",
+   "name": "Supermicro",
+   "sector": "Information Technology",
+   "failed_filter": "near 52w high"
+  },
+  {
+   "ticker": "IT",
+   "name": "Gartner",
+   "sector": "Information Technology",
+   "failed_filter": "near 52w high"
+  },
+  {
+   "ticker": "NOW",
+   "name": "ServiceNow",
+   "sector": "Information Technology",
+   "failed_filter": "near 52w high"
+  },
+  {
+   "ticker": "SHOP",
+   "name": "Shopify",
+   "sector": "Information Technology",
+   "failed_filter": "near 52w high"
+  },
+  {
+   "ticker": "TRI",
+   "name": "Thomson Reuters",
+   "sector": "Information Technology",
+   "failed_filter": "near 52w high"
+  },
+  {
+   "ticker": "GDDY",
+   "name": "GoDaddy",
+   "sector": "Information Technology",
+   "failed_filter": "near 52w high"
+  },
+  {
+   "ticker": "TEL",
+   "name": "TE Connectivity",
+   "sector": "Information Technology",
+   "failed_filter": "50DMA > 200DMA"
+  },
+  {
+   "ticker": "QCOM",
+   "name": "Qualcomm",
+   "sector": "Information Technology",
+   "failed_filter": "near 52w high"
+  },
+  {
+   "ticker": "APH",
+   "name": "Amphenol",
+   "sector": "Information Technology",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "ADI",
+   "name": "Analog Devices",
+   "sector": "Information Technology",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "ASML",
+   "name": "ASML Holding",
+   "sector": "Information Technology",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "INTC",
+   "name": "Intel",
+   "sector": "Information Technology",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "MU",
+   "name": "Micron Technology",
+   "sector": "Information Technology",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "DLR",
+   "name": "Digital Realty",
+   "sector": "AI Infrastructure",
+   "failed_filter": "63d return beats SPY"
+  },
+  {
+   "ticker": "EQIX",
+   "name": "Equinix",
+   "sector": "AI Infrastructure",
+   "failed_filter": "63d return beats SPY"
+  }
+ ],
+ "config": {
+  "min_rr": 2.5,
+  "max_ideas": 10,
+  "top_n_sectors": 3
+ },
+ "logic": [
+  {
+   "layer": "\u2460 Regime",
+   "rule": "Risk-on needs VIX below this AND below its 50DMA",
+   "key": "regime.vix_max",
+   "value": 22
+  },
+  {
+   "layer": "\u2460 Regime",
+   "rule": "HY OAS must sit below this trailing-252d percentile",
+   "key": "regime.hyoas_percentile_max",
+   "value": 75
+  },
+  {
+   "layer": "\u2460 Regime",
+   "rule": "NFCI below this = loose financial conditions",
+   "key": "regime.nfci_max",
+   "value": 0.0
+  },
+  {
+   "layer": "\u2460 Regime",
+   "rule": "SPY 63d range under this = 'ranging' variant",
+   "key": "regime.spy_range_pct",
+   "value": 0.08
+  },
+  {
+   "layer": "\u2461 Sectors",
+   "rule": "Leading/Improving sectors feeding the screen",
+   "key": "sectors.top_n",
+   "value": 3
+  },
+  {
+   "layer": "\u2461 Sectors",
+   "rule": "Below this % of members above 50DMA \u2192 'narrow leadership' flag",
+   "key": "sectors.breadth_min",
+   "value": 0.4
+  },
+  {
+   "layer": "\u2461 Sectors",
+   "rule": "AI-infra theme inclusion policy",
+   "key": "themes.ai_infra.include_when",
+   "value": "always"
+  },
+  {
+   "layer": "\u2462 Screen",
+   "rule": "Minimum share price",
+   "key": "screen.min_price",
+   "value": 10
+  },
+  {
+   "layer": "\u2462 Screen",
+   "rule": "Minimum 21d average dollar volume",
+   "key": "screen.min_avg_dollar_vol",
+   "value": 20000000
+  },
+  {
+   "layer": "\u2462 Screen",
+   "rule": "Max distance below 52w high (leadership filter)",
+   "key": "screen.max_pct_from_52w_high",
+   "value": 0.15
+  },
+  {
+   "layer": "\u2462 Screen",
+   "rule": "\u2026loosened to this when regime is RANGING",
+   "key": "screen.max_pct_from_52w_high_ranging",
+   "value": 0.25
+  },
+  {
+   "layer": "\u2463 Structure",
+   "rule": "Volume-profile lookback (trading days)",
+   "key": "structure.lookback_days",
+   "value": 126
+  },
+  {
+   "layer": "\u2463 Structure",
+   "rule": "Pullback must sit within \u00b1this of POC/HVN",
+   "key": "structure.pullback_poc_tolerance",
+   "value": 0.02
+  },
+  {
+   "layer": "\u2463 Structure",
+   "rule": "Closes above VAH needed to accept a breakout",
+   "key": "structure.breakout_min_sessions",
+   "value": 3
+  },
+  {
+   "layer": "\u2463 Structure",
+   "rule": "Breakout older than this = extended, no entry",
+   "key": "structure.breakout_max_age",
+   "value": 10
+  },
+  {
+   "layer": "\u2464 Trade",
+   "rule": "Reward/risk floor \u2014 ideas below this are dropped to Watch",
+   "key": "trade.min_rr",
+   "value": 2.5
+  },
+  {
+   "layer": "\u2464 Trade",
+   "rule": "Max ideas in the ranked list",
+   "key": "report.max_ideas",
+   "value": 10
+  }
+ ]
+}
