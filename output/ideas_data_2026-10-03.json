@@ -1,6 +1,6 @@
 {
  "run_date": "2026-10-03",
- "generated_at": "2026-10-03T00:39:05Z",
+ "generated_at": "2026-10-03T23:59:19Z",
  "regime": {
   "label": "RISK_OFF",
   "explanation": "No new long ideas: credit and volatility both stressed.",
@@ -31,13 +31,13 @@
    },
    {
     "name": "SPY trend",
-    "value": "764 vs 200DMA 717",
+    "value": "770 vs 200DMA 717",
     "rule": "Close > 200DMA, 50DMA > 200DMA, 200DMA slope up over 21d",
     "passed": true
    },
    {
     "name": "SPY range check",
-    "value": "63d range 6.6%",
+    "value": "63d range 6.5%",
     "rule": "ranging if < 8% and no MA alignment",
     "passed": null
    }
@@ -46,534 +46,533 @@
  "sectors": {
   "rows": [
    {
-    "etf": "SMH",
-    "name": "Semiconductors",
-    "rel_21d": 12.77,
-    "rel_63d": 1.47,
-    "composite": 7.12,
-    "rs_ratio": 106.9,
-    "rs_momentum": 8.63,
+    "etf": "IGV",
+    "name": "Software",
+    "rel_21d": 4.01,
+    "rel_63d": 11.69,
+    "composite": 7.85,
+    "rs_ratio": 110.1,
+    "rs_momentum": 2.45,
     "quadrant": "Leading",
     "selected": true,
     "rank": 1,
     "breadth": null,
     "trail": [
      {
-      "r": 107.37,
-      "m": -1.15
+      "r": 106.91,
+      "m": 6.33
      },
      {
-      "r": 102.64,
-      "m": 3.94
+      "r": 113.48,
+      "m": 11.29
      },
      {
-      "r": 102.75,
-      "m": -1.01
+      "r": 105.96,
+      "m": -2.76
      },
      {
-      "r": 103.57,
-      "m": 0.97
+      "r": 108.72,
+      "m": 0.37
      },
      {
-      "r": 106.93,
-      "m": 8.63
+      "r": 110.08,
+      "m": 2.45
      }
     ]
    },
    {
-    "etf": "IGV",
-    "name": "Software",
-    "rel_21d": 1.39,
-    "rel_63d": 12.83,
-    "composite": 7.11,
-    "rs_ratio": 110.8,
-    "rs_momentum": -0.05,
-    "quadrant": "Weakening",
-    "selected": false,
-    "rank": null,
-    "breadth": null,
-    "trail": [
-     {
-      "r": 106.31,
-      "m": 6.24
-     },
-     {
-      "r": 114.23,
-      "m": 11.4
-     },
-     {
-      "r": 106.02,
-      "m": -3.48
-     },
-     {
-      "r": 109.15,
-      "m": 1.68
-     },
-     {
-      "r": 110.81,
-      "m": -0.05
-     }
-    ]
-   },
-   {
-    "etf": "XLK",
-    "name": "Information Technology",
-    "rel_21d": 7.3,
-    "rel_63d": 6.83,
-    "composite": 7.07,
-    "rs_ratio": 107.9,
-    "rs_momentum": 4.17,
+    "etf": "SMH",
+    "name": "Semiconductors",
+    "rel_21d": 13.72,
+    "rel_63d": 1.65,
+    "composite": 7.69,
+    "rs_ratio": 108.1,
+    "rs_momentum": 9.4,
     "quadrant": "Leading",
     "selected": true,
     "rank": 2,
     "breadth": null,
     "trail": [
      {
-      "r": 107.28,
-      "m": 1.92
+      "r": 103.52,
+      "m": -5.05
      },
      {
-      "r": 105.53,
-      "m": 4.47
+      "r": 99.17,
+      "m": -4.32
      },
      {
-      "r": 105.23,
-      "m": -0.42
+      "r": 100.69,
+      "m": -3.73
      },
      {
-      "r": 106.36,
-      "m": 2.07
+      "r": 105.37,
+      "m": 3.69
      },
      {
-      "r": 107.91,
-      "m": 4.17
+      "r": 108.09,
+      "m": 9.4
+     }
+    ]
+   },
+   {
+    "etf": "XLK",
+    "name": "Information Technology",
+    "rel_21d": 8.12,
+    "rel_63d": 6.28,
+    "composite": 7.2,
+    "rs_ratio": 108.0,
+    "rs_momentum": 4.88,
+    "quadrant": "Leading",
+    "selected": true,
+    "rank": 3,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 105.21,
+      "m": -0.19
+     },
+     {
+      "r": 103.99,
+      "m": -0.71
+     },
+     {
+      "r": 104.24,
+      "m": -1.43
+     },
+     {
+      "r": 106.99,
+      "m": 3.11
+     },
+     {
+      "r": 108.02,
+      "m": 4.88
      }
     ]
    },
    {
     "etf": "XLE",
     "name": "Energy",
-    "rel_21d": -3.16,
-    "rel_63d": 15.68,
-    "composite": 6.26,
-    "rs_ratio": 104.0,
-    "rs_momentum": -2.12,
+    "rel_21d": -3.76,
+    "rel_63d": 16.24,
+    "composite": 6.24,
+    "rs_ratio": 103.5,
+    "rs_momentum": -2.6,
     "quadrant": "Weakening",
     "selected": false,
     "rank": null,
     "breadth": null,
     "trail": [
      {
-      "r": 101.5,
-      "m": 3.28
+      "r": 103.93,
+      "m": 5.21
      },
      {
-      "r": 100.98,
-      "m": -0.09
+      "r": 101.84,
+      "m": 2.0
      },
      {
       "r": 106.92,
-      "m": 9.51
+      "m": 7.84
      },
      {
-      "r": 101.31,
-      "m": -3.17
+      "r": 100.33,
+      "m": -3.52
      },
      {
-      "r": 103.99,
-      "m": -2.12
-     }
-    ]
-   },
-   {
-    "etf": "XLC",
-    "name": "Communication Services",
-    "rel_21d": -1.06,
-    "rel_63d": -2.19,
-    "composite": -1.63,
-    "rs_ratio": 95.0,
-    "rs_momentum": 1.64,
-    "quadrant": "Improving",
-    "selected": true,
-    "rank": 3,
-    "breadth": null,
-    "trail": [
-     {
-      "r": 90.86,
-      "m": -1.22
-     },
-     {
-      "r": 92.37,
-      "m": -1.26
-     },
-     {
-      "r": 93.97,
-      "m": 3.17
-     },
-     {
-      "r": 96.93,
-      "m": 5.06
-     },
-     {
-      "r": 94.96,
-      "m": 1.64
+      "r": 103.51,
+      "m": -2.6
      }
     ]
    },
    {
     "etf": "XLV",
     "name": "Health Care",
-    "rel_21d": -3.35,
-    "rel_63d": -0.94,
-    "composite": -2.15,
-    "rs_ratio": 102.6,
-    "rs_momentum": -3.07,
+    "rel_21d": -4.38,
+    "rel_63d": 0.3,
+    "composite": -2.04,
+    "rs_ratio": 101.8,
+    "rs_momentum": -4.06,
     "quadrant": "Weakening",
     "selected": false,
     "rank": null,
     "breadth": null,
     "trail": [
      {
-      "r": 101.37,
-      "m": 0.42
+      "r": 103.73,
+      "m": 3.74
      },
      {
-      "r": 104.41,
-      "m": -1.86
+      "r": 104.43,
+      "m": 1.46
      },
      {
-      "r": 102.7,
-      "m": 0.69
+      "r": 102.77,
+      "m": 0.68
      },
      {
-      "r": 102.95,
-      "m": -2.92
+      "r": 103.5,
+      "m": -3.24
      },
      {
-      "r": 102.58,
-      "m": -3.07
+      "r": 101.84,
+      "m": -4.06
      }
     ]
    },
    {
-    "etf": "XBI",
-    "name": "Biotech",
-    "rel_21d": -5.98,
-    "rel_63d": -6.54,
-    "composite": -6.26,
-    "rs_ratio": 102.1,
-    "rs_momentum": -7.46,
-    "quadrant": "Weakening",
+    "etf": "XLC",
+    "name": "Communication Services",
+    "rel_21d": -2.38,
+    "rel_63d": -2.27,
+    "composite": -2.32,
+    "rs_ratio": 94.7,
+    "rs_momentum": 0.3,
+    "quadrant": "Improving",
     "selected": false,
     "rank": null,
     "breadth": null,
     "trail": [
      {
-      "r": 107.7,
-      "m": -2.17
+      "r": 91.3,
+      "m": -1.12
      },
      {
-      "r": 112.63,
-      "m": 5.37
+      "r": 94.01,
+      "m": 4.86
      },
      {
-      "r": 106.98,
-      "m": -0.15
+      "r": 95.24,
+      "m": 4.63
      },
      {
-      "r": 103.76,
-      "m": -6.81
+      "r": 96.04,
+      "m": 3.72
      },
      {
-      "r": 102.13,
-      "m": -7.46
-     }
-    ]
-   },
-   {
-    "etf": "XLF",
-    "name": "Financials",
-    "rel_21d": -6.75,
-    "rel_63d": -6.38,
-    "composite": -6.56,
-    "rs_ratio": 95.8,
-    "rs_momentum": -6.39,
-    "quadrant": "Lagging",
-    "selected": false,
-    "rank": null,
-    "breadth": null,
-    "trail": [
-     {
-      "r": 101.54,
-      "m": -1.19
-     },
-     {
-      "r": 102.28,
-      "m": -3.16
-     },
-     {
-      "r": 101.92,
-      "m": 0.1
-     },
-     {
-      "r": 98.49,
-      "m": -3.26
-     },
-     {
-      "r": 95.76,
-      "m": -6.39
+      "r": 94.72,
+      "m": 0.3
      }
     ]
    },
    {
     "etf": "XLP",
     "name": "Consumer Staples",
-    "rel_21d": -5.69,
-    "rel_63d": -7.7,
-    "composite": -6.69,
-    "rs_ratio": 93.5,
-    "rs_momentum": -3.34,
+    "rel_21d": -6.06,
+    "rel_63d": -6.31,
+    "composite": -6.19,
+    "rs_ratio": 93.2,
+    "rs_momentum": -3.67,
     "quadrant": "Lagging",
     "selected": false,
     "rank": null,
     "breadth": null,
     "trail": [
      {
-      "r": 93.6,
-      "m": -3.06
+      "r": 95.34,
+      "m": -1.05
      },
      {
-      "r": 95.04,
-      "m": -6.0
+      "r": 95.79,
+      "m": -1.55
      },
      {
-      "r": 94.68,
-      "m": 1.47
+      "r": 95.39,
+      "m": 2.11
      },
      {
-      "r": 93.23,
-      "m": -2.74
+      "r": 94.27,
+      "m": -2.12
      },
      {
-      "r": 93.51,
-      "m": -3.34
+      "r": 93.18,
+      "m": -3.67
      }
     ]
    },
    {
     "etf": "XLI",
     "name": "Industrials",
-    "rel_21d": -2.64,
-    "rel_63d": -10.89,
-    "composite": -6.77,
-    "rs_ratio": 93.2,
-    "rs_momentum": -0.76,
+    "rel_21d": -2.21,
+    "rel_63d": -10.86,
+    "composite": -6.54,
+    "rs_ratio": 93.3,
+    "rs_momentum": -0.31,
     "quadrant": "Lagging",
     "selected": false,
     "rank": null,
     "breadth": null,
     "trail": [
      {
-      "r": 99.0,
-      "m": 0.07
+      "r": 98.26,
+      "m": -0.12
      },
      {
-      "r": 95.72,
-      "m": -3.47
+      "r": 95.14,
+      "m": -3.38
      },
      {
-      "r": 93.71,
-      "m": -4.23
+      "r": 93.67,
+      "m": -5.16
      },
      {
-      "r": 92.04,
-      "m": -5.08
+      "r": 92.3,
+      "m": -4.75
      },
      {
-      "r": 93.18,
-      "m": -0.76
+      "r": 93.3,
+      "m": -0.31
      }
     ]
    },
    {
     "etf": "XLY",
     "name": "Consumer Discretionary",
-    "rel_21d": -5.37,
-    "rel_63d": -9.72,
-    "composite": -7.55,
-    "rs_ratio": 91.3,
-    "rs_momentum": -3.09,
+    "rel_21d": -4.82,
+    "rel_63d": -9.25,
+    "composite": -7.03,
+    "rs_ratio": 91.8,
+    "rs_momentum": -2.5,
     "quadrant": "Lagging",
     "selected": false,
     "rank": null,
     "breadth": null,
     "trail": [
      {
-      "r": 93.76,
-      "m": -0.51
+      "r": 94.17,
+      "m": 0.38
      },
      {
-      "r": 93.87,
-      "m": 0.1
+      "r": 95.25,
+      "m": 2.44
      },
      {
-      "r": 92.86,
-      "m": -2.9
+      "r": 93.1,
+      "m": -2.68
      },
      {
-      "r": 92.09,
-      "m": -3.25
+      "r": 92.29,
+      "m": -3.83
      },
      {
-      "r": 91.3,
-      "m": -3.09
+      "r": 91.75,
+      "m": -2.5
+     }
+    ]
+   },
+   {
+    "etf": "XBI",
+    "name": "Biotech",
+    "rel_21d": -7.45,
+    "rel_63d": -6.67,
+    "composite": -7.06,
+    "rs_ratio": 101.3,
+    "rs_momentum": -8.77,
+    "quadrant": "Weakening",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 108.71,
+      "m": 0.86
+     },
+     {
+      "r": 108.85,
+      "m": 1.21
+     },
+     {
+      "r": 105.82,
+      "m": -1.49
+     },
+     {
+      "r": 106.07,
+      "m": -5.57
+     },
+     {
+      "r": 101.32,
+      "m": -8.77
+     }
+    ]
+   },
+   {
+    "etf": "XLF",
+    "name": "Financials",
+    "rel_21d": -7.74,
+    "rel_63d": -7.08,
+    "composite": -7.41,
+    "rs_ratio": 95.2,
+    "rs_momentum": -7.29,
+    "quadrant": "Lagging",
+    "selected": false,
+    "rank": null,
+    "breadth": null,
+    "trail": [
+     {
+      "r": 102.71,
+      "m": 0.14
+     },
+     {
+      "r": 102.89,
+      "m": -1.49
+     },
+     {
+      "r": 102.17,
+      "m": 0.01
+     },
+     {
+      "r": 96.61,
+      "m": -5.6
+     },
+     {
+      "r": 95.17,
+      "m": -7.29
      }
     ]
    },
    {
     "etf": "XLB",
     "name": "Materials",
-    "rel_21d": -6.89,
-    "rel_63d": -9.08,
-    "composite": -7.98,
-    "rs_ratio": 92.1,
-    "rs_momentum": -4.98,
+    "rel_21d": -8.13,
+    "rel_63d": -8.27,
+    "composite": -8.2,
+    "rs_ratio": 92.2,
+    "rs_momentum": -6.14,
     "quadrant": "Lagging",
     "selected": false,
     "rank": null,
     "breadth": null,
     "trail": [
      {
-      "r": 94.95,
-      "m": 0.58
+      "r": 94.86,
+      "m": 1.29
      },
      {
-      "r": 97.62,
-      "m": -1.11
+      "r": 97.84,
+      "m": 0.95
      },
      {
-      "r": 95.91,
-      "m": -0.24
+      "r": 95.38,
+      "m": -1.29
      },
      {
-      "r": 92.23,
-      "m": -4.75
+      "r": 93.84,
+      "m": -4.79
      },
      {
-      "r": 92.1,
-      "m": -4.98
+      "r": 92.17,
+      "m": -6.14
      }
     ]
    },
    {
     "etf": "XLRE",
     "name": "Real Estate",
-    "rel_21d": -7.39,
-    "rel_63d": -11.02,
-    "composite": -9.21,
-    "rs_ratio": 90.4,
-    "rs_momentum": -5.61,
+    "rel_21d": -6.73,
+    "rel_63d": -9.78,
+    "composite": -8.25,
+    "rs_ratio": 90.2,
+    "rs_momentum": -4.87,
     "quadrant": "Lagging",
     "selected": false,
     "rank": null,
     "breadth": null,
     "trail": [
      {
-      "r": 95.52,
-      "m": -4.99
+      "r": 95.81,
+      "m": -4.44
      },
      {
-      "r": 95.75,
-      "m": -7.44
+      "r": 95.65,
+      "m": -4.58
      },
      {
-      "r": 94.71,
-      "m": 0.41
+      "r": 94.55,
+      "m": 0.61
      },
      {
-      "r": 92.74,
-      "m": -4.86
+      "r": 92.64,
+      "m": -4.63
      },
      {
-      "r": 90.42,
-      "m": -5.61
+      "r": 90.16,
+      "m": -4.87
      }
     ]
    },
    {
     "etf": "XLU",
     "name": "Utilities",
-    "rel_21d": -6.62,
-    "rel_63d": -15.48,
-    "composite": -11.05,
-    "rs_ratio": 87.5,
-    "rs_momentum": -2.55,
+    "rel_21d": -6.8,
+    "rel_63d": -14.13,
+    "composite": -10.47,
+    "rs_ratio": 87.4,
+    "rs_momentum": -2.64,
     "quadrant": "Lagging",
     "selected": false,
     "rank": null,
     "breadth": null,
     "trail": [
      {
-      "r": 90.46,
-      "m": -4.98
+      "r": 90.86,
+      "m": -4.25
      },
      {
-      "r": 89.55,
-      "m": -7.21
+      "r": 88.97,
+      "m": -5.76
      },
      {
-      "r": 91.24,
-      "m": 3.87
+      "r": 91.03,
+      "m": 2.04
      },
      {
-      "r": 86.89,
-      "m": -4.65
+      "r": 86.8,
+      "m": -2.26
      },
      {
-      "r": 87.5,
-      "m": -2.55
+      "r": 87.4,
+      "m": -2.64
      }
     ]
    },
    {
     "etf": "AI_INFRA",
     "name": "AI Infrastructure",
-    "rel_21d": 5.85,
-    "rel_63d": -0.4,
-    "composite": 2.73,
-    "rs_ratio": 99.6,
-    "rs_momentum": 4.82,
-    "quadrant": "Improving",
+    "rel_21d": 4.41,
+    "rel_63d": -1.63,
+    "composite": 1.39,
+    "rs_ratio": 100.6,
+    "rs_momentum": 3.38,
+    "quadrant": "Leading",
     "selected": true,
     "rank": 4,
     "breadth": null,
     "trail": [
      {
-      "r": 105.1,
-      "m": 1.44
+      "r": 101.52,
+      "m": -2.07
      },
      {
-      "r": 99.09,
-      "m": 3.12
+      "r": 96.03,
+      "m": -4.49
      },
      {
-      "r": 101.13,
-      "m": 0.35
+      "r": 98.59,
+      "m": -3.17
      },
      {
-      "r": 100.05,
-      "m": 1.4
+      "r": 99.11,
+      "m": 1.15
      },
      {
-      "r": 99.6,
-      "m": 4.82
+      "r": 100.58,
+      "m": 3.38
      }
     ]
    }
   ],
   "selected_gics": [
-   "Information Technology",
-   "Communication Services"
+   "Information Technology"
   ]
  },
  "funnel": {
