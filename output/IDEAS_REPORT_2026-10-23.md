@@ -6,32 +6,32 @@ No new long ideas: credit and volatility both stressed.
 
 | Signal | Reading | Rule | Verdict |
 |---|---|---|---|
-| Credit stress (HY OAS) | 3.27% | < 21d MA (3.12) and < p75 of 252d (2.98) | FAIL |
+| Credit stress (HY OAS) | 3.40% | < 21d MA (3.15) and < p75 of 252d (2.98) | FAIL |
 | Yield curve (10y-2y) | +0.31% (positive, steepening) | informational only in v1 | — |
-| Volatility (VIX) | 16.7 | < 22 and < 50d MA (15.7) | FAIL |
+| Volatility (VIX) | 19.0 | < 22 and < 50d MA (15.8) | FAIL |
 | Financial conditions (NFCI) | -0.50 | < 0.0 (loose) | PASS |
-| SPY trend | 773 vs 200DMA 723 | Close > 200DMA, 50DMA > 200DMA, 200DMA slope up over 21d | PASS |
-| SPY range check | 63d range 7.0% | ranging if < 8% and no MA alignment | — |
+| SPY trend | 760 vs 200DMA 724 | Close > 200DMA, 50DMA > 200DMA, 200DMA slope up over 21d | PASS |
+| SPY range check | 63d range 7.1% | ranging if < 8% and no MA alignment | — |
 
 ## ② Sector rotation
 
 | ETF | Sector | 21d rel | 63d rel | RS-ratio | RS-mom | Quadrant | Selected |
 |---|---|---|---|---|---|---|---|
-| IGV | Software | +1.98% | +19.95% | 108.1 | -0.60% | Weakening |  |
-| XLE | Energy | +10.36% | +10.48% | 111.3 | +10.91% | Leading | #1 |
-| XLV | Health Care | +5.36% | +6.27% | 108.6 | +4.97% | Leading | #2 |
-| XLP | Consumer Staples | +5.33% | +0.39% | 101.1 | +7.27% | Leading | #3 |
-| XLY | Consumer Discretionary | +2.89% | +1.47% | 97.3 | +5.40% | Improving |  |
-| XLB | Materials | +1.60% | -2.47% | 97.8 | +4.24% | Improving |  |
-| XLF | Financials | +2.30% | -4.26% | 99.8 | +3.29% | Improving |  |
-| XLK | Information Technology | -3.90% | +0.79% | 99.9 | -6.60% | Lagging |  |
-| XLC | Communication Services | -3.98% | -1.24% | 94.7 | -1.39% | Lagging |  |
-| XLU | Utilities | +3.66% | -13.39% | 93.8 | +8.11% | Improving |  |
-| XBI | Biotech | -5.58% | -4.63% | 99.8 | -5.90% | Lagging |  |
-| XLRE | Real Estate | -1.00% | -10.63% | 93.8 | +1.30% | Improving |  |
-| XLI | Industrials | -1.11% | -12.23% | 93.2 | +0.98% | Improving |  |
-| SMH | Semiconductors | -8.32% | -9.03% | 93.6 | -11.18% | Lagging |  |
-| AI_INFRA | AI Infrastructure | -6.13% | -11.62% | 92.7 | -6.34% | Lagging | #4 |
+| XLE | Energy | +11.69% | +16.42% | 114.9 | +11.88% | Leading | #1 |
+| IGV | Software | +4.15% | +18.57% | 111.4 | +1.47% | Leading | #2 |
+| XLV | Health Care | +6.48% | +7.06% | 110.5 | +5.87% | Leading | #3 |
+| XLP | Consumer Staples | +8.97% | +1.00% | 104.2 | +10.79% | Leading |  |
+| XLY | Consumer Discretionary | +3.46% | -0.82% | 97.0 | +5.94% | Improving |  |
+| XLB | Materials | +4.22% | -2.78% | 99.6 | +6.87% | Improving |  |
+| XLU | Utilities | +9.07% | -9.23% | 97.0 | +13.59% | Improving |  |
+| XLF | Financials | +3.45% | -4.46% | 101.2 | +4.36% | Leading |  |
+| XLK | Information Technology | -4.96% | +2.17% | 98.7 | -7.49% | Lagging |  |
+| XLRE | Real Estate | +3.15% | -9.27% | 96.8 | +5.54% | Improving |  |
+| XBI | Biotech | -3.23% | -3.78% | 99.3 | -3.53% | Lagging |  |
+| XLC | Communication Services | -6.50% | -4.75% | 93.5 | -4.01% | Lagging |  |
+| XLI | Industrials | -1.55% | -12.98% | 92.9 | +0.49% | Improving |  |
+| SMH | Semiconductors | -11.27% | -6.97% | 90.2 | -13.80% | Lagging |  |
+| AI_INFRA | AI Infrastructure | -10.47% | -13.86% | 88.2 | -10.54% | Lagging | #4 |
 
 ## ③ Ranked ideas (0)
 
